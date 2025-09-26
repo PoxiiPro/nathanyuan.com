@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我",
+    "projects": "项目",
+    "demo": "在线项目演示",
+    "contact": "联系"
+  },
+  "landing": {
+    "greeting": "你好，我是",
+    "name": "Nathan Yuan",
+    "subtitle": "全栈开发者 & AI 爱好者",
+    "description": "我构建集成机器学习的现代Web应用程序，创建有意义的智能解决方案。",
+    "cta": {
+      "viewWork": "查看我的作品",
+      "tryAI": "尝试AI助手"
+    },
+    "profile": {
+      "title": "全栈开发者",
+      "techStack": ["React", "Python", "ML/AI", "TypeScript"]
+    }
+  },
+  "chat": {
+    "title": "AI 助手",
+    "welcomeMessage": "你好！我是你的AI助手。今天我能为你做些什么？",
+    "inputPlaceholder": "输入你的消息...",
+    "comingSoon": "聊天助手即将推出..."
+  },
+  "common": {
+    "close": "关闭",
+    "send": "发送",
+    "loading": "加载中...",
+    "underConstruction": "此页面正在建设中。",
+    "comingSoon": "即将推出..."
+  }
+}

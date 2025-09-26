@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de Mí",
+    "projects": "Proyectos",
+    "demo": "Demo de Proyecto en Vivo",
+    "contact": "Contacto"
+  },
+  "landing": {
+    "greeting": "Hola, soy",
+    "name": "Nathan Yuan",
+    "subtitle": "Desarrollador Full-Stack y Entusiasta de IA",
+    "description": "Construyo aplicaciones web modernas con integración de aprendizaje automático y creo soluciones inteligentes que marcan la diferencia.",
+    "cta": {
+      "viewWork": "Ver Mi Trabajo",
+      "tryAI": "Probar Asistente IA"
+    },
+    "profile": {
+      "title": "Desarrollador Full-Stack",
+      "techStack": ["React", "Python", "ML/IA", "TypeScript"]
+    }
+  },
+  "chat": {
+    "title": "Asistente IA",
+    "welcomeMessage": "¡Hola! Soy tu asistente de IA. ¿Cómo puedo ayudarte hoy?",
+    "inputPlaceholder": "Escribe tu mensaje...",
+    "comingSoon": "Asistente de chat próximamente..."
+  },
+  "common": {
+    "close": "Cerrar",
+    "send": "Enviar",
+    "loading": "Cargando...",
+    "underConstruction": "Esta página está en construcción.",
+    "comingSoon": "Próximamente..."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "首頁",
+    "about": "關於我",
+    "projects": "項目",
+    "demo": "在線項目演示",
+    "contact": "聯繫"
+  },
+  "landing": {
+    "greeting": "你好，我是",
+    "name": "Nathan Yuan",
+    "subtitle": "全棧開發者 & AI 愛好者",
+    "description": "我構建集成機器學習的現代Web應用程序，創建有意義的智能解決方案。",
+    "cta": {
+      "viewWork": "查看我的作品",
+      "tryAI": "嘗試AI助手"
+    },
+    "profile": {
+      "title": "全棧開發者",
+      "techStack": ["React", "Python", "ML/AI", "TypeScript"]
+    }
+  },
+  "chat": {
+    "title": "AI 助手",
+    "welcomeMessage": "你好！我是你的AI助手。今天我能為你做些什麼？",
+    "inputPlaceholder": "輸入你的消息...",
+    "comingSoon": "聊天助手即將推出..."
+  },
+  "common": {
+    "close": "關閉",
+    "send": "發送",
+    "loading": "加載中...",
+    "underConstruction": "此頁面正在建設中。",
+    "comingSoon": "即將推出..."
+  }
+}

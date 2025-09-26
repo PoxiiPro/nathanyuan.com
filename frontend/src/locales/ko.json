@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "홈",
+    "about": "소개",
+    "projects": "프로젝트",
+    "demo": "라이브 프로젝트 데모",
+    "contact": "연락처"
+  },
+  "landing": {
+    "greeting": "안녕하세요, 저는",
+    "name": "Nathan Yuan",
+    "subtitle": "풀스택 개발자 & AI 애호가",
+    "description": "머신러닝이 통합된 현대적인 웹 애플리케이션을 구축하고 의미있는 지능형 솔루션을 만듭니다.",
+    "cta": {
+      "viewWork": "내 작업 보기",
+      "tryAI": "AI 어시스턴트 체험"
+    },
+    "profile": {
+      "title": "풀스택 개발자",
+      "techStack": ["React", "Python", "ML/AI", "TypeScript"]
+    }
+  },
+  "chat": {
+    "title": "AI 어시스턴트",
+    "welcomeMessage": "안녕하세요! 저는 당신의 AI 어시스턴트입니다. 오늘 무엇을 도와드릴까요?",
+    "inputPlaceholder": "메시지를 입력하세요...",
+    "comingSoon": "채팅 어시스턴트 곧 출시..."
+  },
+  "common": {
+    "close": "닫기",
+    "send": "보내기",
+    "loading": "로딩 중...",
+    "underConstruction": "이 페이지는 공사 중입니다.",
+    "comingSoon": "곧 출시됩니다..."
+  }
+}

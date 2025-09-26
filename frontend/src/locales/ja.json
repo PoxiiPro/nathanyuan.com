@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "自己紹介",
+    "projects": "プロジェクト",
+    "demo": "ライブプロジェクトデモ",
+    "contact": "お問い合わせ"
+  },
+  "landing": {
+    "greeting": "こんにちは、私は",
+    "name": "Nathan Yuan",
+    "subtitle": "フルスタック開発者 & AI愛好家",
+    "description": "機械学習が統合された現代的なWebアプリケーションを構築し、意味のあるインテリジェントなソリューションを作成します。",
+    "cta": {
+      "viewWork": "私の作品を見る",
+      "tryAI": "AIアシスタントを試す"
+    },
+    "profile": {
+      "title": "フルスタック開発者",
+      "techStack": ["React", "Python", "ML/AI", "TypeScript"]
+    }
+  },
+  "chat": {
+    "title": "AIアシスタント",
+    "welcomeMessage": "こんにちは！私はあなたのAIアシスタントです。今日は何をお手伝いしましょうか？",
+    "inputPlaceholder": "メッセージを入力してください...",
+    "comingSoon": "チャットアシスタント近日公開..."
+  },
+  "common": {
+    "close": "閉じる",
+    "send": "送信",
+    "loading": "読み込み中...",
+    "underConstruction": "このページは工事中です。",
+    "comingSoon": "近日公開..."
+  }
+}

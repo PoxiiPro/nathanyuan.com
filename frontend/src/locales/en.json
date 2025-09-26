@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "demo": "Live Project Demo",
+    "contact": "Contact"
+  },
+  "landing": {
+    "greeting": "Hi, I'm",
+    "name": "Nathan Yuan",
+    "subtitle": "Full-Stack AI Developer",
+    "description": "I build modern web applications with machine learning integration and create intelligent solutions that make a difference.",
+    "cta": {
+      "viewWork": "View My Work",
+      "tryAI": "Try AI Assistant"
+    },
+    "profile": {
+      "title": "Full-Stack AI Developer",
+      "techStack": ["React", "Python", "ML/AI", "TypeScript"]
+    }
+  },
+  "chat": {
+    "title": "AI Assistant",
+    "welcomeMessage": "Hi! I'm your AI assistant. How can I help you today?",
+    "inputPlaceholder": "Type your message...",
+    "comingSoon": "Chat assistant coming soon..."
+  },
+  "common": {
+    "close": "Close",
+    "send": "Send",
+    "loading": "Loading...",
+    "underConstruction": "This page is under construction.",
+    "comingSoon": "Coming soon..."
+  }
+}
