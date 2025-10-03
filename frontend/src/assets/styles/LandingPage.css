@@ -2,11 +2,12 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 70px;
+  padding-top: 4rem;
   background: var(--accent-gradient);
   color: white;
   position: relative;
   overflow: hidden;
+  padding: 6vh 0;
 }
 
 .landing-page::before {
@@ -21,18 +22,21 @@
 }
 
 .landing-content {
+  min-height: 80vh;
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 6vh 4vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
   position: relative;
   z-index: 2;
-  min-height: 80vh;
 }
 
 .landing-text h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
   font-weight: 700;
 }
 
@@ -53,7 +57,7 @@
 .subtitle {
   font-size: 1.5rem;
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -66,7 +70,7 @@
 
 .cta-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .profile-card {
@@ -89,8 +93,8 @@
 }
 
 .placeholder-avatar {
-  width: 120px;
-  height: 120px;
+  width: 7.5rem;
+  height: 7.5rem;
   border-radius: 50%;
   background: linear-gradient(45deg, #3b82f6, #8b5cf6);
   display: flex;
@@ -105,7 +109,7 @@
 
 .profile-info h3 {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .profile-info p {
@@ -116,7 +120,7 @@
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
   justify-content: center;
 }
 
@@ -126,17 +130,79 @@
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-@media (max-width: 768px) {
+.tech-icon {
+  font-size: 1rem;
+  color: var(--accent-secondary);
+}
+
+.landing-title {
+  font-size: 3rem;
+  margin-bottom: 3vh;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 32rem) {
+  .landing-title {
+    font-size: 2.2rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    white-space: normal;
+    display: flex;
+  }
+}
+
+.landing-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 4vh;
+}
+
+.landing-description {
+  font-size: 1.2rem;
+  margin-bottom: 5vh;
+}
+
+.landing-cta {
+  gap: 2vw;
+}
+
+.landing-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.landing-profile {
+  margin-top: 4vh;
+}
+
+.landing-profile-title {
+  font-size: 1.5rem;
+  margin-bottom: 2vh;
+}
+
+.landing-profile-stack {
+  gap: 1vw;
+}
+
+@media (max-width: 48rem) {
   .landing-content {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+    padding: 2vh 1vw;
   }
   
   .landing-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .cta-buttons {
@@ -145,6 +211,10 @@
   }
   
   .cta-buttons .btn {
-    width: 200px;
+    width: 12.5rem;
+  }
+
+  .landing-title {
+    font-size: 2.2rem;
   }
 }

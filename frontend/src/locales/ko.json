@@ -31,6 +31,29 @@
     "send": "보내기",
     "loading": "로딩 중...",
     "underConstruction": "이 페이지는 공사 중입니다.",
-    "comingSoon": "곧 출시됩니다..."
+    "comingSoon": "곧 출시됩니다...",
+    "errorMessage": "죄송합니다. 문제가 발생했습니다. 다시 시도해주세요."
+  },
+  "bugReport": {
+    "title": "버그 신고",
+    "button": "버그 신고",
+    "form": {
+      "titleLabel": "제목",
+      "titlePlaceholder": "문제에 대한 간단한 설명",
+      "descriptionLabel": "설명",
+      "descriptionPlaceholder": "문제를 재현할 수 있는 자세한 단계를 제공해 주세요...",
+      "priorityLabel": "우선순위",
+      "priorityOptions": {
+        "p0": "P0 - 차단자 (사이트 다운/사용 불가)",
+        "p1": "P1 - 중요 (주요 기능 손상)",
+        "p2": "P2 - 높음 (부차적 기능 손상)",
+        "p3": "P3 - 낮음 (수정하면 좋음)"
+      },
+      "submit": "신고 제출",
+      "cancel": "취소"
+    },
+    "success": "버그 신고가 성공적으로 제출되었습니다! 피드백 감사합니다.",
+    "error": "버그 신고 제출에 실패했습니다. 다시 시도하거나 직접 연락해 주세요.",
+    "bugReportPrompt": "문제가 계속되면 버그 신고를 제출해 주세요."
   }
 }

@@ -2,8 +2,10 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 0.5rem 1vw;
   outline: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
 }
 
 .toggle-track {

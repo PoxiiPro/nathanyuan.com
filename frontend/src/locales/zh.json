@@ -32,5 +32,26 @@
     "loading": "加載中...",
     "underConstruction": "此頁面正在建設中。",
     "comingSoon": "即將推出..."
+  },
+  "bugReport": {
+    "title": "回報錯誤",
+    "button": "回報錯誤",
+    "form": {
+      "titleLabel": "標題",
+      "titlePlaceholder": "問題的簡要描述",
+      "descriptionLabel": "描述",
+      "descriptionPlaceholder": "請提供重現問題的詳細步驟...",
+      "priorityLabel": "優先級",
+      "priorityOptions": {
+        "p0": "P0 - 阻塞者（網站故障/無法使用）",
+        "p1": "P1 - 嚴重（主要功能損壞）",
+        "p2": "P2 - 高（次要功能損壞）",
+        "p3": "P3 - 低（修復會更好）"
+      },
+      "submit": "提交報告",
+      "cancel": "取消"
+    },
+    "success": "錯誤報告提交成功！感謝您的反饋。",
+    "error": "提交錯誤報告失敗。請重試或直接聯繫我。"
   }
 }

@@ -1,10 +1,11 @@
-.about-page {
+.experience-page {
   min-height: 100vh;
   display: flex;
   align-items: center;
   padding-top: 70px;
   background: var(--bg-primary);
   color: var(--text-primary);
+  padding: 6vh 0;
 }
 
 .page-content {
@@ -39,6 +40,30 @@
   font-style: italic;
 }
 
+.experience-content {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 6vh 4vw;
+}
+
+.experience-title {
+  font-size: 2.5rem;
+  margin-bottom: 4vh;
+}
+
+.experience-section {
+  margin-bottom: 4vh;
+}
+
+.experience-section-title {
+  font-size: 1.5rem;
+  margin-bottom: 2vh;
+}
+
+.experience-section-content {
+  font-size: 1.1rem;
+}
+
 @media (max-width: 768px) {
   .page-content h1 {
     font-size: 2.5rem;
@@ -47,5 +72,14 @@
   .content-placeholder {
     padding: 2rem;
     margin: 0 1rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .experience-title {
+    font-size: 2rem;
+  }
+  .experience-content {
+    padding: 2vh 1vw;
   }
 }

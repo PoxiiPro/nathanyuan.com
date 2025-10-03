@@ -4,7 +4,7 @@ import { ThemeProvider } from './hooks/useTheme';
 import { LanguageProvider } from './hooks/useLanguage';
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
-import AboutPage from './components/AboutPage';
+import ExperiencePage from './components/ExperiencePage';
 import ProjectsPage from './components/ProjectsPage';
 import DemoPage from './components/DemoPage';
 import ContactPage from './components/ContactPage';
@@ -32,7 +32,7 @@ const App: React.FC = () => {
             <main>
               <Routes>
                 <Route path="/" element={<LandingPage />} />
-                <Route path="/about" element={<AboutPage />} />
+                <Route path="/experience" element={<ExperiencePage />} />
                 <Route path="/projects" element={<ProjectsPage />} />
                 <Route path="/demo" element={<DemoPage />} />
                 <Route path="/contact" element={<ContactPage />} />

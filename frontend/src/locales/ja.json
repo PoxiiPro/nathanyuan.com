@@ -32,5 +32,26 @@
     "loading": "読み込み中...",
     "underConstruction": "このページは工事中です。",
     "comingSoon": "近日公開..."
+  },
+  "bugReport": {
+    "title": "バグ報告",
+    "button": "バグ報告",
+    "form": {
+      "titleLabel": "タイトル",
+      "titlePlaceholder": "問題の簡潔な説明",
+      "descriptionLabel": "説明",
+      "descriptionPlaceholder": "問題を再現するための詳細な手順を教えてください...",
+      "priorityLabel": "優先度",
+      "priorityOptions": {
+        "p0": "P0 - ブロッカー（サイトダウン/使用不可）",
+        "p1": "P1 - クリティカル（主要機能の破損）",
+        "p2": "P2 - 高（軽微な機能の破損）",
+        "p3": "P3 - 低（修正できればよい）"
+      },
+      "submit": "報告を送信",
+      "cancel": "キャンセル"
+    },
+    "success": "バグ報告が正常に送信されました！フィードバックありがとうございます。",
+    "error": "バグ報告の送信に失敗しました。再試行するか、直接お問い合わせください。"
   }
 }

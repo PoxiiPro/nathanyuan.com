@@ -1,0 +1,183 @@
+.bug-report-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.form-select {
+  cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.form-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-button-primary {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.form-button-primary:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.form-button-secondary {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.form-button-secondary:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.bug-report-success,
+.bug-report-error {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bug-report-success i {
+  font-size: 3rem;
+  color: #10b981;
+}
+
+.bug-report-error i {
+  font-size: 3rem;
+  color: #ef4444;
+}
+
+.bug-report-success p,
+.bug-report-error p {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.bug-report-retry-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bug-report-retry-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.bug-priority-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  margin-top: 0.5em;
+}
+
+.bug-priority-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.25em 0.5em;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.bug-priority-icon-row.selected {
+  background: var(--bg-secondary);
+  font-weight: 600;
+}
+
+.bug-priority-icon-row .fa-ban {
+  color: #ef4444;
+}
+.bug-priority-icon-row .fa-exclamation-circle {
+  color: #f59e42;
+}
+.bug-priority-icon-row .fa-bolt {
+  color: #fbbf24;
+}
+.bug-priority-icon-row .fa-info-circle {
+  color: #3b82f6;
+}
+.bug-priority-icon-row span {
+  font-size: 0.95em;
+}

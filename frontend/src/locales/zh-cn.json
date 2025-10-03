@@ -31,6 +31,29 @@
     "send": "发送",
     "loading": "加载中...",
     "underConstruction": "此页面正在建设中。",
-    "comingSoon": "即将推出..."
+    "comingSoon": "即将推出...",
+    "errorMessage": "抱歉，出了点问题。请再试一次。"
+  },
+  "bugReport": {
+    "title": "报告错误",
+    "button": "报告错误",
+    "form": {
+      "titleLabel": "标题",
+      "titlePlaceholder": "问题的简要描述",
+      "descriptionLabel": "描述",
+      "descriptionPlaceholder": "请提供重现问题的详细步骤...",
+      "priorityLabel": "优先级",
+      "priorityOptions": {
+        "p0": "P0 - 阻塞者（网站故障/无法使用）",
+        "p1": "P1 - 严重（主要功能损坏）",
+        "p2": "P2 - 高（次要功能损坏）",
+        "p3": "P3 - 低（修复会更好）"
+      },
+      "submit": "提交报告",
+      "cancel": "取消"
+    },
+    "success": "错误报告提交成功！感谢您的反馈。",
+    "error": "提交错误报告失败。请重试或直接联系我。",
+    "bugReportPrompt": "如果问题仍然存在，请提交错误报告。"
   }
 }

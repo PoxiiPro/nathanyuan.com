@@ -1,5 +1,8 @@
 .language-selector {
   position: relative;
+  padding: 0.5rem 1vw;
+  border-radius: 0.5rem;
+  font-size: 1rem;
 }
 
 .language-dropdown {
@@ -101,6 +104,11 @@
 
 .name {
   font-weight: 500;
+}
+
+.language-selector select {
+  padding: 0.5rem 1vw;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {

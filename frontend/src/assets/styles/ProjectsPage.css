@@ -5,6 +5,7 @@
   padding-top: 70px;
   background: var(--bg-primary);
   color: var(--text-primary);
+  padding: 6vh 0;
 }
 
 .page-content {
@@ -39,6 +40,36 @@
   font-style: italic;
 }
 
+.projects-content {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 6vh 4vw;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  margin-bottom: 4vh;
+}
+
+.projects-list {
+  gap: 2vw;
+}
+
+.project-card {
+  padding: 3vh 2vw;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.75rem var(--shadow-light);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 2vh;
+}
+
+.project-description {
+  font-size: 1.1rem;
+}
+
 @media (max-width: 768px) {
   .page-content h1 {
     font-size: 2.5rem;
@@ -47,5 +78,14 @@
   .content-placeholder {
     padding: 2rem;
     margin: 0 1rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .projects-title {
+    font-size: 2rem;
+  }
+  .projects-content {
+    padding: 2vh 1vw;
   }
 }

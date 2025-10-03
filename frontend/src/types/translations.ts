@@ -22,9 +22,24 @@ export interface Translation {
   };
   chat: {
     title: string;
+    poweredBy: string;
     welcomeMessage: string;
     inputPlaceholder: string;
     comingSoon: string;
+  };
+  contact: {
+    subtitle: string;
+    emailLabel: string;
+    locationLabel: string;
+    location: string;
+    linkedinLabel: string;
+    linkedinUrl: string;
+    workLabel: string;
+    fullTime: string;
+    based: string;
+    relocate: string;
+    citizen: string;
+    clearance: string;
   };
   common: {
     close: string;
@@ -32,6 +47,29 @@ export interface Translation {
     loading: string;
     underConstruction: string;
     comingSoon: string;
+    errorMessage: string; // Added this key
+  };
+  bugReport: {
+    title: string;
+    button: string;
+    form: {
+      titleLabel: string;
+      titlePlaceholder: string;
+      descriptionLabel: string;
+      descriptionPlaceholder: string;
+      priorityLabel: string;
+      priorityOptions: {
+        p0: string;
+        p1: string;
+        p2: string;
+        p3: string;
+      };
+      submit: string;
+      cancel: string;
+    };
+    success: string;
+    error: string;
+    bugReportPrompt: string;
   };
 }
 

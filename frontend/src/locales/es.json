@@ -31,6 +31,29 @@
     "send": "Enviar",
     "loading": "Cargando...",
     "underConstruction": "Esta página está en construcción.",
-    "comingSoon": "Próximamente..."
+    "comingSoon": "Próximamente...",
+    "errorMessage": "Lo siento, algo salió mal. Por favor, inténtalo de nuevo."
+  },
+  "bugReport": {
+    "title": "Reportar un Error",
+    "button": "Reportar Error",
+    "form": {
+      "titleLabel": "Título",
+      "titlePlaceholder": "Descripción breve del problema",
+      "descriptionLabel": "Descripción",
+      "descriptionPlaceholder": "Proporciona pasos detallados para reproducir el problema...",
+      "priorityLabel": "Prioridad",
+      "priorityOptions": {
+        "p0": "P0 - Bloqueador (Sitio caído/inutilizable)",
+        "p1": "P1 - Crítico (Función principal rota)",
+        "p2": "P2 - Alto (Función menor rota)",
+        "p3": "P3 - Bajo (Sería bueno arreglar)"
+      },
+      "submit": "Enviar Reporte",
+      "cancel": "Cancelar"
+    },
+    "success": "¡Reporte de error enviado exitosamente! Gracias por tu comentario.",
+    "error": "Error al enviar el reporte. Inténtalo de nuevo o contáctame directamente.",
+    "bugReportPrompt": "Si el problema persiste, por favor envíe un informe de error."
   }
 }

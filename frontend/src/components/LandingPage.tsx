@@ -1,9 +1,32 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faReact, 
+  faPython, 
+  faJs
+} from '@fortawesome/free-brands-svg-icons';
+import { 
+  faBrain, 
+  faCode,
+  faDatabase
+} from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../hooks/useLanguage';
 import '../assets/styles/LandingPage.css';
 
 const LandingPage: React.FC = () => {
   const { translations } = useLanguage();
+
+  // Function to get the appropriate icon for each technology
+  const getTechIcon = (tech: string) => {
+    const techLower = tech.toLowerCase();
+    if (techLower.includes('react')) return faReact;
+    if (techLower.includes('python')) return faPython;
+    if (techLower.includes('javascript')) return faJs;
+    if (techLower.includes('typescript')) return faCode;
+    if (techLower.includes('postgresql') || techLower.includes('cassandra')) return faDatabase;
+    if (techLower.includes('ai') || techLower.includes('ml')) return faBrain;
+    return faCode; // Default icon
+  };
 
   return (
     <section id="home" className="landing-page">
@@ -16,8 +39,8 @@ const LandingPage: React.FC = () => {
               {translations.landing.description}
             </p>
             <div className="cta-buttons">
-              <a href="#projects" className="btn btn-primary">{translations.landing.cta.viewWork}</a>
-              <a href="#ai-assistant" className="btn btn-secondary">{translations.landing.cta.tryAI}</a>
+              <a href="/experience" className="btn btn-primary">Learn More</a>
+              <a href="/public/Nathan_Yuan_Resume.pdf" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">Resume</a>
             </div>
           </div>
           <div className="landing-visual fade-in-up">
@@ -30,7 +53,10 @@ const LandingPage: React.FC = () => {
                 <p>{translations.landing.profile.title}</p>
                 <div className="tech-stack">
                   {translations.landing.profile.techStack.map((tech, index) => (
-                    <span key={index} className="tech-tag">{tech}</span>
+                    <span key={index} className="tech-tag">
+                      <FontAwesomeIcon icon={getTechIcon(tech)} className="tech-icon" />
+                      {tech}
+                    </span>
                   ))}
                 </div>
               </div>

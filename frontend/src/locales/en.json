@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About Me",
+    "about": "Experience",
     "projects": "Projects",
     "demo": "Live Project Demo",
     "contact": "Contact"
@@ -9,19 +9,20 @@
   "landing": {
     "greeting": "Hi, I'm",
     "name": "Nathan Yuan",
-    "subtitle": "Full-Stack AI Developer",
-    "description": "I build modern web applications with machine learning integration and create intelligent solutions that make a difference.",
+    "subtitle": "AI Full-Stack Software Engineer",
+    "description": "I build modern web applications with machine learning and artificial intelligence integrations while collaborating with clients to deliver impactful solutions.",
     "cta": {
       "viewWork": "View My Work",
       "tryAI": "Try AI Assistant"
     },
     "profile": {
-      "title": "Full-Stack AI Developer",
-      "techStack": ["React", "Python", "ML/AI", "TypeScript"]
+      "title": "Enterprise AI Solutions Engineer",
+      "techStack": ["React", "Python", "AI/ML", "TypeScript", "JavaScript", "PostgreSQL", "Cassandra"]
     }
   },
   "chat": {
     "title": "AI Assistant",
+    "poweredBy": "Powered by Gemini with RAG",
     "welcomeMessage": "Hi! I'm your AI assistant. How can I help you today?",
     "inputPlaceholder": "Type your message...",
     "comingSoon": "Chat assistant coming soon..."
@@ -31,6 +32,71 @@
     "send": "Send",
     "loading": "Loading...",
     "underConstruction": "This page is under construction.",
-    "comingSoon": "Coming soon..."
+    "comingSoon": "Coming soon...",
+    "errorMessage": "Sorry, something went wrong. Please try again."
+  },
+  "bugReport": {
+    "title": "Report a Bug",
+    "button": "Report Bug",
+    "form": {
+      "titleLabel": "Title",
+      "titlePlaceholder": "Brief description of the issue",
+      "descriptionLabel": "Description",
+      "descriptionPlaceholder": "Please provide detailed steps to reproduce the issue...",
+      "priorityLabel": "Priority",
+      "priorityOptions": {
+        "p0": "P0 - Blocker (Site is down/unusable)",
+        "p1": "P1 - Critical (Major feature broken)",
+        "p2": "P2 - High (Minor feature broken)",
+        "p3": "P3 - Low (Nice to fix)"
+      },
+      "submit": "Submit Report",
+      "cancel": "Cancel"
+    },
+    "success": "Bug report submitted successfully! Thank you for your feedback.",
+    "error": "Failed to submit bug report. Please try again or contact me directly.",
+    "bugReportPrompt": "If the issue persists, please file a bug report in the top right of the nav bar."
+  },
+  "contact": {
+    "subtitle": "Let's connect! I'm open to new opportunities.",
+    "emailLabel": "Email",
+    "email": "contact@NathanYuan.com",
+    "locationLabel": "Location",
+    "location": "Bay Area, CA",
+    "linkedinLabel": "LinkedIn",
+    "linkedinUrl": "linkedin.com/in/nathanyuan00",
+    "workLabel": "Work Preferences",
+    "fullTime": "Open to Full Time, On-site, Hybrid, and Remote roles",
+    "based": "Currently based in Bay Area",
+    "relocate": "Willing to relocate for roles in California, Seattle, or Las Vegas",
+    "citizen": "US Citizen",
+    "clearance": "with Active Security Clearance"
+  },
+  "experience": {
+    "intro": "I am an AI Full-Stack Software Engineer with a strong background in academic research, leadership, and professional work experience.",
+    "academic": {
+      "title": "Academic Background",
+      "details": [
+        "B.S. in Computer Science, UC Berkeley",
+        "Relevant coursework: Machine Learning, Data Structures, Algorithms, Database Systems"
+      ]
+    },
+    "leadership": {
+      "title": "Leadership Experience",
+      "details": [
+        "President, AI Club at UC Berkeley",
+        "Led a team of 20+ students in AI research and hackathons"
+      ]
+    },
+    "work": {
+      "title": "Work Experience",
+      "details": [
+        "Enterprise AI Solutions Engineer, XYZ Corp (2022–Present): Developed and deployed AI-powered web applications for Fortune 500 clients.",
+        "Software Engineer Intern, ABC Tech (2021): Built scalable backend APIs and integrated ML models into production systems."
+      ]
+    }
+  },
+  "copilot": {
+    "instructions": "Add your GitHub Copilot directions here."
   }
 }
