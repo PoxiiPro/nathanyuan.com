@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../hooks/useLanguage';
 import '../assets/styles/ChatPanel.css';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
 
 interface ChatPanelProps {
   isOpen: boolean;
@@ -85,7 +86,7 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ isOpen, onClose }) => {
                   <i className={msg.sender === 'bot' ? 'fas fa-robot' : 'fas fa-user'}></i>
                 </div>
                 <div className="message-content">
-                  <p>{msg.text}</p>
+                  <ReactMarkdown>{msg.text}</ReactMarkdown>
                 </div>
               </div>
             ))}
