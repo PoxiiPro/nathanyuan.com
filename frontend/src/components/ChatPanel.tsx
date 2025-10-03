@@ -14,12 +14,14 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ isOpen, onClose }) => {
     { sender: 'bot', text: translations.chat.welcomeMessage }
   ]);
   const [input, setInput] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
 
   const handleSend = async () => {
     if (!input.trim()) return;
 
     // Append user message to the chat history
     setMessages([...messages, { sender: 'user', text: input }]);
+    setIsTyping(true); // Set typing state to true
 
     try {
       // Make a POST request to the serverless function
@@ -47,6 +49,7 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ isOpen, onClose }) => {
       ]);
     } finally {
       setInput('');
+      setIsTyping(false); // Set typing state to false
     }
   };
 
@@ -86,6 +89,16 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ isOpen, onClose }) => {
                 </div>
               </div>
             ))}
+            {isTyping && (
+              <div className="message bot-message">
+                <div className="message-avatar">
+                  <i className="fas fa-robot"></i>
+                </div>
+                <div className="message-content">
+                  <p>...</p>
+                </div>
+              </div>
+            )}
           </div>
           
           <div className="chat-input-container">
