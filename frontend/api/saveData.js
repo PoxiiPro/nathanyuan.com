@@ -44,13 +44,34 @@ export default async function handler(req, res) {
 
     // persist data
     try {
-      // if same session timestamp, update existing record instead of making new one
-      const { error } = await supabase
+      // Check if a record with this timestamp already exists
+      const { data: existingRecord, error: selectError } = await supabase
         .from(table)
-        .upsert(data, { onConflict: ['timestamp'] });
-      
-      if (error) {
-        throw error;
+        .select('timestamp')
+        .eq('timestamp', timestamp)
+        .single();
+
+      if (selectError && selectError.code !== 'PGRST116') {
+        // PGRST116 is "not found" error, which is expected if no record exists
+        throw selectError;
+      }
+
+      let result;
+      if (existingRecord) {
+        // Update existing record
+        result = await supabase
+          .from(table)
+          .update({ messages: data.messages })
+          .eq('timestamp', data.timestamp);
+      } else {
+        // Insert new record
+        result = await supabase
+          .from(table)
+          .insert(data);
+      }
+
+      if (result.error) {
+        throw result.error;
       }
 
       return res.status(200).json({ message: 'Chat log saved successfully' });
