@@ -62,14 +62,19 @@ module.exports = async (req, res) => {
     botResponse = response?.data?.response;
     updatedMessages.push({ sender: 'bot', text: botResponse });
 
+    // Save the chat log with the complete conversation including bot response
+    await saveChatLog(sessionTimestamp, updatedMessages);
+
     // Return the response from the chatbot to front end
     return res.status(200).json({ response: botResponse });
   } catch (error) {
     console.error('Error communicating with Hugging Face API:', error);
-    updatedMessages.push({ sender: 'bot', text: 'Failed to get a response from the bot.' });
-    return res.status(500).json({ error: 'Failed to communicate with Hugging Face API' });
-  } finally {
-    // Log the chat history regardless of success or failure
+    const errorMessage = 'Failed to get a response from the bot.';
+    updatedMessages.push({ sender: 'bot', text: errorMessage });
+    
+    // Save the chat log even on error
     await saveChatLog(sessionTimestamp, updatedMessages);
+    
+    return res.status(500).json({ error: 'Failed to communicate with Hugging Face API' });
   }
 };

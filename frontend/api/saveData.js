@@ -29,7 +29,7 @@ export default async function handler(req, res) {
   }
 
   if (table === 'ChatLog') {
-    const { messages } = data;
+    const { messages, timestamp } = data;
 
     if (!messages || !Array.isArray(messages)) {
       return res.status(400).json({ error: 'Missing or invalid messages field for ChatLog' });
@@ -42,9 +42,12 @@ export default async function handler(req, res) {
       }
     }
 
-    // Simply insert a new chat log record - let Supabase handle ID and timestamp
+    // persist data
     try {
-      const { error } = await supabase.from(table).insert(data);
+      // if same session timestamp, update existing record instead of making new one
+      const { error } = await supabase
+        .from(table)
+        .upsert(data, { onConflict: ['timestamp'] });
       
       if (error) {
         throw error;
@@ -58,7 +61,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { error } = await supabase.from(table).insert(data);
+    const { error } = await supabase
+      .from(table)
+      .upsert(data, { onConflict: ['timestamp'] });
 
     if (error) {
       throw error;
