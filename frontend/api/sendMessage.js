@@ -24,14 +24,15 @@ module.exports = async (req, res) => {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { message, chatId } = req.body;
+  const { message, chatId, currentMessages } = req.body;
 
   if (!message || !chatId) {
     return res.status(400).json({ error: 'Message and chatId are required' });
   }
 
   let botResponse = '';
-  const updatedMessages = [{ sender: 'user', text: message }];
+  // Use the complete conversation history from the frontend (already includes the user message)
+  const updatedMessages = currentMessages ? [...currentMessages] : [{ sender: 'user', text: message }];
 
   try {
     // Hugging Face API endpoint and token
@@ -60,10 +61,9 @@ module.exports = async (req, res) => {
     // Return the response from the chatbot to front end
     return res.status(200).json({ response: botResponse });
   } catch (error) {
-    const response = res.status(500).json({ error: 'Failed to communicate with Hugging Face API' });
-    updatedMessages.push({ sender: 'bot', text: response.toString() });
     console.error('Error communicating with Hugging Face API:', error);
-    return response;
+    updatedMessages.push({ sender: 'bot', text: 'Failed to get a response from the bot.' });
+    return res.status(500).json({ error: 'Failed to communicate with Hugging Face API' });
   } finally {
     // Log the chat history regardless of success or failure
     await saveChatLog(chatId, updatedMessages);

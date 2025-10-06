@@ -55,11 +55,10 @@ export default async function handler(req, res) {
       }
 
       if (existingChat) {
-        // Append new messages to the existing chat history
-        const updatedMessages = [...existingChat.messages, ...messages];
+        // Replace the entire messages array (since sendMessage sends complete history)
         const { error: updateError } = await supabase
           .from(table)
-          .update({ messages: updatedMessages })
+          .update({ messages: messages })
           .eq('id', id);
 
         if (updateError) {
@@ -69,6 +68,21 @@ export default async function handler(req, res) {
         return res.status(200).json({ message: 'Chat history updated successfully' });
       }
     } catch (error) {
+      console.error('Error handling ChatLog:', error);
+      return res.status(500).json({ error: error.message });
+    }
+
+    // If no existing chat found, create a new one
+    try {
+      const { error } = await supabase.from(table).insert(data);
+      
+      if (error) {
+        throw error;
+      }
+
+      return res.status(200).json({ message: 'New chat created successfully' });
+    } catch (error) {
+      console.error('Error creating new ChatLog:', error);
       return res.status(500).json({ error: error.message });
     }
   }

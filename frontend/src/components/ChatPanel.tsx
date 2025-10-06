@@ -28,7 +28,8 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ isOpen, onClose }) => {
     }
 
     // Append user message to the chat history
-    setMessages([...messages, { sender: 'user', text: input }]);
+    const updatedMessages = [...messages, { sender: 'user', text: input }];
+    setMessages(updatedMessages);
     setIsTyping(true); // Set typing state to true
 
     try {
@@ -36,6 +37,7 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ isOpen, onClose }) => {
       const response = await axios.post('/api/sendMessage', {
         message: input,
         chatId: chatId || uuidv4(), // Use existing chatId or generate a new one
+        currentMessages: updatedMessages, // Send updated conversation history including current user message
       });
 
       // Append bot response to the chat if it responds
