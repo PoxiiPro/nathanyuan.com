@@ -13,6 +13,7 @@ const saveChatLog = async (chatId, messages) => {
         messages,
       },
     });
+    console.log("Saving chat log")
   } catch (error) {
     console.error('Failed to save chat log:', error);
   }
@@ -59,8 +60,10 @@ module.exports = async (req, res) => {
     // Return the response from the chatbot to front end
     return res.status(200).json({ response: botResponse });
   } catch (error) {
+    const response = res.status(500).json({ error: 'Failed to communicate with Hugging Face API' });
+    updatedMessages.push({ sender: 'bot', text: response.toString() });
     console.error('Error communicating with Hugging Face API:', error);
-    return res.status(500).json({ error: 'Failed to communicate with Hugging Face API' });
+    return response;
   } finally {
     // Log the chat history regardless of success or failure
     await saveChatLog(chatId, updatedMessages);
