@@ -29,15 +29,19 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ isOpen, onClose }) => {
   const handleSend = async () => {
     if (!input.trim()) return;
 
+    // Clear the input field immediately
+    const userInput = input;
+    setInput('');
+
     // Append user message to the chat history
-    const updatedMessages = [...messages, { sender: 'user', text: input }];
+    const updatedMessages = [...messages, { sender: 'user', text: userInput }];
     setMessages(updatedMessages);
     setIsTyping(true); // Set typing state to true
 
     try {
       // Make a POST request to the serverless function
       const response = await axios.post('/api/sendMessage', {
-        message: input,
+        message: userInput,
         sessionTimestamp: sessionTimestamp || Date.now(),
         currentMessages: updatedMessages, // Send updated conversation history including current user message
       });
@@ -54,7 +58,7 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ isOpen, onClose }) => {
           { sender: 'bot', text: `${translations.common.errorMessage} ${translations.bugReport.bugReportPrompt}` },
         ]);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error communicating with serverless function:', error);
       
       // Check if it's a rate limiting error (429)
@@ -70,7 +74,6 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ isOpen, onClose }) => {
         ]);
       }
     } finally {
-      setInput('');
       setIsTyping(false); // Set typing state to false
     }
   };
