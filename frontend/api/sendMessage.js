@@ -51,7 +51,7 @@ module.exports = async (req, res) => {
     // Send the message to the Hugging Face endpoint
     const response = await axios.post(
       hfEndpoint,
-      { message },
+      { message, chatHistory: updatedMessages },
       {
         headers: {
           Authorization: `Bearer ${auth_token}`,
