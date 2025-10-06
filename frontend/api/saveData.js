@@ -17,31 +17,15 @@ export default async function handler(req, res) {
   }
 
   if (table === 'BugTickets') {
-    const { title, desc, prio } = data;
-
-    if (!title || !desc || !prio) {
-      return res.status(400).json({ error: 'Missing required fields for BugTickets' });
-    }
-
-    if (!['P0', 'P1', 'P2', 'P3'].includes(prio)) {
-      return res.status(400).json({ error: 'Invalid priority value' });
-    }
+    // Insert new record
+    result = await supabase
+      .from(table)
+      .insert(data);
   }
 
   if (table === 'ChatLog') {
     const { messages, timestamp } = data;
-
-    if (!messages || !Array.isArray(messages)) {
-      return res.status(400).json({ error: 'Missing or invalid messages field for ChatLog' });
-    }
-
-    // Validate message format
-    for (const message of messages) {
-      if (typeof message !== 'object' || message === null || !message.sender || !message.text) {
-        return res.status(400).json({ error: 'Invalid message format in messages array' });
-      }
-    }
-
+    
     // persist data
     try {
       // Check if a record with this timestamp already exists
