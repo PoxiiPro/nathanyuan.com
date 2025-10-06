@@ -11,6 +11,7 @@ export default async function handler(req, res) {
   }
 
   const { table, data } = req.body;
+  let result;
 
   if (!table || !data) {
     return res.status(400).json({ error: 'Missing table or data in request body' });
@@ -25,7 +26,7 @@ export default async function handler(req, res) {
 
   if (table === 'ChatLog') {
     const { messages, timestamp } = data;
-    
+
     // persist data
     try {
       // Check if a record with this timestamp already exists
@@ -40,7 +41,6 @@ export default async function handler(req, res) {
         throw selectError;
       }
 
-      let result;
       if (existingRecord) {
         // Update existing record
         result = await supabase
