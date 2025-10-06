@@ -6,7 +6,7 @@ const axios = require('axios');
 // Call other serverless method to save chat log to Supabase
 const saveChatLog = async (chatId, messages) => {
   try {
-    await axios.post('/api/saveData', {
+    await axios.post('https://nathanyuan-com.vercel.app/api/saveData', {
       table: 'ChatLog',
       data: {
         id: chatId,
