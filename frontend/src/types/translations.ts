@@ -47,7 +47,8 @@ export interface Translation {
     loading: string;
     underConstruction: string;
     comingSoon: string;
-    errorMessage: string; // Added this key
+    errorMessage: string;
+    rateLimitMessage: string;
   };
   bugReport: {
     title: string;

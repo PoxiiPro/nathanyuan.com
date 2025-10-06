@@ -31,7 +31,9 @@
     "send": "送信",
     "loading": "読み込み中...",
     "underConstruction": "このページは工事中です。",
-    "comingSoon": "近日公開..."
+    "comingSoon": "近日公開...",
+    "errorMessage": "申し訳ありません。何か問題が発生しました。もう一度お試しください。",
+    "rateLimitMessage": "1分あたりのメッセージが多すぎます。少し時間を置いてください。"
   },
   "bugReport": {
     "title": "バグ報告",

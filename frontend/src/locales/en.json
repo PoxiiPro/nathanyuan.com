@@ -35,7 +35,8 @@
     "loading": "Loading...",
     "underConstruction": "This page is under construction.",
     "comingSoon": "Coming soon...",
-    "errorMessage": "Sorry, something went wrong. Please try again."
+    "errorMessage": "Sorry, something went wrong. Please try again.",
+    "rateLimitMessage": "Too many messages per minute. Please slow down."
   },
   "bugReport": {
     "title": "Report a Bug",

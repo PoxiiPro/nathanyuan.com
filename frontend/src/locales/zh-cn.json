@@ -32,7 +32,8 @@
     "loading": "加载中...",
     "underConstruction": "此页面正在建设中。",
     "comingSoon": "即将推出...",
-    "errorMessage": "抱歉，出了点问题。请再试一次。"
+    "errorMessage": "抱歉，出了点问题。请再试一次。",
+    "rateLimitMessage": "每分钟消息过多。请慢一点。"
   },
   "bugReport": {
     "title": "报告错误",

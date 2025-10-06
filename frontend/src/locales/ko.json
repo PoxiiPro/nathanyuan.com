@@ -32,7 +32,8 @@
     "loading": "로딩 중...",
     "underConstruction": "이 페이지는 공사 중입니다.",
     "comingSoon": "곧 출시됩니다...",
-    "errorMessage": "죄송합니다. 문제가 발생했습니다. 다시 시도해주세요."
+    "errorMessage": "죄송합니다. 문제가 발생했습니다. 다시 시도해주세요.",
+    "rateLimitMessage": "분당 메시지가 너무 많습니다. 천천히 해주세요."
   },
   "bugReport": {
     "title": "버그 신고",

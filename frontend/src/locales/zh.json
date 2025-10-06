@@ -31,7 +31,9 @@
     "send": "發送",
     "loading": "加載中...",
     "underConstruction": "此頁面正在建設中。",
-    "comingSoon": "即將推出..."
+    "comingSoon": "即將推出...",
+    "errorMessage": "抱歉，出了點問題。請再試一次。",
+    "rateLimitMessage": "每分鐘消息過多。請慢一點。"
   },
   "bugReport": {
     "title": "回報錯誤",

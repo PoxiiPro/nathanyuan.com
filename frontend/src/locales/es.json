@@ -32,7 +32,8 @@
     "loading": "Cargando...",
     "underConstruction": "Esta página está en construcción.",
     "comingSoon": "Próximamente...",
-    "errorMessage": "Lo siento, algo salió mal. Por favor, inténtalo de nuevo."
+    "errorMessage": "Lo siento, algo salió mal. Por favor, inténtalo de nuevo.",
+    "rateLimitMessage": "Demasiados mensajes por minuto. Por favor, reduce la velocidad."
   },
   "bugReport": {
     "title": "Reportar un Error",

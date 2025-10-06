@@ -56,10 +56,19 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ isOpen, onClose }) => {
       }
     } catch (error) {
       console.error('Error communicating with serverless function:', error);
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        { sender: 'bot', text: `${translations.common.errorMessage} ${translations.bugReport.bugReportPrompt}` },
-      ]);
+      
+      // Check if it's a rate limiting error (429)
+      if (axios.isAxiosError(error) && error.response?.status === 429) {
+        setMessages((prevMessages) => [
+          ...prevMessages,
+          { sender: 'bot', text: translations.common.rateLimitMessage },
+        ]);
+      } else {
+        setMessages((prevMessages) => [
+          ...prevMessages,
+          { sender: 'bot', text: `${translations.common.errorMessage} ${translations.bugReport.bugReportPrompt}` },
+        ]);
+      }
     } finally {
       setInput('');
       setIsTyping(false); // Set typing state to false
