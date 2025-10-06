@@ -7,10 +7,13 @@ const saveDataUrl = process.env.SAVE_DATA_URL;
 // Call other serverless method to save chat log to Supabase
 const saveChatLog = async (sessionTimestamp, messages) => {
   try {
+    // Convert JavaScript timestamp to PostgreSQL timestamptz format
+    const postgresTimestamp = new Date(sessionTimestamp).toISOString();
+    
     await axios.post(saveDataUrl, {
       table: 'ChatLog',
       data: {
-        timestamp: sessionTimestamp,
+        timestamp: postgresTimestamp, 
         messages,
       },
     });
