@@ -22,6 +22,7 @@ export default async function handler(req, res) {
     result = await supabase
       .from(table)
       .insert(data);
+    return res.status(200).json({ message: 'Bug ticket saved successfully' });
   }
 
   if (table === 'ChatLog') {
