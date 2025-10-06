@@ -3,6 +3,7 @@ import { useLanguage } from '../hooks/useLanguage';
 import '../assets/styles/ChatPanel.css';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
+import { v4 as uuidv4 } from 'uuid';
 
 interface ChatPanelProps {
   isOpen: boolean;
@@ -16,9 +17,15 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ isOpen, onClose }) => {
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [chatId, setChatId] = useState<string | null>(null);
 
   const handleSend = async () => {
     if (!input.trim()) return;
+
+    // Generate a unique chat ID if not already set
+    if (!chatId) {
+      setChatId(uuidv4());
+    }
 
     // Append user message to the chat history
     setMessages([...messages, { sender: 'user', text: input }]);
@@ -28,6 +35,7 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ isOpen, onClose }) => {
       // Make a POST request to the serverless function
       const response = await axios.post('/api/sendMessage', {
         message: input,
+        chatId: chatId || uuidv4(), // Use existing chatId or generate a new one
       });
 
       // Append bot response to the chat if it responds

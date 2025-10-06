@@ -13,7 +13,9 @@
     "description": "I build modern web applications with machine learning and artificial intelligence integrations while collaborating with clients to deliver impactful solutions.",
     "cta": {
       "viewWork": "View My Work",
-      "tryAI": "Try AI Assistant"
+      "tryAI": "Try AI Assistant",
+      "learnMore": "Learn More",
+      "resume": "View Resume"
     },
     "profile": {
       "title": "Enterprise AI Solutions Engineer",
@@ -23,7 +25,7 @@
   "chat": {
     "title": "AI Assistant",
     "poweredBy": "Powered by Gemini with RAG",
-    "welcomeMessage": "Hi! I'm your AI assistant. How can I help you today?",
+    "welcomeMessage": "Hi! I'm your AI assistant here to answer any questions about Nathan Yuan's work background.",
     "inputPlaceholder": "Type your message...",
     "comingSoon": "Chat assistant coming soon..."
   },
@@ -54,7 +56,7 @@
       "cancel": "Cancel"
     },
     "success": "Bug report submitted successfully! Thank you for your feedback.",
-    "error": "Failed to submit bug report. Please try again or contact me directly.",
+    "error": "Failed to submit bug report. Please try again or contact me directly via email: contact@nathanyuan.com.",
     "bugReportPrompt": "If the issue persists, please file a bug report in the top right of the nav bar."
   },
   "contact": {

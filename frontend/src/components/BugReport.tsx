@@ -17,7 +17,7 @@ const BugReport: React.FC<BugReportProps> = ({ onClose }) => {
   const [form, setForm] = useState<BugReportForm>({
     title: '',
     description: '',
-    priority: 'p2'
+    priority: 'p1'
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -27,7 +27,7 @@ const BugReport: React.FC<BugReportProps> = ({ onClose }) => {
   };
 
   /**
-   * Handles form submission by sending bug report data via email
+   * Handles form submission by saving bug report data to the "BugTickets" table
    * @param e - Form submission event
    */
   const handleSubmit = async (e: React.FormEvent) => {
@@ -36,43 +36,30 @@ const BugReport: React.FC<BugReportProps> = ({ onClose }) => {
 
     try {
       const bugReportData = {
-        ...form,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
+        title: form.title,
+        desc: form.description,
+        prio: form.priority.toUpperCase(),
       };
 
-      // Send email using mailto (opens user's email client)
-      const subject = encodeURIComponent(`Bug Report: ${form.title}`);
-      const body = encodeURIComponent(`
-Bug Report Details:
+      const response = await fetch('/api/saveData', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          table: 'BugTickets',
+          data: bugReportData,
+        }),
+      });
 
-Title: ${form.title}
-Priority: ${form.priority.toUpperCase()}
-Description: ${form.description}
+      if (!response.ok) {
+        throw new Error('Failed to save bug report');
+      }
 
-Additional Information:
-- Timestamp: ${bugReportData.timestamp}
-- URL: ${bugReportData.url}
-- User Agent: ${bugReportData.userAgent}
-
----
-This bug report was submitted through nathanyuan.com
-      `);
-
-      const mailtoLink = `mailto:contact@nathanyuan.com?subject=${subject}&body=${body}`;
-      
-      // Open email client
-      window.open(mailtoLink);
-
-      // Show success message after a short delay
+      setSubmitStatus('success');
       setTimeout(() => {
-        setSubmitStatus('success');
-        setTimeout(() => {
-          onClose();
-        }, 2000);
-      }, 500);
-
+        onClose();
+      }, 2000);
     } catch (error) {
       console.error('Failed to submit bug report:', error);
       setSubmitStatus('error');

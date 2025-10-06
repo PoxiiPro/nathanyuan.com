@@ -121,15 +121,6 @@
   padding-left: 1.25rem;
 }
 
-.experience-list-item ul li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: var(--accent-primary);
-  font-size: 0.8rem;
-  top: 0.1rem;
-}
-
 .experience-list-item em {
   color: var(--text-muted);
   font-style: italic;

@@ -15,6 +15,7 @@ import '../assets/styles/LandingPage.css';
 
 const LandingPage: React.FC = () => {
   const { translations } = useLanguage();
+  const profilePictureUrl = 'profile_picture.jpeg';
 
   // Function to get the appropriate icon for each technology
   const getTechIcon = (tech: string) => {
@@ -39,15 +40,21 @@ const LandingPage: React.FC = () => {
               {translations.landing.description}
             </p>
             <div className="cta-buttons">
-              <a href="/experience" className="btn btn-primary">Learn More</a>
-              <a href="/public/Nathan_Yuan_Resume.pdf" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">Resume</a>
+              <a href="/experience" className="btn btn-primary">{translations.landing.cta.learnMore}</a>
+              <a href="/Nathan_Yuan_Resume.pdf" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">{translations.landing.cta.resume}</a>
             </div>
           </div>
           <div className="landing-visual fade-in-up">
             <div className="profile-card">
-              <div className="profile-image">
-                <div className="placeholder-avatar">NY</div>
-              </div>
+              <img
+                src={profilePictureUrl}
+                alt="Profile Picture"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = 'none';
+                  (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
+                }}
+                className="profile-picture"
+              />
               <div className="profile-info">
                 <h3>{translations.landing.name}</h3>
                 <p>{translations.landing.profile.title}</p>
