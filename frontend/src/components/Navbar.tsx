@@ -25,6 +25,7 @@ const Navbar: React.FC = () => {
             <li><Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''}>{translations.nav.projects}</Link></li>
             <li><Link to="/demo" className={location.pathname === '/demo' ? 'active' : ''}>{translations.nav.demo}</Link></li>
             <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>{translations.nav.contact}</Link></li>
+            <li><Link to="/readme" className={location.pathname === '/readme' ? 'active' : ''}>{translations.nav.readme}</Link></li>
           </ul>
           <div className="navbar-actions">
             <ThemeToggle />

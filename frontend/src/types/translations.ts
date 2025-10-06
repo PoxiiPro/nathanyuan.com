@@ -5,6 +5,7 @@ export interface Translation {
     projects: string;
     demo: string;
     contact: string;
+    readme: string;
   };
   landing: {
     greeting: string;

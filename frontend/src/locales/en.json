@@ -4,7 +4,8 @@
     "about": "Experience",
     "projects": "Projects",
     "demo": "Live Project Demo",
-    "contact": "Contact"
+    "contact": "Contact",
+    "readme": "README.md"
   },
   "landing": {
     "greeting": "Hi, I'm",

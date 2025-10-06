@@ -1,0 +1,169 @@
+.readme-page {
+  min-height: 100vh;
+  padding-top: 4.375rem; /* 70px -> 4.375rem */
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Courier New', monospace;
+}
+
+.readme-page .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.readme-page h1 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  font-weight: normal;
+}
+
+.readme-content {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border: 1px solid #3c3c3c;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+}
+
+.readme-content h1,
+.readme-content h2,
+.readme-content h3,
+.readme-content h4,
+.readme-content h5,
+.readme-content h6 {
+  color: #4ec9b0;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+}
+
+.readme-content h1 {
+  font-size: 1.2em;
+  color: #569cd6;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.readme-content h2 {
+  font-size: 1.1em;
+  color: #4ec9b0;
+}
+
+.readme-content p {
+  margin-bottom: 0.8rem;
+  color: #d4d4d4;
+}
+
+.readme-content code {
+  background: #2d2d30;
+  color: #ce9178;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.2rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.readme-content pre {
+  background: #2d2d30;
+  color: #d4d4d4;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+  border: 1px solid #3c3c3c;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+}
+
+.readme-content pre code {
+  background: none;
+  padding: 0;
+  color: #d4d4d4;
+}
+
+.readme-content blockquote {
+  border-left: 3px solid #4ec9b0;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #6a9955;
+  font-style: italic;
+}
+
+.readme-content ul,
+.readme-content ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.readme-content li {
+  margin-bottom: 0.3rem;
+  color: #d4d4d4;
+}
+
+.readme-content a {
+  color: #4ec9b0;
+  text-decoration: none;
+}
+
+.readme-content a:hover {
+  text-decoration: underline;
+  color: #5fd4b3;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  border-radius: 0.5rem;
+  border: 1px solid #3c3c3c;
+  font-family: 'Courier New', monospace;
+}
+
+.loading p,
+.error p {
+  font-size: 1rem;
+  margin: 0;
+  font-family: 'Courier New', monospace;
+}
+
+.error p {
+  color: #f48771;
+}
+
+/* Raw markdown appearance */
+.readme-content::before {
+  content: "# The README file for this full-stack web application, fully deployed end to end with AI/ML and Genai integrations";
+  display: block;
+  color: #6a9955;
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-size: 12px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .readme-page .container {
+    padding: 1rem;
+  }
+
+  .readme-page h1 {
+    font-size: 1.2rem;
+  }
+
+  .readme-content {
+    padding: 1rem;
+    font-size: 13px;
+  }
+}

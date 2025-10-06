@@ -131,10 +131,10 @@ Visit [nathanyuan.com](https://nathanyuan.com) to see the live application.
 **Solution:** Session-based storage with PostgreSQL persistence and conflict resolution. Allows me to look at all user chat logs and fine tune the large language model to improve conversation experience with user.
 
 ### Internationalization
-**Problem:** Supporting multiple languages without code duplication.
+**Problem:** Supporting multiple languages and reducing hard coded strings.
 **Solution:** React-i18next with JSON-based translations and lazy loading.
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 - **Frontend Bundle Size:** ~150KB gzipped
 - **API Response Time:** <200ms average
@@ -142,7 +142,7 @@ Visit [nathanyuan.com](https://nathanyuan.com) to see the live application.
 - **Mobile Performance Score:** 95+ (Lighthouse)
 - **SEO Score:** 90+ (Search Console)
 
-## 🤝 Contributing
+## Contributing
 
 This is a personal portfolio project, but I'm always open to feedback and suggestions. Feel free to:
 
@@ -150,11 +150,11 @@ This is a personal portfolio project, but I'm always open to feedback and sugges
 - Submit pull requests for improvements
 - Reach out via the contact form on the website
 
-## 📄 License
+## License
 
 This project is private and intended for portfolio purposes only.
 
-## 🙋‍♂️ About the Developer
+## About the Developer
 
 I'm Nathan Yuan, an AI Full-Stack Software Engineer with experience in:
 - Enterprise AI solutions and machine learning integrations

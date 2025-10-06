@@ -8,6 +8,7 @@ import ExperiencePage from './components/ExperiencePage';
 import ProjectsPage from './components/ProjectsPage';
 import DemoPage from './components/DemoPage';
 import ContactPage from './components/ContactPage';
+import ReadmePage from './components/ReadmePage';
 import ChatButton from './components/ChatButton';
 import ChatPanel from './components/ChatPanel';
 import './assets/styles/globals.css';
@@ -35,6 +36,7 @@ const App: React.FC = () => {
                 <Route path="/experience" element={<ExperiencePage />} />
                 <Route path="/projects" element={<ProjectsPage />} />
                 <Route path="/demo" element={<DemoPage />} />
+                <Route path="/readme" element={<ReadmePage />} />
                 <Route path="/contact" element={<ContactPage />} />
               </Routes>
             </main>
