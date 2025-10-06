@@ -1,6 +1,6 @@
 # Nathan Yuan - Portfolio Website
 
-A modern, full-stack portfolio website showcasing my work as an AI Full-Stack Software Engineer. This project demonstrates end-to-end development capabilities, from frontend user experience to backend AI integrations and cloud deployment.
+A modern, full-stack portfolio website showcasing my work as an AI Full-Stack Software Engineer. This project demonstrates end-to-end development capabilities, from frontend user experience to backend AI integrations and cloud deployment. By utilizing industry AI coding agent tools such has GPT-4.1, GPT-4.0, Grok Code Fast 1, and Claude Sonnet 4 - development was greatly accelerated. 
 
 ## What This Project Is About
 

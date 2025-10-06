@@ -58,7 +58,7 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ isOpen, onClose }) => {
       console.error('Error communicating with serverless function:', error);
       
       // Check if it's a rate limiting error (429)
-      if (axios.isAxiosError(error) && error.response?.status === 429) {
+      if (error.response?.status === 429) {
         setMessages((prevMessages) => [
           ...prevMessages,
           { sender: 'bot', text: translations.common.rateLimitMessage },
