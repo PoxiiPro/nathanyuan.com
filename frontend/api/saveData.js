@@ -29,39 +29,20 @@ export default async function handler(req, res) {
   }
 
   if (table === 'ChatLog') {
-    const { id, messages } = data;
+    const { messages } = data;
 
     if (!messages || !Array.isArray(messages)) {
       return res.status(400).json({ error: 'Missing or invalid messages field for ChatLog' });
     }
 
-    try {
-      // Check if a record with the same chat ID exists
-      const { data: existingChat, error: fetchError } = await supabase
-        .from(table)
-        .select('id, messages')
-        .eq('id', id)
-        .single();
-
-      if (existingChat) {
-        // Replace the entire messages array (since sendMessage sends complete history)
-        const { error: updateError } = await supabase
-          .from(table)
-          .update({ messages: messages })
-          .eq('id', id);
-
-        if (updateError) {
-          throw updateError;
-        }
-
-        return res.status(200).json({ message: 'Chat history updated successfully' });
+    // Validate message format
+    for (const message of messages) {
+      if (typeof message !== 'object' || message === null || !message.sender || !message.text) {
+        return res.status(400).json({ error: 'Invalid message format in messages array' });
       }
-    } catch (error) {
-      console.error('Error handling ChatLog:', error);
-      return res.status(500).json({ error: error.message });
     }
 
-    // If no existing chat found, create a new one
+    // Simply insert a new chat log record - let Supabase handle ID and timestamp
     try {
       const { error } = await supabase.from(table).insert(data);
       
@@ -69,9 +50,9 @@ export default async function handler(req, res) {
         throw error;
       }
 
-      return res.status(200).json({ message: 'New chat created successfully' });
+      return res.status(200).json({ message: 'Chat log saved successfully' });
     } catch (error) {
-      console.error('Error creating new ChatLog:', error);
+      console.error('Error saving ChatLog:', error);
       return res.status(500).json({ error: error.message });
     }
   }

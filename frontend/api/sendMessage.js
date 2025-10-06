@@ -5,12 +5,12 @@ const axios = require('axios');
 const saveDataUrl = process.env.SAVE_DATA_URL;
 
 // Call other serverless method to save chat log to Supabase
-const saveChatLog = async (chatId, messages) => {
+const saveChatLog = async (sessionTimestamp, messages) => {
   try {
     await axios.post(saveDataUrl, {
       table: 'ChatLog',
       data: {
-        id: chatId,
+        timestamp: sessionTimestamp,
         messages,
       },
     });
@@ -25,10 +25,10 @@ module.exports = async (req, res) => {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { message, chatId, currentMessages } = req.body;
+  const { message, sessionTimestamp, currentMessages } = req.body;
 
-  if (!message || !chatId) {
-    return res.status(400).json({ error: 'Message and chatId are required' });
+  if (!message || !sessionTimestamp) {
+    return res.status(400).json({ error: 'Message and sessionTimestamp are required' });
   }
 
   let botResponse = '';
@@ -67,6 +67,6 @@ module.exports = async (req, res) => {
     return res.status(500).json({ error: 'Failed to communicate with Hugging Face API' });
   } finally {
     // Log the chat history regardless of success or failure
-    await saveChatLog(chatId, updatedMessages);
+    await saveChatLog(sessionTimestamp, updatedMessages);
   }
 };
