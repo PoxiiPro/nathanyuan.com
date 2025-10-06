@@ -35,13 +35,6 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Missing or invalid messages field for ChatLog' });
     }
 
-    // Ensure all messages are valid JSON objects
-    for (const message of messages) {
-      if (typeof message !== 'object' || message === null || !message.sender || !message.text) {
-        return res.status(400).json({ error: 'Invalid message format in messages array' });
-      }
-    }
-
     try {
       // Check if a record with the same chat ID exists
       const { data: existingChat, error: fetchError } = await supabase
@@ -49,10 +42,6 @@ export default async function handler(req, res) {
         .select('id, messages')
         .eq('id', id)
         .single();
-
-      if (fetchError && fetchError.code !== 'PGRST116') { // Ignore "row not found" error
-        throw fetchError;
-      }
 
       if (existingChat) {
         // Replace the entire messages array (since sendMessage sends complete history)
