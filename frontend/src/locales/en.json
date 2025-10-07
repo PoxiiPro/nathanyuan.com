@@ -10,7 +10,7 @@
   "landing": {
     "greeting": "Hi, I'm",
     "name": "Nathan Yuan",
-    "subtitle": "AI Full-Stack Software Engineer",
+    "subtitle": "Cleared AI Full-Stack Software Engineer",
     "description": "I build modern web applications with machine learning and artificial intelligence integrations while collaborating with clients to deliver impactful solutions.",
     "cta": {
       "viewWork": "View My Work",
@@ -20,7 +20,8 @@
     },
     "profile": {
       "title": "Enterprise AI Solutions Engineer",
-      "techStack": ["React", "Python", "AI/ML", "TypeScript", "JavaScript", "PostgreSQL", "Cassandra"]
+      "techStack": ["React", "Python", "AI/ML", "TypeScript", "JavaScript", "PostgreSQL", "Cassandra"],
+      "pictureAlt": "Profile Picture"
     }
   },
   "chat": {
@@ -37,7 +38,10 @@
     "underConstruction": "This page is under construction.",
     "comingSoon": "Coming soon...",
     "errorMessage": "Sorry, something went wrong. Please try again.",
-    "rateLimitMessage": "Too many messages per minute. Please slow down."
+    "rateLimitMessage": "Too many messages per minute. Please slow down.",
+    "switchToLightMode": "Switch to light mode",
+    "switchToDarkMode": "Switch to dark mode",
+    "readmeLoadError": "Failed to load README.md. Please check if the file exists."
   },
   "bugReport": {
     "title": "Report a Bug",
@@ -59,7 +63,8 @@
     },
     "success": "Bug report submitted successfully! Thank you for your feedback.",
     "error": "Failed to submit bug report. Please try again or contact me directly via email: contact@nathanyuan.com.",
-    "bugReportPrompt": "If the issue persists, please file a bug report in the top right of the nav bar."
+    "bugReportPrompt": "If the issue persists, please file a bug report in the top right of the nav bar.",
+    "retry": "Try Again"
   },
   "contact": {
     "subtitle": "Let's connect! I'm open to new opportunities.",
@@ -97,6 +102,108 @@
       "details": [
         "Enterprise AI Solutions Engineer, XYZ Corp (2022–Present): Developed and deployed AI-powered web applications for Fortune 500 clients.",
         "Software Engineer Intern, ABC Tech (2021): Built scalable backend APIs and integrated ML models into production systems."
+      ]
+    }
+  },
+  "experiencePage": {
+    "title": "Professional Experience",
+    "technicalExperience": {
+      "title": "Technical Experience",
+      "jobs": [
+        {
+          "title": "AI & ML Fullstack Software Engineer II",
+          "company": "C3.AI via Paradyme Inc.",
+          "period": "June 2024 - Present",
+          "description": "Enterprise solutions engineering and software development in the federal space (DoD)<br />C3.AI Decision Advantage | C3.AI Contested Logistics",
+          "bullets": [
+            "Partnered with project managers to prepare app features for demo flows and contributed to client meetings to discuss feature requirements",
+            "Agentic AI Agent Hackathon: Designed and developed an Agentic AI agent to streamline GitHub PR creation using C3 platform tools",
+            "Beta tested C3.AI Machine Learning Forecasting Project capstone course, provided key feedback, and earned completion certificate",
+            "Utilized time-series forecasting to predict wind turbine power output for 7 days, achieving 35% improvement over baseline model",
+            "Created end-to-end LightGBM pipeline on C3.AI platform, scored 100% capstone grade",
+            "Maintained end-to-end ownership of key features including proof of concepts, tech specs, development, and documentation:",
+            "Ingress/Egress RESTful API with OAuth2 authentication for secure data exchange",
+            "Import/Export Microsoft documents using Pandas for data manipulation and parsing",
+            "Real-time messaging system with chat history and user search functionality"
+          ]
+        },
+        {
+          "title": "Technical Specialist",
+          "company": "Apple",
+          "period": "May 2019 - May 2020",
+          "bullets": [
+            "Triaged hardware/software issues with iOS devices in client-facing role, performed diagnostics and produced technical documentation",
+            "Excelled in cross-functional team collaboration across different departments to deliver exceptional customer experiences"
+          ]
+        }
+      ]
+    },
+    "leadershipManagement": {
+      "title": "Leadership & Management",
+      "jobs": [
+        {
+          "title": "Software Engineer Team Lead",
+          "company": "Paradyme Inc.",
+          "period": "January 2025 - Present",
+          "bullets": [
+            "Led and supported growth of engineering team, bridging communication between engineers and executive leadership",
+            "Onboarded and guided 20+ new team members, streamlining onboarding systems and decreasing onboarding period by 60%",
+            "Screened potential candidates for engineering roles and conducted technical interviews, resulting in stronger new hires",
+            "Led sprint retrospectives and standup meetings as scrum master, along with demoing features to stakeholders"
+          ]
+        },
+        {
+          "title": "Public Relations Board Member / Social Media Coordinator",
+          "company": "Chinese Student Association & Korean American Student Association",
+          "period": "Sep 2022 - Jun 2023",
+          "bullets": [
+            "Delivered club updates at weekly general meetings to 50-100 members and led icebreaker activities",
+            "Expanded networks and partnerships two-fold by managing social media accounts and initiating strategic outreach",
+            "Raised hundreds of dollars in club funds through partnerships with local businesses like Poke House"
+          ]
+        }
+      ]
+    },
+    "educationCertifications": {
+      "title": "Education & Certifications",
+      "items": [
+        {
+          "title": "Bachelor's Degree in Computer Science",
+          "subtitle": "University of California Santa Cruz"
+        },
+        {
+          "title": "Active Top Secret Security Clearance (Tier 5)",
+          "subtitle": "Valid for next 5 years"
+        },
+        {
+          "title": "Nvidia Deep Learning Institute",
+          "subtitle": "Generative AI Explained Certification"
+        },
+        {
+          "title": "Apple Certified iOS Technician (ACiT)",
+          "subtitle": "Hardware and Software Troubleshooting Certification"
+        }
+      ]
+    },
+    "technicalSkills": {
+      "title": "Technical Skills",
+      "skills": [
+        {
+          "category": "Programming Languages & Frameworks",
+          "items": "Python, JavaScript, React.js, TypeScript, HTML, CSS, JSON, SQL"
+        },
+        {
+          "category": "Development Tools & Platforms",
+          "items": "APIs, GitHub Version Control, Terminal Environments, Jira, Clusters & Artifact Deployment, Python runtimes, Google Workstations"
+        },
+        {
+          "category": "AI & Machine Learning",
+          "items": "Artificial Intelligence, Machine Learning, Natural Language Processing, Large Language Models, Prompt Engineering, Hyperparameter Tuning, Pandas, Feature Engineering"
+        },
+        {
+          "category": "Professional Skills",
+          "items": "Collaborative Leadership, Communication, Adaptability, Problem Solving, Time Management, Cross-functional Teamwork, Mentorship, Stakeholder Engagement, Technical Writing, Decision Making"
+        }
       ]
     }
   },

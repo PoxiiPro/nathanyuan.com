@@ -1,28 +1,33 @@
 {
   "nav": {
     "home": "Inicio",
-    "about": "Acerca de Mí",
+    "about": "Experiencia",
     "projects": "Proyectos",
     "demo": "Demo de Proyecto en Vivo",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "readme": "README.md"
   },
   "landing": {
     "greeting": "Hola, soy",
     "name": "Nathan Yuan",
-    "subtitle": "Desarrollador Full-Stack y Entusiasta de IA",
-    "description": "Construyo aplicaciones web modernas con integración de aprendizaje automático y creo soluciones inteligentes que marcan la diferencia.",
+    "subtitle": "Ingeniero Full-Stack de IA Certificado",
+    "description": "Construyo aplicaciones web modernas con integraciones de machine learning e inteligencia artificial, colaborando con clientes para entregar soluciones impactantes.",
     "cta": {
       "viewWork": "Ver Mi Trabajo",
-      "tryAI": "Probar Asistente IA"
+      "tryAI": "Probar Asistente IA",
+      "learnMore": "Saber Más",
+      "resume": "Ver Currículum"
     },
     "profile": {
-      "title": "Desarrollador Full-Stack",
-      "techStack": ["React", "Python", "ML/IA", "TypeScript"]
+      "title": "Ingeniero de Soluciones AI Empresariales",
+      "techStack": ["React", "Python", "AI/ML", "TypeScript", "JavaScript", "PostgreSQL", "Cassandra"],
+      "pictureAlt": "Foto de Perfil"
     }
   },
   "chat": {
     "title": "Asistente IA",
-    "welcomeMessage": "¡Hola! Soy tu asistente de IA. ¿Cómo puedo ayudarte hoy?",
+    "poweredBy": "Impulsado por Gemini con RAG",
+    "welcomeMessage": "¡Hola! Soy tu asistente de IA, aquí para responder cualquier pregunta sobre el background laboral de Nathan Yuan.",
     "inputPlaceholder": "Escribe tu mensaje...",
     "comingSoon": "Asistente de chat próximamente..."
   },
@@ -33,7 +38,10 @@
     "underConstruction": "Esta página está en construcción.",
     "comingSoon": "Próximamente...",
     "errorMessage": "Lo siento, algo salió mal. Por favor, inténtalo de nuevo.",
-    "rateLimitMessage": "Demasiados mensajes por minuto. Por favor, reduce la velocidad."
+    "rateLimitMessage": "Demasiados mensajes por minuto. Por favor, baja el ritmo.",
+    "switchToLightMode": "Cambiar a modo claro",
+    "switchToDarkMode": "Cambiar a modo oscuro",
+    "readmeLoadError": "Error al cargar README.md. Por favor, verifica si el archivo existe."
   },
   "bugReport": {
     "title": "Reportar un Error",
@@ -42,7 +50,7 @@
       "titleLabel": "Título",
       "titlePlaceholder": "Descripción breve del problema",
       "descriptionLabel": "Descripción",
-      "descriptionPlaceholder": "Proporciona pasos detallados para reproducir el problema...",
+      "descriptionPlaceholder": "Por favor, proporciona pasos detallados para reproducir el problema...",
       "priorityLabel": "Prioridad",
       "priorityOptions": {
         "p0": "P0 - Bloqueador (Sitio caído/inutilizable)",
@@ -53,8 +61,153 @@
       "submit": "Enviar Reporte",
       "cancel": "Cancelar"
     },
-    "success": "¡Reporte de error enviado exitosamente! Gracias por tu comentario.",
-    "error": "Error al enviar el reporte. Inténtalo de nuevo o contáctame directamente.",
-    "bugReportPrompt": "Si el problema persiste, por favor envíe un informe de error."
+    "success": "¡Reporte de error enviado exitosamente! Gracias por tu feedback.",
+    "error": "Error al enviar el reporte. Inténtalo de nuevo o contáctame directamente por email: contact@nathanyuan.com.",
+    "bugReportPrompt": "Si el problema persiste, por favor envía un reporte de error en la esquina superior derecha de la nav bar.",
+    "retry": "Intentar de Nuevo"
+  },
+  "contact": {
+    "subtitle": "¡Conectemos! Estoy abierto a nuevas oportunidades.",
+    "emailLabel": "Email",
+    "email": "contact@NathanYuan.com",
+    "locationLabel": "Ubicación",
+    "location": "Bay Area, CA",
+    "linkedinLabel": "LinkedIn",
+    "linkedinUrl": "linkedin.com/in/nathanyuan00",
+    "workLabel": "Preferencias Laborales",
+    "fullTime": "Abierto a roles Full Time, On-site, Hybrid y Remote",
+    "based": "Actualmente basado en Bay Area",
+    "relocate": "Dispuesto a reubicarme para roles en California, Seattle o Las Vegas",
+    "citizen": "Ciudadano de EE.UU.",
+    "clearance": "con Autorización de Seguridad Activa"
+  },
+  "experience": {
+    "intro": "Soy un Ingeniero Full-Stack de IA con un fuerte background en investigación académica, liderazgo y experiencia laboral profesional.",
+    "academic": {
+      "title": "Background Académico",
+      "details": [
+        "B.S. en Computer Science, UC Berkeley",
+        "Cursos relevantes: Machine Learning, Estructuras de Datos, Algoritmos, Sistemas de Bases de Datos"
+      ]
+    },
+    "leadership": {
+      "title": "Experiencia de Liderazgo",
+      "details": [
+        "Presidente, AI Club en UC Berkeley",
+        "Lideré un equipo de 20+ estudiantes en investigación de IA y hackathons"
+      ]
+    },
+    "work": {
+      "title": "Experiencia Laboral",
+      "details": [
+        "Ingeniero de Soluciones AI Empresariales, XYZ Corp (2022–Presente): Desarrollé y desplegué aplicaciones web impulsadas por IA para clientes Fortune 500.",
+        "Ingeniero de Software Interno, ABC Tech (2021): Construí APIs backend escalables e integré modelos ML en sistemas de producción."
+      ]
+    }
+  },
+  "experiencePage": {
+    "title": "Experiencia Profesional",
+    "technicalExperience": {
+      "title": "Experiencia Técnica",
+      "jobs": [
+        {
+          "title": "Ingeniero Full-Stack de IA y ML II",
+          "company": "C3.AI vía Paradyme Inc.",
+          "period": "Junio 2024 - Presente",
+          "description": "Ingeniería de soluciones empresariales y desarrollo de software en el espacio federal (DoD)<br />C3.AI Decision Advantage | C3.AI Contested Logistics",
+          "bullets": [
+            "Colaboré con gerentes de proyecto para preparar características de apps para flujos de demo y contribuí a reuniones con clientes para discutir requisitos de características",
+            "Hackathon de Agente AI: Diseñé y desarrollé un agente AI para agilizar la creación de PR en GitHub usando herramientas de plataforma C3",
+            "Beta testé el curso capstone de Forecasting de ML de C3.AI, proporcioné feedback clave y obtuve certificado de finalización",
+            "Utilicé forecasting de series temporales para predecir la salida de energía de turbinas eólicas por 7 días, logrando 35% de mejora sobre el modelo base",
+            "Creé pipeline end-to-end de LightGBM en plataforma C3.AI, obtuve 100% en el capstone",
+            "Mantuve propiedad end-to-end de características clave incluyendo pruebas de concepto, specs técnicas, desarrollo y documentación:",
+            "API RESTful de Ingress/Egress con autenticación OAuth2 para intercambio de datos seguro",
+            "Importar/Exportar documentos Microsoft usando Pandas para manipulación y parsing de datos",
+            "Sistema de mensajería en tiempo real con historial de chat y funcionalidad de búsqueda de usuario"
+          ]
+        },
+        {
+          "title": "Especialista Técnico",
+          "company": "Apple",
+          "period": "Mayo 2019 - Mayo 2020",
+          "bullets": [
+            "Trié problemas de hardware/software con dispositivos iOS en rol orientado al cliente, realicé diagnósticos y produje documentación técnica",
+            "Excelí en colaboración de equipo cross-functional a través de diferentes departamentos para entregar experiencias excepcionales al cliente"
+          ]
+        }
+      ]
+    },
+    "leadershipManagement": {
+      "title": "Liderazgo y Gestión",
+      "jobs": [
+        {
+          "title": "Líder de Equipo de Ingenieros de Software",
+          "company": "Paradyme Inc.",
+          "period": "Enero 2025 - Presente",
+          "bullets": [
+            "Lideré y apoyé el crecimiento del equipo de ingeniería, puenteando comunicación entre ingenieros y liderazgo ejecutivo",
+            "Incorporé y guié a 20+ nuevos miembros del equipo, agilizando sistemas de onboarding y reduciendo el período de onboarding en 60%",
+            "Evalué candidatos potenciales para roles de ingeniería y conduje entrevistas técnicas, resultando en contrataciones más fuertes",
+            "Lideré retrospectivas de sprint y reuniones diarias como scrum master, junto con demo de características a stakeholders"
+          ]
+        },
+        {
+          "title": "Miembro de Junta de Relaciones Públicas / Coordinador de Redes Sociales",
+          "company": "Asociación de Estudiantes Chinos & Asociación de Estudiantes Coreano-Americanos",
+          "period": "Sep 2022 - Jun 2023",
+          "bullets": [
+            "Entregué actualizaciones del club en reuniones generales semanales a 50-100 miembros y lideré actividades de icebreaker",
+            "Expandí redes y partnerships dos veces mediante gestión de cuentas de redes sociales e iniciación de outreach estratégico",
+            "Recaudé cientos de dólares en fondos del club a través de partnerships con negocios locales como Poke House"
+          ]
+        }
+      ]
+    },
+    "educationCertifications": {
+      "title": "Educación y Certificaciones",
+      "items": [
+        {
+          "title": "Licenciatura en Ciencias de la Computación",
+          "subtitle": "Universidad de California Santa Cruz"
+        },
+        {
+          "title": "Autorización de Seguridad Top Secret Activa (Tier 5)",
+          "subtitle": "Válida por los próximos 5 años"
+        },
+        {
+          "title": "Instituto de Deep Learning de Nvidia",
+          "subtitle": "Certificación de IA Generativa Explicada"
+        },
+        {
+          "title": "Técnico Certificado de iOS de Apple (ACiT)",
+          "subtitle": "Certificación de Troubleshooting de Hardware y Software"
+        }
+      ]
+    },
+    "technicalSkills": {
+      "title": "Habilidades Técnicas",
+      "skills": [
+        {
+          "category": "Lenguajes de Programación y Frameworks",
+          "items": "Python, JavaScript, React.js, TypeScript, HTML, CSS, JSON, SQL"
+        },
+        {
+          "category": "Herramientas y Plataformas de Desarrollo",
+          "items": "APIs, Control de Versiones GitHub, Entornos de Terminal, Jira, Despliegue de Clusters y Artefactos, Runtimes de Python, Workstations de Google"
+        },
+        {
+          "category": "IA y Machine Learning",
+          "items": "Inteligencia Artificial, Machine Learning, Procesamiento de Lenguaje Natural, Modelos de Lenguaje Grandes, Ingeniería de Prompts, Ajuste de Hiperparámetros, Pandas, Ingeniería de Características"
+        },
+        {
+          "category": "Habilidades Profesionales",
+          "items": "Liderazgo Colaborativo, Comunicación, Adaptabilidad, Resolución de Problemas, Gestión del Tiempo, Trabajo en Equipo Cross-Functional, Mentoría, Compromiso con Stakeholders, Escritura Técnica, Toma de Decisiones"
+        }
+      ]
+    }
+  },
+  "copilot": {
+    "instructions": "Agrega tus instrucciones de GitHub Copilot aquí."
   }
 }

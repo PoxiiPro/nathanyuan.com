@@ -1,59 +1,213 @@
 {
   "nav": {
     "home": "首頁",
-    "about": "關於我",
+    "about": "經驗",
     "projects": "項目",
     "demo": "在線項目演示",
-    "contact": "聯繫"
+    "contact": "聯繫",
+    "readme": "README.md"
   },
   "landing": {
     "greeting": "你好，我是",
     "name": "Nathan Yuan",
-    "subtitle": "全棧開發者 & AI 愛好者",
-    "description": "我構建集成機器學習的現代Web應用程序，創建有意義的智能解決方案。",
+    "subtitle": "認證AI全棧軟體工程師",
+    "description": "我打造現代網頁應用，整合機器學習和AI，跟客戶合作提供有影響力的解決方案。",
     "cta": {
-      "viewWork": "查看我的作品",
-      "tryAI": "嘗試AI助手"
+      "viewWork": "看我的作品",
+      "tryAI": "試試AI助手",
+      "learnMore": "了解更多",
+      "resume": "看履歷"
     },
     "profile": {
-      "title": "全棧開發者",
-      "techStack": ["React", "Python", "ML/AI", "TypeScript"]
+      "title": "企業AI解決方案工程師",
+      "techStack": ["React", "Python", "AI/ML", "TypeScript", "JavaScript", "PostgreSQL", "Cassandra"],
+      "pictureAlt": "頭像"
     }
   },
   "chat": {
-    "title": "AI 助手",
-    "welcomeMessage": "你好！我是你的AI助手。今天我能為你做些什麼？",
-    "inputPlaceholder": "輸入你的消息...",
+    "title": "AI助手",
+    "poweredBy": "由Gemini with RAG驅動",
+    "welcomeMessage": "你好！我是你的AI助手，可以回答關於Nathan Yuan工作背景的任何問題。",
+    "inputPlaceholder": "輸入你的訊息...",
     "comingSoon": "聊天助手即將推出..."
   },
   "common": {
     "close": "關閉",
     "send": "發送",
-    "loading": "加載中...",
-    "underConstruction": "此頁面正在建設中。",
+    "loading": "載入中...",
+    "underConstruction": "這個頁面還在建。",
     "comingSoon": "即將推出...",
-    "errorMessage": "抱歉，出了點問題。請再試一次。",
-    "rateLimitMessage": "每分鐘消息過多。請慢一點。"
+    "errorMessage": "抱歉，出問題了。再試試。",
+    "rateLimitMessage": "每分鐘訊息太多了。慢點來。",
+    "switchToLightMode": "切換到亮模式",
+    "switchToDarkMode": "切換到暗模式",
+    "readmeLoadError": "載入README.md失敗。請檢查檔案是否存在。"
   },
   "bugReport": {
     "title": "回報錯誤",
     "button": "回報錯誤",
     "form": {
       "titleLabel": "標題",
-      "titlePlaceholder": "問題的簡要描述",
+      "titlePlaceholder": "問題簡要描述",
       "descriptionLabel": "描述",
       "descriptionPlaceholder": "請提供重現問題的詳細步驟...",
       "priorityLabel": "優先級",
       "priorityOptions": {
-        "p0": "P0 - 阻塞者（網站故障/無法使用）",
-        "p1": "P1 - 嚴重（主要功能損壞）",
-        "p2": "P2 - 高（次要功能損壞）",
-        "p3": "P3 - 低（修復會更好）"
+        "p0": "P0 - 阻塞（網站掛了/不能用）",
+        "p1": "P1 - 嚴重（主要功能壞了）",
+        "p2": "P2 - 高（小功能壞了）",
+        "p3": "P3 - 低（修修更好）"
       },
       "submit": "提交報告",
       "cancel": "取消"
     },
-    "success": "錯誤報告提交成功！感謝您的反饋。",
-    "error": "提交錯誤報告失敗。請重試或直接聯繫我。"
+    "success": "錯誤報告提交成功！謝謝你的回饋。",
+    "error": "提交錯誤報告失敗。再試試或直接聯繫我。郵箱: contact@nathanyuan.com。",
+    "bugReportPrompt": "如果問題還存在，請在導航欄右上角提交錯誤報告。",
+    "retry": "再試一次"
+  },
+  "contact": {
+    "subtitle": "聯繫我吧！對新機會開放。",
+    "emailLabel": "郵箱",
+    "email": "contact@NathanYuan.com",
+    "locationLabel": "位置",
+    "location": "Bay Area, CA",
+    "linkedinLabel": "LinkedIn",
+    "linkedinUrl": "linkedin.com/in/nathanyuan00",
+    "workLabel": "工作偏好",
+    "fullTime": "對全職、現場、混合、遠程工作開放",
+    "based": "目前在Bay Area",
+    "relocate": "願意為California, Seattle, Las Vegas的工作搬家",
+    "citizen": "美國公民",
+    "clearance": "有活躍安全許可"
+  },
+  "experience": {
+    "intro": "我是AI全棧軟體工程師，有很強的學術研究、領導力和專業工作經驗背景。",
+    "academic": {
+      "title": "學術背景",
+      "details": [
+        "UC Berkeley電腦科學學士",
+        "相關課程: 機器學習, 資料結構, 演算法, 資料庫系統"
+      ]
+    },
+    "leadership": {
+      "title": "領導經驗",
+      "details": [
+        "UC Berkeley AI Club主席",
+        "領導20多名學生團隊進行AI研究和駭客松"
+      ]
+    },
+    "work": {
+      "title": "工作經驗",
+      "details": [
+        "企業AI解決方案工程師, XYZ Corp (2022–現在): 為Fortune 500客戶開發和部署AI驅動網頁應用。",
+        "軟體工程師實習生, ABC Tech (2021): 建構可擴展後端API並將ML模型整合到生產系統。"
+      ]
+    }
+  },
+  "experiencePage": {
+    "title": "專業經驗",
+    "technicalExperience": {
+      "title": "技術經驗",
+      "jobs": [
+        {
+          "title": "AI & ML 全端軟體工程師 II",
+          "company": "C3.AI via Paradyme Inc.",
+          "period": "2024年6月 - 至今",
+          "description": "國防部企業解決方案工程和軟體開發<br />C3.AI Decision Advantage | C3.AI Contested Logistics",
+          "bullets": [
+            "與專案經理合作，為示範流程準備應用功能，並參與客戶會議討論功能需求",
+            "代理AI代理駭客松：使用C3平台工具設計並開發代理AI代理，以簡化GitHub PR建立",
+            "Beta測試C3.AI機器學習預測專案頂點課程，提供關鍵回饋，並獲得完成證書",
+            "利用時間序列預測來預測風力渦輪機7天的功率輸出，比基準模型提高了35%",
+            "在C3.AI平台上建立端到端LightGBM管道，獲得100%頂點成績",
+            "維護關鍵功能的端到端所有權，包括概念驗證、技術規格、開發和文件：",
+            "帶有OAuth2認證的安全資料交換的入口/出口RESTful API",
+            "使用Pandas進行資料操作和解析的匯入/匯出Microsoft文件",
+            "具有聊天歷史和使用者搜尋功能的即時訊息系統"
+          ]
+        },
+        {
+          "title": "技術專家",
+          "company": "Apple",
+          "period": "2019年5月 - 2020年5月",
+          "bullets": [
+            "在面向客戶角色中對iOS裝置進行硬體/軟體問題分類，執行診斷並製作技術文件",
+            "在跨職能團隊合作中表現出色，在不同部門之間合作以提供卓越的客戶體驗"
+          ]
+        }
+      ]
+    },
+    "leadershipManagement": {
+      "title": "領導與管理",
+      "jobs": [
+        {
+          "title": "軟體工程師團隊負責人",
+          "company": "Paradyme Inc.",
+          "period": "2025年1月 - 至今",
+          "bullets": [
+            "領導並支援工程團隊的成長，在工程師和執行領導之間架起溝通橋樑",
+            "入職並指導20多名新團隊成員，簡化入職系統，將入職期縮短60%",
+            "篩選工程角色的潛在候選人並進行技術面試，從而獲得更強的招聘",
+            "作為Scrum Master領導衝刺回顧和站立會議，並向利害關係人示範功能"
+          ]
+        },
+        {
+          "title": "公共關係董事會成員 / 社群媒體協調員",
+          "company": "中國學生協會 & 韓裔美國學生協會",
+          "period": "2022年9月 - 2023年6月",
+          "bullets": [
+            "在每週大會上向50-100名成員傳達俱樂部更新，並領導破冰活動",
+            "透過管理社群媒體帳戶和啟動策略外展，將網路和夥伴關係擴大兩倍",
+            "透過與Poke House等本地企業的夥伴關係，為俱樂部籌集數百美元資金"
+          ]
+        }
+      ]
+    },
+    "educationCertifications": {
+      "title": "教育與認證",
+      "items": [
+        {
+          "title": "電腦科學學士學位",
+          "subtitle": "加州大學聖克魯茲分校"
+        },
+        {
+          "title": "活躍的頂級機密安全許可（第5級）",
+          "subtitle": "有效期為未來5年"
+        },
+        {
+          "title": "Nvidia深度學習研究所",
+          "subtitle": "生成AI解釋認證"
+        },
+        {
+          "title": "Apple認證iOS技術員（ACiT）",
+          "subtitle": "硬體和軟體故障排除認證"
+        }
+      ]
+    },
+    "technicalSkills": {
+      "title": "技術技能",
+      "skills": [
+        {
+          "category": "程式語言與框架",
+          "items": "Python, JavaScript, React.js, TypeScript, HTML, CSS, JSON, SQL"
+        },
+        {
+          "category": "開發工具與平台",
+          "items": "APIs, GitHub版本控制, 終端環境, Jira, 叢集與工件部署, Python運行時, Google工作站"
+        },
+        {
+          "category": "AI與機器學習",
+          "items": "人工智慧, 機器學習, 自然語言處理, 大型語言模型, 提示工程, 超參數調整, Pandas, 特徵工程"
+        },
+        {
+          "category": "專業技能",
+          "items": "協作領導力, 溝通, 適應性, 問題解決, 時間管理, 跨職能團隊合作, 導師制, 利害關係人參與, 技術寫作, 決策制定"
+        }
+      ]
+    }
+  },
+  "copilot": {
+    "instructions": "在這裡添加你的GitHub Copilot指令。"
   }
 }

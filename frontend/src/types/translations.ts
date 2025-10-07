@@ -15,10 +15,13 @@ export interface Translation {
     cta: {
       viewWork: string;
       tryAI: string;
+      learnMore: string;
+      resume: string;
     };
     profile: {
       title: string;
       techStack: string[];
+      pictureAlt: string;
     };
   };
   chat: {
@@ -28,20 +31,6 @@ export interface Translation {
     inputPlaceholder: string;
     comingSoon: string;
   };
-  contact: {
-    subtitle: string;
-    emailLabel: string;
-    locationLabel: string;
-    location: string;
-    linkedinLabel: string;
-    linkedinUrl: string;
-    workLabel: string;
-    fullTime: string;
-    based: string;
-    relocate: string;
-    citizen: string;
-    clearance: string;
-  };
   common: {
     close: string;
     send: string;
@@ -50,6 +39,9 @@ export interface Translation {
     comingSoon: string;
     errorMessage: string;
     rateLimitMessage: string;
+    switchToLightMode: string;
+    switchToDarkMode: string;
+    readmeLoadError: string;
   };
   bugReport: {
     title: string;
@@ -72,6 +64,76 @@ export interface Translation {
     success: string;
     error: string;
     bugReportPrompt: string;
+    retry: string;
+  };
+  contact: {
+    subtitle: string;
+    emailLabel: string;
+    email: string;
+    locationLabel: string;
+    location: string;
+    linkedinLabel: string;
+    linkedinUrl: string;
+    workLabel: string;
+    fullTime: string;
+    based: string;
+    relocate: string;
+    citizen: string;
+    clearance: string;
+  };
+  experience: {
+    intro: string;
+    academic: {
+      title: string;
+      details: string[];
+    };
+    leadership: {
+      title: string;
+      details: string[];
+    };
+    work: {
+      title: string;
+      details: string[];
+    };
+  };
+  experiencePage: {
+    title: string;
+    technicalExperience: {
+      title: string;
+      jobs: {
+        title: string;
+        company: string;
+        period: string;
+        description?: string;
+        bullets: string[];
+      }[];
+    };
+    leadershipManagement: {
+      title: string;
+      jobs: {
+        title: string;
+        company: string;
+        period: string;
+        bullets: string[];
+      }[];
+    };
+    educationCertifications: {
+      title: string;
+      items: {
+        title: string;
+        subtitle: string;
+      }[];
+    };
+    technicalSkills: {
+      title: string;
+      skills: {
+        category: string;
+        items: string;
+      }[];
+    };
+  };
+  copilot: {
+    instructions: string;
   };
 }
 

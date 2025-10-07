@@ -1,59 +1,213 @@
 {
   "nav": {
     "home": "ホーム",
-    "about": "自己紹介",
+    "about": "経験",
     "projects": "プロジェクト",
     "demo": "ライブプロジェクトデモ",
-    "contact": "お問い合わせ"
+    "contact": "連絡",
+    "readme": "README.md"
   },
   "landing": {
-    "greeting": "こんにちは、私は",
+    "greeting": "こんにちは、僕は",
     "name": "Nathan Yuan",
-    "subtitle": "フルスタック開発者 & AI愛好家",
-    "description": "機械学習が統合された現代的なWebアプリケーションを構築し、意味のあるインテリジェントなソリューションを作成します。",
+    "subtitle": "クリアードAIフルスタックソフトウェアエンジニア",
+    "description": "機械学習とAIの統合を備えたモダンなウェブアプリを作ってて、クライアントとコラボしてインパクトのあるソリューションを提供してるよ。",
     "cta": {
-      "viewWork": "私の作品を見る",
-      "tryAI": "AIアシスタントを試す"
+      "viewWork": "作品を見る",
+      "tryAI": "AIアシスタント試してみる",
+      "learnMore": "もっと知る",
+      "resume": "履歴書を見る"
     },
     "profile": {
-      "title": "フルスタック開発者",
-      "techStack": ["React", "Python", "ML/AI", "TypeScript"]
+      "title": "エンタープライズAIソリューションエンジニア",
+      "techStack": ["React", "Python", "AI/ML", "TypeScript", "JavaScript", "PostgreSQL", "Cassandra"],
+      "pictureAlt": "プロフィール写真"
     }
   },
   "chat": {
     "title": "AIアシスタント",
-    "welcomeMessage": "こんにちは！私はあなたのAIアシスタントです。今日は何をお手伝いしましょうか？",
-    "inputPlaceholder": "メッセージを入力してください...",
-    "comingSoon": "チャットアシスタント近日公開..."
+    "poweredBy": "Gemini with RAGで動いてるよ",
+    "welcomeMessage": "こんにちは！ 僕はNathan Yuanの仕事の背景について質問に答えるAIアシスタントだよ。",
+    "inputPlaceholder": "メッセージ入力して...",
+    "comingSoon": "チャットアシスタントもうすぐ..."
   },
   "common": {
     "close": "閉じる",
     "send": "送信",
     "loading": "読み込み中...",
-    "underConstruction": "このページは工事中です。",
-    "comingSoon": "近日公開...",
-    "errorMessage": "申し訳ありません。何か問題が発生しました。もう一度お試しください。",
-    "rateLimitMessage": "1分あたりのメッセージが多すぎます。少し時間を置いてください。"
+    "underConstruction": "このページは工事中だよ。",
+    "comingSoon": "もうすぐ...",
+    "errorMessage": "ごめん、何か問題起きたよ。もう一度試して。",
+    "rateLimitMessage": "1分間にメッセージ多すぎ。ちょっとゆっくりして。",
+    "switchToLightMode": "ライトモードに切り替え",
+    "switchToDarkMode": "ダークモードに切り替え",
+    "readmeLoadError": "README.mdの読み込み失敗。ファイルが存在するか確認して。"
   },
   "bugReport": {
     "title": "バグ報告",
     "button": "バグ報告",
     "form": {
       "titleLabel": "タイトル",
-      "titlePlaceholder": "問題の簡潔な説明",
+      "titlePlaceholder": "問題の簡単な説明",
       "descriptionLabel": "説明",
-      "descriptionPlaceholder": "問題を再現するための詳細な手順を教えてください...",
+      "descriptionPlaceholder": "問題を再現する詳しい手順を教えて...",
       "priorityLabel": "優先度",
       "priorityOptions": {
-        "p0": "P0 - ブロッカー（サイトダウン/使用不可）",
-        "p1": "P1 - クリティカル（主要機能の破損）",
-        "p2": "P2 - 高（軽微な機能の破損）",
-        "p3": "P3 - 低（修正できればよい）"
+        "p0": "P0 - ブロッカー（サイトダウン/使えない）",
+        "p1": "P1 - クリティカル（メイン機能壊れてる）",
+        "p2": "P2 - 高い（ちょっとした機能壊れてる）",
+        "p3": "P3 - 低い（直せたらいいな）"
       },
-      "submit": "報告を送信",
+      "submit": "報告送信",
       "cancel": "キャンセル"
     },
-    "success": "バグ報告が正常に送信されました！フィードバックありがとうございます。",
-    "error": "バグ報告の送信に失敗しました。再試行するか、直接お問い合わせください。"
+    "success": "バグ報告送信成功！ フィードバックありがと。",
+    "error": "バグ報告送信失敗。もう一度試すか直接連絡して。メール: contact@nathanyuan.com。",
+    "bugReportPrompt": "問題が続くなら、ナビバーの右上でバグ報告して。",
+    "retry": "もう一度試す"
+  },
+  "contact": {
+    "subtitle": "つながろう！ 新しい機会にオープンだよ。",
+    "emailLabel": "メール",
+    "email": "contact@NathanYuan.com",
+    "locationLabel": "場所",
+    "location": "Bay Area, CA",
+    "linkedinLabel": "LinkedIn",
+    "linkedinUrl": "linkedin.com/in/nathanyuan00",
+    "workLabel": "仕事の好み",
+    "fullTime": "フルタイム、オンサイト、ハイブリッド、リモートの仕事にオープン",
+    "based": "今はBay Areaに住んでる",
+    "relocate": "California, Seattle, Las Vegasの仕事のために引っ越すよ",
+    "citizen": "アメリカ市民",
+    "clearance": "アクティブなセキュリティクリアランス付き"
+  },
+  "experience": {
+    "intro": "僕はAIフルスタックソフトウェアエンジニアで、学術研究、リーダーシップ、プロの仕事経験が強いよ。",
+    "academic": {
+      "title": "学歴",
+      "details": [
+        "UC BerkeleyでComputer ScienceのB.S.",
+        "関連コース: Machine Learning, Data Structures, Algorithms, Database Systems"
+      ]
+    },
+    "leadership": {
+      "title": "リーダーシップ経験",
+      "details": [
+        "UC BerkeleyのAI Clubの会長",
+        "AI研究とハッカソンのために20人以上の学生チームをリード"
+      ]
+    },
+    "work": {
+      "title": "仕事経験",
+      "details": [
+        "エンタープライズAIソリューションエンジニア, XYZ Corp (2022–現在): Fortune 500のクライアント向けにAI駆動のウェブアプリを開発・デプロイ。",
+        "ソフトウェアエンジニアインターン, ABC Tech (2021): スケーラブルなバックエンドAPIを構築し、プロダクションシステムにMLモデルを統合。"
+      ]
+    }
+  },
+  "experiencePage": {
+    "title": "プロフェッショナル経験",
+    "technicalExperience": {
+      "title": "テクニカル経験",
+      "jobs": [
+        {
+          "title": "AI & MLフルスタックソフトウェアエンジニアII",
+          "company": "C3.AI via Paradyme Inc.",
+          "period": "2024年6月 - 現在",
+          "description": "連邦スペース（DoD）でのエンタープライズソリューションエンジニアリングとソフトウェア開発<br />C3.AI Decision Advantage | C3.AI Contested Logistics",
+          "bullets": [
+            "プロジェクトマネージャーと協力してデモフローのアプリ機能を準備し、クライアントミーティングで機能要件を議論",
+            "Agentic AI Agent Hackathon: C3プラットフォームツールを使ってGitHub PR作成を効率化するAgentic AI agentを設計・開発",
+            "C3.AI Machine Learning Forecasting Project capstoneコースのベータテストを行い、重要なフィードバックを提供し、完了証明書を取得",
+            "時系列予測を使って風力タービンの電力出力を7日間予測し、ベースラインモデルより35%改善",
+            "C3.AIプラットフォームでLightGBMのエンドツーエンドパイプラインを作成、capstoneで100%スコア",
+            "概念実証、技術仕様、開発、文書化を含む主要機能のエンドツーエンド所有権を維持:",
+            "OAuth2認証による安全なデータ交換のためのIngress/Egress RESTful API",
+            "Pandasを使ったMicrosoftドキュメントのインポート/エクスポートとデータ操作・解析",
+            "チャット履歴とユーザー検索機能付きリアルタイムメッセージングシステム"
+          ]
+        },
+        {
+          "title": "テクニカルスペシャリスト",
+          "company": "Apple",
+          "period": "2019年5月 - 2020年5月",
+          "bullets": [
+            "クライアント向けロールでiOSデバイスのハードウェア/ソフトウェア問題をトリアージ、診断を行い、技術文書を作成",
+            "異なる部門間でのクロスファンクショナルチームコラボレーションで優れた顧客体験を提供"
+          ]
+        }
+      ]
+    },
+    "leadershipManagement": {
+      "title": "リーダーシップとマネジメント",
+      "jobs": [
+        {
+          "title": "ソフトウェアエンジニアチームリード",
+          "company": "Paradyme Inc.",
+          "period": "2025年1月 - 現在",
+          "bullets": [
+            "エンジニアリングチームの成長をリード・サポートし、エンジニアとエグゼクティブリーダーシップ間のコミュニケーションを橋渡し",
+            "20人以上の新しいチームメンバーをオンボード・ガイド、オンボーディングシステムを効率化し、オンボーディング期間を60%短縮",
+            "エンジニアリングロールの潜在候補者をスクリーニングし、技術面接を実施、より強い新入社員を実現",
+            "スクラムマスターとしてスプリントレトロスペクティブとスタンドアップミーティングをリード、ステークホルダーへの機能デモも"
+          ]
+        },
+        {
+          "title": "広報委員会メンバー / ソーシャルメディアコーディネーター",
+          "company": "中国学生協会 & 韓国系アメリカ人学生協会",
+          "period": "2022年9月 - 2023年6月",
+          "bullets": [
+            "50-100人のメンバーに週次総会でクラブ更新を配信し、アイスブレイカー活動をリード",
+            "ソーシャルメディアアカウントの管理と戦略的アウトリーチの開始により、ネットワークとパートナーシップを2倍に拡大",
+            "Poke Houseのような地元ビジネスとのパートナーシップを通じてクラブ資金で数百ドルを集める"
+          ]
+        }
+      ]
+    },
+    "educationCertifications": {
+      "title": "教育と資格",
+      "items": [
+        {
+          "title": "コンピュータサイエンス学士号",
+          "subtitle": "カリフォルニア大学サンタクルーズ校"
+        },
+        {
+          "title": "アクティブなトップシークレットセキュリティクリアランス (Tier 5)",
+          "subtitle": "次の5年間有効"
+        },
+        {
+          "title": "Nvidia Deep Learning Institute",
+          "subtitle": "Generative AI Explained Certification"
+        },
+        {
+          "title": "Apple Certified iOS Technician (ACiT)",
+          "subtitle": "ハードウェアおよびソフトウェアトラブルシューティング認定"
+        }
+      ]
+    },
+    "technicalSkills": {
+      "title": "テクニカルスキル",
+      "skills": [
+        {
+          "category": "プログラミング言語とフレームワーク",
+          "items": "Python, JavaScript, React.js, TypeScript, HTML, CSS, JSON, SQL"
+        },
+        {
+          "category": "開発ツールとプラットフォーム",
+          "items": "APIs, GitHubバージョンコントロール, ターミナル環境, Jira, クラスターとアーティファクトデプロイメント, Pythonランタイム, Google Workstations"
+        },
+        {
+          "category": "AIと機械学習",
+          "items": "人工知能, 機械学習, 自然言語処理, 大規模言語モデル, プロンプトエンジニアリング, ハイパーパラメータチューニング, Pandas, 特徴量エンジニアリング"
+        },
+        {
+          "category": "プロフェッショナルスキル",
+          "items": "協調的リーダーシップ, コミュニケーション, 適応性, 問題解決, 時間管理, クロスファンクショナルチームワーク, メンタリング, ステークホルダーエンゲージメント, 技術ライティング, 意思決定"
+        }
+      ]
+    }
+  },
+  "copilot": {
+    "instructions": "GitHub Copilotの指示をここに追加。"
   }
 }

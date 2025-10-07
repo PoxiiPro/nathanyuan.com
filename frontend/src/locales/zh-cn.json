@@ -1,28 +1,33 @@
 {
   "nav": {
     "home": "首页",
-    "about": "关于我",
+    "about": "经验",
     "projects": "项目",
     "demo": "在线项目演示",
-    "contact": "联系"
+    "contact": "联系",
+    "readme": "README.md"
   },
   "landing": {
     "greeting": "你好，我是",
     "name": "Nathan Yuan",
-    "subtitle": "全栈开发者 & AI 爱好者",
-    "description": "我构建集成机器学习的现代Web应用程序，创建有意义的智能解决方案。",
+    "subtitle": "认证AI全栈软件工程师",
+    "description": "我打造现代网页应用，集成机器学习和AI，跟客户合作提供有影响力的解决方案。",
     "cta": {
-      "viewWork": "查看我的作品",
-      "tryAI": "尝试AI助手"
+      "viewWork": "看我的作品",
+      "tryAI": "试试AI助手",
+      "learnMore": "了解更多",
+      "resume": "看简历"
     },
     "profile": {
-      "title": "全栈开发者",
-      "techStack": ["React", "Python", "ML/AI", "TypeScript"]
+      "title": "企业AI解决方案工程师",
+      "techStack": ["React", "Python", "AI/ML", "TypeScript", "JavaScript", "PostgreSQL", "Cassandra"],
+      "pictureAlt": "头像"
     }
   },
   "chat": {
-    "title": "AI 助手",
-    "welcomeMessage": "你好！我是你的AI助手。今天我能为你做些什么？",
+    "title": "AI助手",
+    "poweredBy": "由Gemini with RAG驱动",
+    "welcomeMessage": "你好！我是你的AI助手，可以回答关于Nathan Yuan工作背景的任何问题。",
     "inputPlaceholder": "输入你的消息...",
     "comingSoon": "聊天助手即将推出..."
   },
@@ -30,31 +35,179 @@
     "close": "关闭",
     "send": "发送",
     "loading": "加载中...",
-    "underConstruction": "此页面正在建设中。",
+    "underConstruction": "这个页面还在建。",
     "comingSoon": "即将推出...",
-    "errorMessage": "抱歉，出了点问题。请再试一次。",
-    "rateLimitMessage": "每分钟消息过多。请慢一点。"
+    "errorMessage": "抱歉，出问题了。再试试。",
+    "rateLimitMessage": "每分钟消息太多了。慢点来。",
+    "switchToLightMode": "切换到亮模式",
+    "switchToDarkMode": "切换到暗模式",
+    "readmeLoadError": "加载README.md失败。请检查文件是否存在。"
   },
   "bugReport": {
     "title": "报告错误",
     "button": "报告错误",
     "form": {
       "titleLabel": "标题",
-      "titlePlaceholder": "问题的简要描述",
+      "titlePlaceholder": "问题简要描述",
       "descriptionLabel": "描述",
       "descriptionPlaceholder": "请提供重现问题的详细步骤...",
       "priorityLabel": "优先级",
       "priorityOptions": {
-        "p0": "P0 - 阻塞者（网站故障/无法使用）",
-        "p1": "P1 - 严重（主要功能损坏）",
-        "p2": "P2 - 高（次要功能损坏）",
-        "p3": "P3 - 低（修复会更好）"
+        "p0": "P0 - 阻塞（网站挂了/不能用）",
+        "p1": "P1 - 严重（主要功能坏了）",
+        "p2": "P2 - 高（小功能坏了）",
+        "p3": "P3 - 低（修修更好）"
       },
       "submit": "提交报告",
       "cancel": "取消"
     },
-    "success": "错误报告提交成功！感谢您的反馈。",
-    "error": "提交错误报告失败。请重试或直接联系我。",
-    "bugReportPrompt": "如果问题仍然存在，请提交错误报告。"
+    "success": "错误报告提交成功！谢谢你的反馈。",
+    "error": "提交错误报告失败。再试试或直接联系我。邮箱: contact@nathanyuan.com。",
+    "bugReportPrompt": "如果问题还存在，请在导航栏右上角提交错误报告。",
+    "retry": "再试一次"
+  },
+  "contact": {
+    "subtitle": "联系我吧！对新机会开放。",
+    "emailLabel": "邮箱",
+    "email": "contact@NathanYuan.com",
+    "locationLabel": "位置",
+    "location": "Bay Area, CA",
+    "linkedinLabel": "LinkedIn",
+    "linkedinUrl": "linkedin.com/in/nathanyuan00",
+    "workLabel": "工作偏好",
+    "fullTime": "对全职、现场、混合、远程工作开放",
+    "based": "目前在Bay Area",
+    "relocate": "愿意为California, Seattle, Las Vegas的工作搬家",
+    "citizen": "美国公民",
+    "clearance": "有活跃安全许可"
+  },
+  "experience": {
+    "intro": "我是AI全栈软件工程师，有很强的学术研究、领导力和专业工作经验背景。",
+    "academic": {
+      "title": "学术背景",
+      "details": [
+        "UC Berkeley计算机科学学士",
+        "相关课程: 机器学习, 数据结构, 算法, 数据库系统"
+      ]
+    },
+    "leadership": {
+      "title": "领导经验",
+      "details": [
+        "UC Berkeley AI Club主席",
+        "领导20多名学生团队进行AI研究和黑客马拉松"
+      ]
+    },
+    "work": {
+      "title": "工作经验",
+      "details": [
+        "企业AI解决方案工程师, XYZ Corp (2022–现在): 为Fortune 500客户开发和部署AI驱动网页应用。",
+        "软件工程师实习生, ABC Tech (2021): 构建可扩展后端API并将ML模型集成到生产系统。"
+      ]
+    }
+  },
+  "experiencePage": {
+    "title": "专业经验",
+    "technicalExperience": {
+      "title": "技术经验",
+      "jobs": [
+        {
+          "title": "AI & ML 全栈软件工程师 II",
+          "company": "C3.AI via Paradyme Inc.",
+          "period": "2024年6月 - 至今",
+          "description": "国防部企业解决方案工程和软件开发<br />C3.AI Decision Advantage | C3.AI Contested Logistics",
+          "bullets": [
+            "与项目经理合作，为演示流程准备应用功能，并参与客户会议讨论功能需求",
+            "代理AI代理黑客马拉松：使用C3平台工具设计并开发代理AI代理，以简化GitHub PR创建",
+            "Beta测试C3.AI机器学习预测项目顶点课程，提供关键反馈，并获得完成证书",
+            "利用时间序列预测来预测风力涡轮机7天的功率输出，比基线模型提高了35%",
+            "在C3.AI平台上创建端到端LightGBM管道，获得100%顶点成绩",
+            "维护关键功能的端到端所有权，包括概念验证、技术规范、开发和文档：",
+            "带有OAuth2认证的安全数据交换的入口/出口RESTful API",
+            "使用Pandas进行数据操作和解析的导入/导出Microsoft文档",
+            "具有聊天历史和用户搜索功能的实时消息系统"
+          ]
+        },
+        {
+          "title": "技术专家",
+          "company": "Apple",
+          "period": "2019年5月 - 2020年5月",
+          "bullets": [
+            "在面向客户角色中对iOS设备进行硬件/软件问题分类，执行诊断并制作技术文档",
+            "在跨职能团队合作中表现出色，在不同部门之间合作以提供卓越的客户体验"
+          ]
+        }
+      ]
+    },
+    "leadershipManagement": {
+      "title": "领导与管理",
+      "jobs": [
+        {
+          "title": "软件工程师团队负责人",
+          "company": "Paradyme Inc.",
+          "period": "2025年1月 - 至今",
+          "bullets": [
+            "领导并支持工程团队的成长，在工程师和执行领导之间架起沟通桥梁",
+            "入职并指导20多名新团队成员，简化入职系统，将入职期缩短60%",
+            "筛选工程角色的潜在候选人并进行技术面试，从而获得更强的招聘",
+            "作为Scrum Master领导冲刺回顾和站立会议，并向利益相关者演示功能"
+          ]
+        },
+        {
+          "title": "公共关系董事会成员 / 社交媒体协调员",
+          "company": "中国学生协会 & 韩裔美国学生协会",
+          "period": "2022年9月 - 2023年6月",
+          "bullets": [
+            "在每周大会上向50-100名成员传达俱乐部更新，并领导破冰活动",
+            "通过管理社交媒体账户和启动战略外展，将网络和伙伴关系扩大两倍",
+            "通过与Poke House等本地企业的伙伴关系，为俱乐部筹集数百美元资金"
+          ]
+        }
+      ]
+    },
+    "educationCertifications": {
+      "title": "教育与认证",
+      "items": [
+        {
+          "title": "计算机科学学士学位",
+          "subtitle": "加州大学圣克鲁兹分校"
+        },
+        {
+          "title": "活跃的顶级机密安全许可（第5级）",
+          "subtitle": "有效期为未来5年"
+        },
+        {
+          "title": "Nvidia深度学习研究所",
+          "subtitle": "生成AI解释认证"
+        },
+        {
+          "title": "Apple认证iOS技术员（ACiT）",
+          "subtitle": "硬件和软件故障排除认证"
+        }
+      ]
+    },
+    "technicalSkills": {
+      "title": "技术技能",
+      "skills": [
+        {
+          "category": "编程语言与框架",
+          "items": "Python, JavaScript, React.js, TypeScript, HTML, CSS, JSON, SQL"
+        },
+        {
+          "category": "开发工具与平台",
+          "items": "APIs, GitHub版本控制, 终端环境, Jira, 集群与工件部署, Python运行时, Google工作站"
+        },
+        {
+          "category": "AI与机器学习",
+          "items": "人工智能, 机器学习, 自然语言处理, 大型语言模型, 提示工程, 超参数调整, Pandas, 特征工程"
+        },
+        {
+          "category": "专业技能",
+          "items": "协作领导力, 沟通, 适应性, 问题解决, 时间管理, 跨职能团队合作, 导师制, 利益相关者参与, 技术写作, 决策制定"
+        }
+      ]
+    }
+  },
+  "copilot": {
+    "instructions": "在这里添加你的GitHub Copilot指令。"
   }
 }
