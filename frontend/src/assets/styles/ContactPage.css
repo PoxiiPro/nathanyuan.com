@@ -2,9 +2,17 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 4.375rem; /* 70px -> 4.375rem */
+  padding-top: 4.375rem;
   background: var(--bg-primary);
   color: var(--text-primary);
+}
+
+.contact-disclaimer p {
+  margin-top: 2vh;
+  text-align: center;
+  font-size: .9rem;
+  color: var(--text-muted);
+  font-style: italic;
 }
 
 .page-content {

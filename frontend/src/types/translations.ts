@@ -83,6 +83,7 @@ export interface Translation {
     relocate: string;
     citizen: string;
     clearance: string;
+    disclaimer: string;
   };
   experience: {
     intro: string;

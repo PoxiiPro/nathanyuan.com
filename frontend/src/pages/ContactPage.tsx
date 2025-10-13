@@ -42,6 +42,9 @@ const ContactPage: React.FC = () => {
               </ul>
             </div>
           </div>
+          <div className="contact-disclaimer">
+            <p><em>{translations.contact.disclaimer}</em></p>
+          </div>
         </div>
       </section>
     </>
