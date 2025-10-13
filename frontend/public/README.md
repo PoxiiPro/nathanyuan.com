@@ -136,11 +136,7 @@ Visit [nathanyuan.com](https://nathanyuan.com) to see the live application.
 
 ## Performance Metrics
 
-- **Frontend Bundle Size:** ~150KB gzipped
-- **API Response Time:** <200ms average
-- **AI Response Latency:** 1-3 seconds
-- **Mobile Performance Score:** 95+ (Lighthouse)
-- **SEO Score:** 90+ (Search Console)
+- 
 
 ## Contributing
 

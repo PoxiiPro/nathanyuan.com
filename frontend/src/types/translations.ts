@@ -4,6 +4,9 @@ export interface Translation {
     about: string;
     projects: string;
     demo: string;
+    ugc: string;
+    demos: string;
+    aboutMe: string;
     contact: string;
     readme: string;
   };
@@ -134,6 +137,69 @@ export interface Translation {
   };
   copilot: {
     instructions: string;
+  };
+  ugc: {
+    title: string;
+    tagline: string;
+    about: {
+      title: string;
+      description: string;
+    };
+    niches: {
+      title: string;
+      lifestyle: {
+        title: string;
+        description: string;
+      };
+      fitness: {
+        title: string;
+        description: string;
+      };
+      food: {
+        title: string;
+        description: string;
+      };
+      tech: {
+        title: string;
+        description: string;
+      };
+      fashion: {
+        title: string;
+        description: string;
+      };
+      skincare: {
+        title: string;
+        description: string;
+      };
+    };
+    contact: {
+      title: string;
+      description: string;
+      email: string;
+      rates: string;
+      turnaround: string;
+    };
+    social: {
+      title: string;
+      instagram: string;
+      tiktok: string;
+      youtube: string;
+    };
+    cta: {
+      viewDemo: string;
+      getQuote: string;
+      contact: string;
+    };
+    video: {
+      modalTitle: string;
+      modalDescription: string;
+      watchMore: string;
+      closeVideo: string;
+    };
+    demographics: {
+      title: string;
+      description: string;
+    };
   };
 }
 

@@ -151,6 +151,21 @@
   position: static;
 }
 
+/* Contact anchor link styling */
+.contact-anchor {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.contact-anchor:hover {
+  color: var(--primary-color);
+  background: rgba(59, 130, 246, 0.1);
+}
+
 @media (max-width: 1024px) {
   .navbar-nav {
     gap: 1rem;

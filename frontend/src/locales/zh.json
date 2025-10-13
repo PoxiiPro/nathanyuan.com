@@ -207,7 +207,8 @@
       ]
     }
   },
-  "copilot": {
-    "instructions": "在這裡添加你的GitHub Copilot指令。"
+  "ugc": {
+    "title": "User Generated Content",
+    "description": "This is a hidden page for user-generated content."
   }
 }

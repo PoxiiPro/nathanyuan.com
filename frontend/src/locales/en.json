@@ -4,6 +4,9 @@
     "about": "Experience",
     "projects": "Projects",
     "demo": "Live Project Demo",
+    "ugc": "UGC Portfolio",
+    "demos": "Demos",
+    "aboutMe": "About Me",
     "contact": "Contact",
     "readme": "README.md"
   },
@@ -209,5 +212,68 @@
   },
   "copilot": {
     "instructions": "Add your GitHub Copilot directions here."
+  },
+  "ugc": {
+    "title": "UGC Creator",
+    "tagline": "Bay Area • 24 • Lifestyle Content Creator",
+    "about": {
+      "title": "About Me",
+      "description": "I'm Nathan, a 24-year-old content creator based in the Bay Area, specializing in authentic lifestyle content that drives engagement and builds brand trust. My approach focuses on genuine storytelling that resonates with diverse audiences."
+    },
+    "niches": {
+      "title": "Content Niches",
+      "lifestyle": {
+        "title": "Lifestyle",
+        "description": "Authentic day-in-the-life content showcasing real experiences"
+      },
+      "fitness": {
+        "title": "Fitness",
+        "description": "Workout routines, supplements, and fitness gear reviews"
+      },
+      "food": {
+        "title": "Food & Dining",
+        "description": "Restaurant experiences, meal prep, and food product reviews"
+      },
+      "tech": {
+        "title": "Tech",
+        "description": "Latest gadgets, apps, and tech lifestyle integrations"
+      },
+      "fashion": {
+        "title": "Fashion",
+        "description": "Men's style, casual wear, and accessory showcases"
+      },
+      "skincare": {
+        "title": "Skincare",
+        "description": "Men's grooming routines and skincare product reviews"
+      }
+    },
+    "contact": {
+      "title": "Let's Create Together",
+      "description": "Ready to collaborate on your next campaign?",
+      "email": "ugc@nathanyuan.com",
+      "rates": "Starting at $300, please reach out for a consultation",
+      "turnaround": "Quick reply and content delivery times"
+    },
+    "social": {
+      "title": "Let's Connect",
+      "instagram": "@poxiipro",
+      "tiktok": "@poxiipro",
+      "youtube": "@poxiipro"
+    },
+    "cta": {
+      "viewDemo": "View Demo Reel",
+      "getQuote": "Get Quote",
+      "contact": "Contact Me"
+    },
+    "video": {
+      "modalTitle": "Demo Reel",
+      "modalDescription": "Like what you see? Let's create something amazing together!",
+      "watchMore": "Watch More",
+      "closeVideo": "Close Video"
+    },
+    "demographics": {
+      "title": "Demographic Outreach",
+      "description": "Visual representation of audience demographics and engagement metrics. Data sampled from my own social media insights and analytics."
+    }
   }
 }

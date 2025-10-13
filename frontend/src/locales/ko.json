@@ -4,7 +4,10 @@
     "about": "경험",
     "projects": "프로젝트",
     "demo": "라이브 프로젝트 데모",
-    "contact": "연락",
+    "ugc": "UGC 포트폴리오",
+    "demos": "데모",
+    "aboutMe": "나에 대해",
+    "contact": "연락처",
     "readme": "README.md"
   },
   "landing": {
@@ -209,5 +212,68 @@
   },
   "copilot": {
     "instructions": "GitHub Copilot 지시 여기 추가."
+  },
+  "ugc": {
+    "title": "UGC 크리에이터",
+    "tagline": "베이 에어리어 • 24세 • 라이프스타일 콘텐츠 크리에이터",
+    "about": {
+      "title": "소개",
+      "description": "저는 베이 에어리어에 거주하는 24세 콘텐츠 크리에이터 Nathan입니다. 참여도를 높이고 브랜드 신뢰를 구축하는 진정한 라이프스타일 콘텐츠를 전문으로 합니다. 다양한 오디언스에게 공감을 불러일으키는 진실한 스토리텔링에 중점을 두고 있습니다."
+    },
+    "niches": {
+      "title": "콘텐츠 분야",
+      "lifestyle": {
+        "title": "라이프스타일",
+        "description": "실제 경험을 보여주는 진정한 일상 콘텐츠"
+      },
+      "fitness": {
+        "title": "피트니스",
+        "description": "운동 루틴, 보충제, 피트니스 장비 리뷰"
+      },
+      "food": {
+        "title": "음식 & 다이닝",
+        "description": "레스토랑 경험, 식사 준비, 식품 리뷰"
+      },
+      "tech": {
+        "title": "테크",
+        "description": "최신 가젯, 앱, 테크 라이프스타일 통합"
+      },
+      "fashion": {
+        "title": "패션",
+        "description": "남성 스타일, 캐주얼웨어, 액세서리 쇼케이스"
+      },
+      "skincare": {
+        "title": "스킨케어",
+        "description": "남성 그루밍 루틴 및 스킨케어 제품 리뷰"
+      }
+    },
+    "contact": {
+      "title": "함께 창작해요",
+      "description": "다음 캠페인에서 협업할 준비가 되셨나요?",
+      "email": "ugc@nathanyuan.com",
+      "rates": "비디오당 $150부터 시작",
+      "turnaround": "48-72시간 배송"
+    },
+    "social": {
+      "title": "제 여정을 팔로우하세요",
+      "instagram": "@nathanyuan_ugc",
+      "tiktok": "@nathanyuan",
+      "youtube": "Nathan Yuan"
+    },
+    "cta": {
+      "viewDemo": "데모 릴 보기",
+      "getQuote": "견적 받기",
+      "contact": "연락하기"
+    },
+    "video": {
+      "modalTitle": "데모 릴",
+      "modalDescription": "마음에 드시나요? 함께 멋진 작품을 만들어요!",
+      "watchMore": "더 보기",
+      "closeVideo": "비디오 닫기"
+    },
+    "demographics": {
+      "title": "인구통계적 도달 범위",
+      "description": "청중 인구통계 및 참여 지표의 시각적 표현"
+    }
   }
 }

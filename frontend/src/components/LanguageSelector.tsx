@@ -9,8 +9,8 @@ const LanguageSelector: React.FC = () => {
   const languages: { code: Language; name: string; flag: string }[] = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
     { code: 'es', name: 'Español', flag: '🇪🇸' },
-    { code: 'zh', name: '繁體中文', flag: '🇹🇼' },
-    { code: 'zh-cn', name: '简体中文', flag: '🇨🇳' },
+    { code: 'zh', name: '繁體', flag: '🇹🇼' },
+    { code: 'zh-cn', name: '简体', flag: '🇨🇳' },
     { code: 'ko', name: '한국어', flag: '🇰🇷' },
     { code: 'ja', name: '日本語', flag: '🇯🇵' },
   ];

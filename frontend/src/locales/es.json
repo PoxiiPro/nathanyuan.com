@@ -2,8 +2,11 @@
   "nav": {
     "home": "Inicio",
     "about": "Experiencia",
-    "projects": "Proyectos",
+    "projects": "Proyectos", 
     "demo": "Demo de Proyecto en Vivo",
+    "ugc": "Portafolio UGC",
+    "demos": "Demos",
+    "aboutMe": "Acerca de mí",
     "contact": "Contacto",
     "readme": "README.md"
   },
@@ -209,5 +212,68 @@
   },
   "copilot": {
     "instructions": "Agrega tus instrucciones de GitHub Copilot aquí."
+  },
+  "ugc": {
+    "title": "Creador UGC",
+    "tagline": "Área de la Bahía • 24 • Creador de Contenido de Estilo de Vida",
+    "about": {
+      "title": "Sobre Mí",
+      "description": "Soy Nathan, un creador de contenido de 24 años con base en el Área de la Bahía, especializado en contenido auténtico de estilo de vida que impulsa el engagement y construye confianza en la marca. Mi enfoque se centra en narrativas genuinas que resuenan con audiencias diversas."
+    },
+    "niches": {
+      "title": "Nichos de Contenido",
+      "lifestyle": {
+        "title": "Estilo de Vida",
+        "description": "Contenido auténtico de día a día mostrando experiencias reales"
+      },
+      "fitness": {
+        "title": "Fitness",
+        "description": "Rutinas de ejercicio, suplementos y reseñas de equipo de fitness"
+      },
+      "food": {
+        "title": "Comida y Restaurantes",
+        "description": "Experiencias gastronómicas, meal prep y reseñas de productos alimentarios"
+      },
+      "tech": {
+        "title": "Tecnología",
+        "description": "Últimos gadgets, apps e integraciones de estilo de vida tech"
+      },
+      "fashion": {
+        "title": "Moda",
+        "description": "Estilo masculino, ropa casual y showcases de accesorios"
+      },
+      "skincare": {
+        "title": "Cuidado de la Piel",
+        "description": "Rutinas de grooming masculino y reseñas de productos de skincare"
+      }
+    },
+    "contact": {
+      "title": "Creemos Juntos",
+      "description": "¿Listo para colaborar en tu próxima campaña?",
+      "email": "ugc@nathanyuan.com",
+      "rates": "Desde $150 por video",
+      "turnaround": "Entrega en 48-72 horas"
+    },
+    "social": {
+      "title": "Sigue Mi Viaje",
+      "instagram": "@nathanyuan_ugc",
+      "tiktok": "@nathanyuan",
+      "youtube": "Nathan Yuan"
+    },
+    "cta": {
+      "viewDemo": "Ver Demo Reel",
+      "getQuote": "Obtener Cotización",
+      "contact": "Contáctame"
+    },
+    "video": {
+      "modalTitle": "Demo Reel",
+      "modalDescription": "¿Te gusta lo que ves? ¡Creemos algo increíble juntos!",
+      "watchMore": "Ver Más",
+      "closeVideo": "Cerrar Video"
+    },
+    "demographics": {
+      "title": "Alcance Demográfico",
+      "description": "Representación visual de las demografías de la audiencia y métricas de engagement"
+    }
   }
 }
