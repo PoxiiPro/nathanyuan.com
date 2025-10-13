@@ -24,14 +24,6 @@ const ContactPage: React.FC = () => {
             <p className="contact-subtitle">{translations.contact.subtitle}</p>
           </div>
           <div className="contact-columns">
-            <div className="contact-info">
-              <h2><i className="fas fa-envelope"></i> {translations.contact.emailLabel}</h2>
-              <a href="mailto:contact@NathanYuan.com" className="contact-email">contact@NathanYuan.com</a>
-              <h2><i className="fas fa-location-dot"></i> {translations.contact.locationLabel}</h2>
-              <p className="contact-location">{translations.contact.location}</p>
-              <h2><i className="fab fa-linkedin"></i> {translations.contact.linkedinLabel}</h2>
-              <a href="https://www.linkedin.com/in/nathanyuan00/" className="contact-linkedin" target="_blank" rel="noopener noreferrer">{translations.contact.linkedinUrl}</a>
-            </div>
             <div className="contact-work">
               <h2><i className="fas fa-briefcase"></i> {translations.contact.workLabel}</h2>
               <ul>
@@ -40,6 +32,14 @@ const ContactPage: React.FC = () => {
                 <li>{translations.contact.relocate}</li>
                 <li><strong>{translations.contact.citizen}</strong> {translations.contact.clearance}</li>
               </ul>
+            </div>
+            <div className="contact-info">
+              <h2><i className="fas fa-envelope"></i> {translations.contact.emailLabel}</h2>
+              <a href="mailto:contact@NathanYuan.com" className="contact-email">contact@NathanYuan.com</a>
+              <h2><i className="fas fa-location-dot"></i> {translations.contact.locationLabel}</h2>
+              <p className="contact-location">{translations.contact.location}</p>
+              <h2><i className="fab fa-linkedin"></i> {translations.contact.linkedinLabel}</h2>
+              <a href="https://www.linkedin.com/in/nathanyuan00/" className="contact-linkedin" target="_blank" rel="noopener noreferrer">{translations.contact.linkedinUrl}</a>
             </div>
           </div>
           <div className="contact-disclaimer">
