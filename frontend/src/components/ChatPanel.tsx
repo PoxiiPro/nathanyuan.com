@@ -120,7 +120,11 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ isOpen, onClose }) => {
                   <i className="fas fa-robot"></i>
                 </div>
                 <div className="message-content">
-                  <p>...</p>
+                  <div className="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
                 </div>
               </div>
             )}

@@ -225,6 +225,41 @@
   color: white;
 }
 
+/* Typing Indicator */
+.typing-indicator {
+  display: flex;
+  gap: 0.5vw;
+  align-items: center;
+  padding: 1vh 0;
+}
+
+.typing-indicator span {
+  width: 0.5vw;
+  height: 0.5vw;
+  min-width: 6px;
+  min-height: 6px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes typing {
+  0%, 80%, 100% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
 /* Input Container */
 .chat-input-container {
   padding: 2vh 3vw;
