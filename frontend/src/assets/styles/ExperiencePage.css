@@ -23,12 +23,13 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   margin-bottom: 2vh;
-  color: var(--accent-primary);
+  color: var(--text-primary);
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* Keep a subtle accent underline for branding consistency */
+  background-image: linear-gradient(90deg, transparent 0%, transparent calc(100% - 0.6rem), var(--accent-primary) 0%);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0.18rem;
 }
 
 .experience-subtitle {
