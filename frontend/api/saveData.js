@@ -31,18 +31,16 @@ export default async function handler(req, res) {
     // persist data
     try {
       // Check if a record with this timestamp already exists
-      const { data: existingRecord, error: selectError } = await supabase
+      const { data: existingRecords, error: selectError } = await supabase
         .from(table)
         .select('timestamp')
-        .eq('timestamp', timestamp)
-        .single();
+        .eq('timestamp', timestamp);
 
-      if (selectError && selectError.code !== 'PGRST116') {
-        // PGRST116 is "not found" error, which is expected if no record exists
+      if (selectError) {
         throw selectError;
       }
 
-      if (existingRecord) {
+      if (existingRecords && existingRecords.length > 0) {
         // Update existing record
         result = await supabase
           .from(table)
