@@ -107,103 +107,213 @@
     }
   },
   "experiencePage": {
-    "title": "专业经验",
-    "technicalExperience": {
-      "title": "技术经验",
-      "jobs": [
-        {
-          "title": "AI & ML 全栈软件工程师 II",
-          "company": "C3.AI via Paradyme Inc.",
-          "period": "2024年6月 - 至今",
-          "description": "国防部企业解决方案工程和软件开发<br />C3.AI Decision Advantage | C3.AI Contested Logistics",
-          "bullets": [
-            "与项目经理合作，为演示流程准备应用功能，并参与客户会议讨论功能需求",
-            "代理AI代理黑客马拉松：使用C3平台工具设计并开发代理AI代理，以简化GitHub PR创建",
-            "Beta测试C3.AI机器学习预测项目顶点课程，提供关键反馈，并获得完成证书",
-            "利用时间序列预测来预测风力涡轮机7天的功率输出，比基线模型提高了35%",
-            "在C3.AI平台上创建端到端LightGBM管道，获得100%顶点成绩",
-            "维护关键功能的端到端所有权，包括概念验证、技术规范、开发和文档：",
-            "带有OAuth2认证的安全数据交换的入口/出口RESTful API",
-            "使用Pandas进行数据操作和解析的导入/导出Microsoft文档",
-            "具有聊天历史和用户搜索功能的实时消息系统"
-          ]
-        },
-        {
-          "title": "技术专家",
-          "company": "Apple",
-          "period": "2019年5月 - 2020年5月",
-          "bullets": [
-            "在面向客户角色中对iOS设备进行硬件/软件问题分类，执行诊断并制作技术文档",
-            "在跨职能团队合作中表现出色，在不同部门之间合作以提供卓越的客户体验"
-          ]
-        }
-      ]
+    "title": "工作经历时间线",
+    "subtitle": "交互式时间线，展示技术专长、领导力与客户合作能力",
+    "filters": {
+      "all": "所有经历",
+      "technical": "技术",
+      "leadership": "领导力",
+      "client": "客户服务"
     },
-    "leadershipManagement": {
-      "title": "领导与管理",
-      "jobs": [
-        {
-          "title": "软件工程师团队负责人",
-          "company": "Paradyme Inc.",
-          "period": "2025年1月 - 至今",
-          "bullets": [
-            "领导并支持工程团队的成长，在工程师和执行领导之间架起沟通桥梁",
-            "入职并指导20多名新团队成员，简化入职系统，将入职期缩短60%",
-            "筛选工程角色的潜在候选人并进行技术面试，从而获得更强的招聘",
-            "作为Scrum Master领导冲刺回顾和站立会议，并向利益相关者演示功能"
-          ]
-        },
-        {
-          "title": "公共关系董事会成员 / 社交媒体协调员",
-          "company": "中国学生协会 & 韩裔美国学生协会",
-          "period": "2022年9月 - 2023年6月",
-          "bullets": [
-            "在每周大会上向50-100名成员传达俱乐部更新，并领导破冰活动",
-            "通过管理社交媒体账户和启动战略外展，将网络和伙伴关系扩大两倍",
-            "通过与Poke House等本地企业的伙伴关系，为俱乐部筹集数百美元资金"
-          ]
-        }
-      ]
+    "timeline": [
+      {
+        "id": "current-lead",
+        "title": "Technical Lead",
+        "company": "Paradyme Inc.",
+        "period": "Jan 2025 - Present",
+        "duration": "Current",
+        "type": "current",
+        "categories": ["leadership", "technical"],
+        "highlights": [
+          "带领工程团队成长并负责与高管沟通",
+          "将20+名成员的入职时间缩短60%",
+          "负责技术面试并提升招聘质量"
+        ],
+        "impact": "团队领导与流程优化"
+      },
+      {
+        "id": "c3ai-engineer",
+        "title": "AI & ML Fullstack Software Engineer II",
+        "company": "C3.AI via Paradyme Inc.",
+        "period": "Jun 2024 - Present",
+        "duration": "Current",
+        "type": "technical",
+        "categories": ["technical", "client"],
+        "highlights": [
+          "为国防(DoD)客户构建企业级AI解决方案",
+          "跨团队与数据科学家及产品经理协作",
+          "开发带OAuth2认证的安全API"
+        ],
+        "impact": "企业AI与联邦项目"
+      },
+      {
+        "id": "cartier-coordinator",
+        "title": "Client Experience Coordinator",
+        "company": "Cartier",
+        "period": "Apr 2024 - Jun 2024",
+        "duration": "3 months",
+        "type": "client",
+        "categories": ["client", "leadership"],
+        "highlights": [
+          "管理奢侈品精品店的客户体验与期望",
+          "培训新成员并安排跟随学习",
+          "协调团队排班以保证客户覆盖"
+        ],
+        "impact": "奢侈品客户体验管理"
+      },
+      {
+        "id": "apple-genius",
+        "title": "Technical Specialist @ Genius Bar",
+        "company": "Apple",
+        "period": "Nov 2019 - Apr 2020",
+        "duration": "6 months",
+        "type": "technical",
+        "categories": ["technical", "client"],
+        "highlights": [
+          "在高流量预约中保持前10%客户满意度",
+          "获得Apple ACiT (iOS Technician) 认证",
+          "通过个性化服务产生业务线索，位列前20%"
+        ],
+        "impact": "技术支持卓越"
+      },
+      {
+        "id": "apple-sales",
+        "title": "Sales Specialist",
+        "company": "Apple",
+        "period": "May 2019 - Nov 2019",
+        "duration": "7 months",
+        "type": "client",
+        "categories": ["client", "technical"],
+        "highlights": [
+          "实现90%+的客户净推荐值(NPS)",
+          "将Apple Care转化率提高到70-80%",
+          "晋升为Technical Specialist"
+        ],
+        "impact": "销售与客户满意度"
+      },
+      {
+        "id": "graduation",
+        "title": "Bachelor's Degree in Computer Science",
+        "company": "University of California Santa Cruz",
+        "period": "Jun 2023",
+        "duration": "Graduated",
+        "type": "education",
+        "categories": ["technical"],
+        "highlights": [
+          "完成计算机科学学士学位",
+          "在算法、数据结构和软件工程方面打下坚实基础",
+          "为从事AI和软件开发的职业做好准备"
+        ],
+        "impact": "学术成就与技术基础"
+      },
+      {
+        "id": "csa-kasa-board",
+        "title": "PR Board Member & Social Media Coordinator",
+        "company": "Chinese Student Association & Korean American Student Association",
+        "period": "Sep 2022 - Jun 2023",
+        "duration": "10 months",
+        "type": "leadership",
+        "categories": ["leadership", "client"],
+        "highlights": [
+          "为50-100名成员主持每周大会并领导活动",
+          "通过战略外展将合作伙伴数量翻倍",
+          "通过与本地企业的合作为社团筹集资金"
+        ],
+        "impact": "社区领导与合作伙伴建设"
+      },
+      {
+        "id": "hot-topic",
+        "title": "Stock Key",
+        "company": "Hot Topic",
+        "period": "Sep 2018 - May 2019",
+        "duration": "9 months",
+        "type": "client",
+        "categories": ["client"],
+        "highlights": [
+          "管理库存与补货",
+          "在零售环境中提供客户服务",
+          "维护门店整理与视觉标准"
+        ],
+        "impact": "零售运营与客户服务"
+      },
+      {
+        "id": "chipotle",
+        "title": "Cashier",
+        "company": "Chipotle Mexican Grill",
+        "period": "May 2018 - Aug 2018",
+        "duration": "4 months",
+        "type": "client",
+        "categories": ["client"],
+        "highlights": [
+          "处理高并发交易",
+          "在快节奏环境中保持准确性",
+          "提供友好的客户服务"
+        ],
+        "impact": "快节奏环境中的客户服务"
+      }
+    ],
+    "capstones": {
+      "technical": {
+        "title": "技术专长",
+        "description": "全栈开发、企业AI解决方案和联邦(DoD)经验。",
+        "icon": "fas fa-code",
+        "color": "#4F46E5"
+      },
+      "leadership": {
+        "title": "领导与管理",
+        "description": "团队领导、流程优化、指导与组织成长",
+        "icon": "fas fa-users",
+        "color": "#059669"
+      },
+      "client": {
+        "title": "客户卓越",
+        "description": "建立关系、理解需求并在多行业交付解决方案",
+        "icon": "fas fa-handshake",
+        "color": "#DC2626"
+      }
     },
-    "educationCertifications": {
+    "education": {
       "title": "教育与认证",
       "items": [
         {
-          "title": "计算机科学学士学位",
-          "subtitle": "加州大学圣克鲁兹分校"
+          "title": "Bachelor's Degree in Computer Science",
+          "subtitle": "University of California Santa Cruz • June 2023"
         },
         {
-          "title": "活跃的顶级机密安全许可（第5级）",
-          "subtitle": "有效期为未来5年"
+          "title": "Active Security Clearance",
+          "subtitle": "Valid for next 5 years"
         },
         {
-          "title": "Nvidia深度学习研究所",
-          "subtitle": "生成AI解释认证"
+          "title": "Nvidia Deep Learning Institute",
+          "subtitle": "Generative AI Explained Certification"
         },
         {
-          "title": "Apple认证iOS技术员（ACiT）",
-          "subtitle": "硬件和软件故障排除认证"
+          "title": "Apple Certified iOS Technician (ACiT)",
+          "subtitle": "Hardware and Software Troubleshooting"
         }
       ]
     },
-    "technicalSkills": {
-      "title": "技术技能",
-      "skills": [
+    "skills": {
+      "technical": [
+        "Python", "JavaScript", "React.js", "TypeScript", "AI/ML", "APIs", "PostgreSQL", "Git"
+      ],
+      "leadership": [
+        "Team Management", "Mentorship", "Process Optimization", "Strategic Planning", "Cross-functional Collaboration"
+      ],
+      "client": [
+        "Client Relations", "Problem Resolution", "Service Excellence", "Communication", "Stakeholder Management"
+      ]
+    },
+    "projectExamples": {
+      "label": "项目示例",
+      "c3ai": [
         {
-          "category": "编程语言与框架",
-          "items": "Python, JavaScript, React.js, TypeScript, HTML, CSS, JSON, SQL"
+          "title": "C3 AI Decision Advantage",
+          "url": "https://c3.ai/products/c3-ai-decision-advantage/"
         },
         {
-          "category": "开发工具与平台",
-          "items": "APIs, GitHub版本控制, 终端环境, Jira, 集群与工件部署, Python运行时, Google工作站"
-        },
-        {
-          "category": "AI与机器学习",
-          "items": "人工智能, 机器学习, 自然语言处理, 大型语言模型, 提示工程, 超参数调整, Pandas, 特征工程"
-        },
-        {
-          "category": "专业技能",
-          "items": "协作领导力, 沟通, 适应性, 问题解决, 时间管理, 跨职能团队合作, 导师制, 利益相关者参与, 技术写作, 决策制定"
+          "title": "C3 AI Contested Logistics",
+          "url": "https://c3.ai/products/c3-ai-contested-logistics/"
         }
       ]
     }

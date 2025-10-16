@@ -107,103 +107,213 @@
     }
   },
   "experiencePage": {
-    "title": "專業經驗",
-    "technicalExperience": {
-      "title": "技術經驗",
-      "jobs": [
-        {
-          "title": "AI & ML 全端軟體工程師 II",
-          "company": "C3.AI via Paradyme Inc.",
-          "period": "2024年6月 - 至今",
-          "description": "國防部企業解決方案工程和軟體開發<br />C3.AI Decision Advantage | C3.AI Contested Logistics",
-          "bullets": [
-            "與專案經理合作，為示範流程準備應用功能，並參與客戶會議討論功能需求",
-            "代理AI代理駭客松：使用C3平台工具設計並開發代理AI代理，以簡化GitHub PR建立",
-            "Beta測試C3.AI機器學習預測專案頂點課程，提供關鍵回饋，並獲得完成證書",
-            "利用時間序列預測來預測風力渦輪機7天的功率輸出，比基準模型提高了35%",
-            "在C3.AI平台上建立端到端LightGBM管道，獲得100%頂點成績",
-            "維護關鍵功能的端到端所有權，包括概念驗證、技術規格、開發和文件：",
-            "帶有OAuth2認證的安全資料交換的入口/出口RESTful API",
-            "使用Pandas進行資料操作和解析的匯入/匯出Microsoft文件",
-            "具有聊天歷史和使用者搜尋功能的即時訊息系統"
-          ]
-        },
-        {
-          "title": "技術專家",
-          "company": "Apple",
-          "period": "2019年5月 - 2020年5月",
-          "bullets": [
-            "在面向客戶角色中對iOS裝置進行硬體/軟體問題分類，執行診斷並製作技術文件",
-            "在跨職能團隊合作中表現出色，在不同部門之間合作以提供卓越的客戶體驗"
-          ]
-        }
-      ]
+    "title": "專業經驗時間軸",
+    "subtitle": "互動式時間軸，展示技術專長、領導力與客戶合作能力",
+    "filters": {
+      "all": "所有經驗",
+      "technical": "技術",
+      "leadership": "領導力",
+      "client": "客戶服務"
     },
-    "leadershipManagement": {
-      "title": "領導與管理",
-      "jobs": [
-        {
-          "title": "軟體工程師團隊負責人",
-          "company": "Paradyme Inc.",
-          "period": "2025年1月 - 至今",
-          "bullets": [
-            "領導並支援工程團隊的成長，在工程師和執行領導之間架起溝通橋樑",
-            "入職並指導20多名新團隊成員，簡化入職系統，將入職期縮短60%",
-            "篩選工程角色的潛在候選人並進行技術面試，從而獲得更強的招聘",
-            "作為Scrum Master領導衝刺回顧和站立會議，並向利害關係人示範功能"
-          ]
-        },
-        {
-          "title": "公共關係董事會成員 / 社群媒體協調員",
-          "company": "中國學生協會 & 韓裔美國學生協會",
-          "period": "2022年9月 - 2023年6月",
-          "bullets": [
-            "在每週大會上向50-100名成員傳達俱樂部更新，並領導破冰活動",
-            "透過管理社群媒體帳戶和啟動策略外展，將網路和夥伴關係擴大兩倍",
-            "透過與Poke House等本地企業的夥伴關係，為俱樂部籌集數百美元資金"
-          ]
-        }
-      ]
+    "timeline": [
+      {
+        "id": "current-lead",
+        "title": "Technical Lead",
+        "company": "Paradyme Inc.",
+        "period": "Jan 2025 - Present",
+        "duration": "Current",
+        "type": "current",
+        "categories": ["leadership", "technical"],
+        "highlights": [
+          "帶領工程團隊成長並與高層溝通",
+          "將20+名成員的入職時間縮短60%",
+          "負責技術面試並提升招募品質"
+        ],
+        "impact": "團隊領導與流程優化"
+      },
+      {
+        "id": "c3ai-engineer",
+        "title": "AI & ML Fullstack Software Engineer II",
+        "company": "C3.AI via Paradyme Inc.",
+        "period": "Jun 2024 - Present",
+        "duration": "Current",
+        "type": "technical",
+        "categories": ["technical", "client"],
+        "highlights": [
+          "為國防(DoD)客戶構建企業級AI解決方案",
+          "跨團隊與資料科學家及產品經理協作",
+          "開發包含OAuth2認證的安全API"
+        ],
+        "impact": "企業AI與聯邦專案"
+      },
+      {
+        "id": "cartier-coordinator",
+        "title": "Client Experience Coordinator",
+        "company": "Cartier",
+        "period": "Apr 2024 - Jun 2024",
+        "duration": "3 months",
+        "type": "client",
+        "categories": ["client", "leadership"],
+        "highlights": [
+          "在奢侈精品店管理客戶體驗與期望",
+          "培訓新成員並安排shadowing",
+          "協調團隊排班以確保客戶覆蓋"
+        ],
+        "impact": "高端客戶體驗管理"
+      },
+      {
+        "id": "apple-genius",
+        "title": "Technical Specialist @ Genius Bar",
+        "company": "Apple",
+        "period": "Nov 2019 - Apr 2020",
+        "duration": "6 months",
+        "type": "technical",
+        "categories": ["technical", "client"],
+        "highlights": [
+          "在高流量預約中維持前10%客戶滿意度",
+          "取得Apple ACiT (iOS Technician) 認證",
+          "透過客製化服務帶來源頭，位列前20%"
+        ],
+        "impact": "技術支援卓越"
+      },
+      {
+        "id": "apple-sales",
+        "title": "Sales Specialist",
+        "company": "Apple",
+        "period": "May 2019 - Nov 2019",
+        "duration": "7 months",
+        "type": "client",
+        "categories": ["client", "technical"],
+        "highlights": [
+          "達成90%+的客戶淨推薦分數(NPS)",
+          "將Apple Care轉換率提升到70-80%",
+          "升遷為Technical Specialist"
+        ],
+        "impact": "銷售與客戶滿意度"
+      },
+      {
+        "id": "graduation",
+        "title": "Bachelor's Degree in Computer Science",
+        "company": "University of California Santa Cruz",
+        "period": "Jun 2023",
+        "duration": "Graduated",
+        "type": "education",
+        "categories": ["technical"],
+        "highlights": [
+          "完成電腦科學學士學位",
+          "在演算法、資料結構和軟體工程方面建立扎實基礎",
+          "為從事AI與軟體開發的職涯做好準備"
+        ],
+        "impact": "學術成就與技術基礎"
+      },
+      {
+        "id": "csa-kasa-board",
+        "title": "PR Board Member & Social Media Coordinator",
+        "company": "Chinese Student Association & Korean American Student Association",
+        "period": "Sep 2022 - Jun 2023",
+        "duration": "10 months",
+        "type": "leadership",
+        "categories": ["leadership", "client"],
+        "highlights": [
+          "每週大會向50-100名成員傳達社團更新並主持活動",
+          "透過策略性外展將網絡與夥伴關係翻倍",
+          "透過與在地企業合作為社團募得經費"
+        ],
+        "impact": "社群領導與夥伴關係建立"
+      },
+      {
+        "id": "hot-topic",
+        "title": "Stock Key",
+        "company": "Hot Topic",
+        "period": "Sep 2018 - May 2019",
+        "duration": "9 months",
+        "type": "client",
+        "categories": ["client"],
+        "highlights": [
+          "管理庫存與補貨",
+          "在零售環境提供客戶服務",
+          "維護門市整理與視覺標準"
+        ],
+        "impact": "零售運營與客戶服務"
+      },
+      {
+        "id": "chipotle",
+        "title": "Cashier",
+        "company": "Chipotle Mexican Grill",
+        "period": "May 2018 - Aug 2018",
+        "duration": "4 months",
+        "type": "client",
+        "categories": ["client"],
+        "highlights": [
+          "處理大量交易",
+          "在快節奏環境中保持準確性",
+          "提供友善的客戶服務"
+        ],
+        "impact": "快節奏環境的客戶服務"
+      }
+    ],
+    "capstones": {
+      "technical": {
+        "title": "技術專長",
+        "description": "全端開發、企業AI解決方案與聯邦(DoD)經驗",
+        "icon": "fas fa-code",
+        "color": "#4F46E5"
+      },
+      "leadership": {
+        "title": "領導與管理",
+        "description": "團隊領導、流程優化、指導與組織成長",
+        "icon": "fas fa-users",
+        "color": "#059669"
+      },
+      "client": {
+        "title": "客戶卓越",
+        "description": "建立關係、理解需求並在多產業交付解決方案",
+        "icon": "fas fa-handshake",
+        "color": "#DC2626"
+      }
     },
-    "educationCertifications": {
-      "title": "教育與認證",
+    "education": {
+      "title": "學歷與認證",
       "items": [
         {
-          "title": "電腦科學學士學位",
-          "subtitle": "加州大學聖克魯茲分校"
+          "title": "Bachelor's Degree in Computer Science",
+          "subtitle": "University of California Santa Cruz • June 2023"
         },
         {
-          "title": "活躍的頂級機密安全許可（第5級）",
-          "subtitle": "有效期為未來5年"
+          "title": "Active Security Clearance",
+          "subtitle": "Valid for next 5 years"
         },
         {
-          "title": "Nvidia深度學習研究所",
-          "subtitle": "生成AI解釋認證"
+          "title": "Nvidia Deep Learning Institute",
+          "subtitle": "Generative AI Explained Certification"
         },
         {
-          "title": "Apple認證iOS技術員（ACiT）",
-          "subtitle": "硬體和軟體故障排除認證"
+          "title": "Apple Certified iOS Technician (ACiT)",
+          "subtitle": "Hardware and Software Troubleshooting"
         }
       ]
     },
-    "technicalSkills": {
-      "title": "技術技能",
-      "skills": [
+    "skills": {
+      "technical": [
+        "Python", "JavaScript", "React.js", "TypeScript", "AI/ML", "APIs", "PostgreSQL", "Git"
+      ],
+      "leadership": [
+        "Team Management", "Mentorship", "Process Optimization", "Strategic Planning", "Cross-functional Collaboration"
+      ],
+      "client": [
+        "Client Relations", "Problem Resolution", "Service Excellence", "Communication", "Stakeholder Management"
+      ]
+    },
+    "projectExamples": {
+      "label": "專案範例",
+      "c3ai": [
         {
-          "category": "程式語言與框架",
-          "items": "Python, JavaScript, React.js, TypeScript, HTML, CSS, JSON, SQL"
+          "title": "C3 AI Decision Advantage",
+          "url": "https://c3.ai/products/c3-ai-decision-advantage/"
         },
         {
-          "category": "開發工具與平台",
-          "items": "APIs, GitHub版本控制, 終端環境, Jira, 叢集與工件部署, Python運行時, Google工作站"
-        },
-        {
-          "category": "AI與機器學習",
-          "items": "人工智慧, 機器學習, 自然語言處理, 大型語言模型, 提示工程, 超參數調整, Pandas, 特徵工程"
-        },
-        {
-          "category": "專業技能",
-          "items": "協作領導力, 溝通, 適應性, 問題解決, 時間管理, 跨職能團隊合作, 導師制, 利害關係人參與, 技術寫作, 決策制定"
+          "title": "C3 AI Contested Logistics",
+          "url": "https://c3.ai/products/c3-ai-contested-logistics/"
         }
       ]
     }

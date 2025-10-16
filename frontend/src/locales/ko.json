@@ -110,74 +110,181 @@
     }
   },
   "experiencePage": {
-    "title": "프로페셔널 경험",
-    "technicalExperience": {
-      "title": "테크니컬 경험",
-      "jobs": [
-        {
-          "title": "AI & ML 풀스택 소프트웨어 엔지니어 II",
-          "company": "C3.AI via Paradyme Inc.",
-          "period": "2024년 6월 - 현재",
-          "description": "연방 공간(DoD)에서의 엔터프라이즈 솔루션 엔지니어링과 소프트웨어 개발<br />C3.AI Decision Advantage | C3.AI Contested Logistics",
-          "bullets": [
-            "프로젝트 매니저와 협력해서 데모 플로우를 위한 앱 기능 준비하고, 클라이언트 미팅에서 기능 요구사항 논의에 기여",
-            "Agentic AI Agent Hackathon: C3 플랫폼 툴을 사용해서 GitHub PR 생성을 간소화하는 Agentic AI agent 디자인 및 개발",
-            "C3.AI Machine Learning Forecasting Project capstone 코스 베타 테스트, 중요한 피드백 제공하고 완료 인증서 획득",
-            "시계열 예측을 사용해서 풍력 터빈 전력 출력을 7일 예측, 베이스라인 모델보다 35% 개선 달성",
-            "C3.AI 플랫폼에서 LightGBM 엔드투엔드 파이프라인 생성, capstone에서 100% 점수",
-            "개념 증명, 기술 스펙, 개발, 문서화 포함 주요 기능의 엔드투엔드 소유권 유지:",
-            "OAuth2 인증으로 안전한 데이터 교환을 위한 Ingress/Egress RESTful API",
-            "Pandas를 사용한 Microsoft 문서 임포트/익스포트 및 데이터 조작과 파싱",
-            "채팅 히스토리와 사용자 검색 기능이 있는 실시간 메시징 시스템"
-          ]
-        },
-        {
-          "title": "테크니컬 스페셜리스트",
-          "company": "Apple",
-          "period": "2019년 5월 - 2020년 5월",
-          "bullets": [
-            "클라이언트 페이싱 롤에서 iOS 디바이스의 하드웨어/소프트웨어 이슈 트리아지, 진단 수행하고 기술 문서 생성",
-            "다른 부서 간 크로스펑셔널 팀 협업에서 탁월한 고객 경험 제공"
-          ]
-        }
-      ]
+    "title": "경력 타임라인",
+    "subtitle": "기술 전문성, 리더십, 고객(클라이언트) 대응 역량을 보여주는 인터랙티브 타임라인",
+    "filters": {
+      "all": "전체 경력",
+      "technical": "기술",
+      "leadership": "리더십",
+      "client": "클라이언트 역량"
     },
-    "leadershipManagement": {
-      "title": "리더십과 매니지먼트",
-      "jobs": [
-        {
-          "title": "소프트웨어 엔지니어 팀 리드",
-          "company": "Paradyme Inc.",
-          "period": "2025년 1월 - 현재",
-          "bullets": [
-            "엔지니어링 팀 성장 리드 및 지원, 엔지니어와 임원 리더십 간 커뮤니케이션 브릿지",
-            "20명 이상 새로운 팀 멤버 온보드 및 가이드, 온보딩 시스템 간소화하고 온보딩 기간 60% 감소",
-            "엔지니어링 롤 잠재 후보자 스크리닝하고 기술 인터뷰 진행, 더 강한 신입사원 결과",
-            "스크럼 마스터로서 스프린트 레트로스펙티브와 스탠드업 미팅 리드, 스테이크홀더에게 기능 데모도"
-          ]
-        },
-        {
-          "title": "공보 위원회 멤버 / 소셜 미디어 코디네이터",
-          "company": "중국 학생 협회 & 한국계 미국인 학생 협회",
-          "period": "2022년 9월 - 2023년 6월",
-          "bullets": [
-            "50-100명 멤버에게 주간 총회에서 클럽 업데이트 전달하고 아이스브레이커 활동 리드",
-            "소셜 미디어 계정 관리와 전략적 아웃리치 시작으로 네트워크와 파트너십 두 배 확대",
-            "Poke House 같은 지역 비즈니스와 파트너십 통해 클럽 펀드 수백 달러 모금"
-          ]
-        }
-      ]
+    "timeline": [
+      {
+        "id": "current-lead",
+        "title": "Technical Lead",
+        "company": "Paradyme Inc.",
+        "period": "Jan 2025 - Present",
+        "duration": "Current",
+        "type": "current",
+        "categories": ["leadership", "technical"],
+        "highlights": [
+          "엔지니어링 팀 성장 리드 및 경영진과의 소통",
+          "20명 이상의 신규 멤버 온보딩 시간을 60% 단축",
+          "기술 인터뷰 주도 및 채용 품질 향상"
+        ],
+        "impact": "팀 리더십 및 프로세스 최적화"
+      },
+      {
+        "id": "c3ai-engineer",
+        "title": "AI & ML Fullstack Software Engineer II",
+        "company": "C3.AI via Paradyme Inc.",
+        "period": "Jun 2024 - Present",
+        "duration": "Current",
+        "type": "technical",
+        "categories": ["technical", "client"],
+        "highlights": [
+          "국방(DoD) 클라이언트를 위한 엔터프라이즈 AI 솔루션 개발",
+          "데이터 사이언티스트 및 제품 관리자와의 크로스팀 협업",
+          "OAuth2 인증을 포함한 보안 API 개발"
+        ],
+        "impact": "엔터프라이즈 AI 및 연방 솔루션"
+      },
+      {
+        "id": "cartier-coordinator",
+        "title": "Client Experience Coordinator",
+        "company": "Cartier",
+        "period": "Apr 2024 - Jun 2024",
+        "duration": "3 months",
+        "type": "client",
+        "categories": ["client", "leadership"],
+        "highlights": [
+          "럭셔리 부티크에서 클라이언트 경험 및 기대치 관리",
+          "신규 팀원 교육 및 섀도잉 세션 운영",
+          "최적의 고객 커버리지를 위한 일정 조정"
+        ],
+        "impact": "프리미엄 고객 경험 관리"
+      },
+      {
+        "id": "apple-genius",
+        "title": "Technical Specialist @ Genius Bar",
+        "company": "Apple",
+        "period": "Nov 2019 - Apr 2020",
+        "duration": "6 months",
+        "type": "technical",
+        "categories": ["technical", "client"],
+        "highlights": [
+          "고객 만족도 상위 10% 달성",
+          "Apple ACiT(iOS Technician) 인증 획득",
+          "맞춤형 서비스로 비즈니스 리드 생성 상위 20% 달성"
+        ],
+        "impact": "기술 지원 우수성"
+      },
+      {
+        "id": "apple-sales",
+        "title": "Sales Specialist",
+        "company": "Apple",
+        "period": "May 2019 - Nov 2019",
+        "duration": "7 months",
+        "type": "client",
+        "categories": ["client", "technical"],
+        "highlights": [
+          "고객 순추천지수(NPS) 90% 이상 달성",
+          "Apple Care 전환율 70-80% 달성",
+          "Technical Specialist로 승진"
+        ],
+        "impact": "영업 및 고객 만족"
+      },
+      {
+        "id": "graduation",
+        "title": "Bachelor's Degree in Computer Science",
+        "company": "University of California Santa Cruz",
+        "period": "Jun 2023",
+        "duration": "Graduated",
+        "type": "education",
+        "categories": ["technical"],
+        "highlights": [
+          "컴퓨터 과학 학사 학위 취득",
+          "알고리즘, 자료구조, 소프트웨어 공학 기반 확립",
+          "AI 및 소프트웨어 개발 경력 준비"
+        ],
+        "impact": "학업 성취 및 기술적 기초"
+      },
+      {
+        "id": "csa-kasa-board",
+        "title": "PR Board Member & Social Media Coordinator",
+        "company": "Chinese Student Association & Korean American Student Association",
+        "period": "Sep 2022 - Jun 2023",
+        "duration": "10 months",
+        "type": "leadership",
+        "categories": ["leadership", "client"],
+        "highlights": [
+          "주간 총회에서 50-100명 대상 클럽 업데이트 진행",
+          "전략적 아웃리치로 네트워크 및 파트너십을 두 배 확장",
+          "지역 비즈니스와의 파트너십으로 클럽 기금 모금"
+        ],
+        "impact": "커뮤니티 리더십 및 파트너십 구축"
+      },
+      {
+        "id": "hot-topic",
+        "title": "Stock Key",
+        "company": "Hot Topic",
+        "period": "Sep 2018 - May 2019",
+        "duration": "9 months",
+        "type": "client",
+        "categories": ["client"],
+        "highlights": [
+          "재고 및 보충 관리",
+          "소매 환경에서 고객 서비스 제공",
+          "매장 정리 및 비주얼 표준 유지"
+        ],
+        "impact": "소매 운영 및 고객 서비스"
+      },
+      {
+        "id": "chipotle",
+        "title": "Cashier",
+        "company": "Chipotle Mexican Grill",
+        "period": "May 2018 - Aug 2018",
+        "duration": "4 months",
+        "type": "client",
+        "categories": ["client"],
+        "highlights": [
+          "고거래량 트랜잭션 처리",
+          "빠른 환경에서 정확성 유지",
+          "친절한 고객 서비스 제공"
+        ],
+        "impact": "고속 환경의 고객 서비스"
+      }
+    ],
+    "capstones": {
+      "technical": {
+        "title": "기술 전문성",
+        "description": "Full-stack 개발, 엔터프라이즈 AI 솔루션 및 연방(DoD) 경험",
+        "icon": "fas fa-code",
+        "color": "#4F46E5"
+      },
+      "leadership": {
+        "title": "리더십 및 관리",
+        "description": "팀 리더십, 프로세스 최적화, 멘토십 및 조직 성장",
+        "icon": "fas fa-users",
+        "color": "#059669"
+      },
+      "client": {
+        "title": "클라이언트 우수성",
+        "description": "관계 구축, 니즈 이해 및 다양한 산업에서의 솔루션 제공",
+        "icon": "fas fa-handshake",
+        "color": "#DC2626"
+      }
     },
-    "educationCertifications": {
-      "title": "교육과 인증",
+    "education": {
+      "title": "학력 및 인증",
       "items": [
         {
-          "title": "컴퓨터 사이언스 학사",
-          "subtitle": "캘리포니아 대학교 산타크루즈"
+          "title": "Bachelor's Degree in Computer Science",
+          "subtitle": "University of California Santa Cruz • June 2023"
         },
         {
-          "title": "액티브 탑 시크릿 시큐리티 클리어런스 (Tier 5)",
-          "subtitle": "다음 5년간 유효"
+          "title": "Active Security Clearance",
+          "subtitle": "Valid for next 5 years"
         },
         {
           "title": "Nvidia Deep Learning Institute",
@@ -185,28 +292,31 @@
         },
         {
           "title": "Apple Certified iOS Technician (ACiT)",
-          "subtitle": "하드웨어 및 소프트웨어 트러블슈팅 인증"
+          "subtitle": "Hardware and Software Troubleshooting"
         }
       ]
     },
-    "technicalSkills": {
-      "title": "테크니컬 스킬",
-      "skills": [
+    "skills": {
+      "technical": [
+        "Python", "JavaScript", "React.js", "TypeScript", "AI/ML", "APIs", "PostgreSQL", "Git"
+      ],
+      "leadership": [
+        "Team Management", "Mentorship", "Process Optimization", "Strategic Planning", "Cross-functional Collaboration"
+      ],
+      "client": [
+        "Client Relations", "Problem Resolution", "Service Excellence", "Communication", "Stakeholder Management"
+      ]
+    },
+    "projectExamples": {
+      "label": "프로젝트 예시",
+      "c3ai": [
         {
-          "category": "프로그래밍 언어와 프레임워크",
-          "items": "Python, JavaScript, React.js, TypeScript, HTML, CSS, JSON, SQL"
+          "title": "C3 AI Decision Advantage",
+          "url": "https://c3.ai/products/c3-ai-decision-advantage/"
         },
         {
-          "category": "개발 툴과 플랫폼",
-          "items": "APIs, GitHub 버전 컨트롤, 터미널 환경, Jira, 클러스터와 아티팩트 디플로이먼트, Python 런타임, Google Workstations"
-        },
-        {
-          "category": "AI와 머신러닝",
-          "items": "인공지능, 머신러닝, 자연어 처리, 대규모 언어 모델, 프롬프트 엔지니어링, 하이퍼파라미터 튜닝, Pandas, 특징 엔지니어링"
-        },
-        {
-          "category": "프로페셔널 스킬",
-          "items": "협력적 리더십, 커뮤니케이션, 적응성, 문제 해결, 시간 관리, 크로스펑셔널 팀워크, 멘토링, 스테이크홀더 참여, 기술 라이팅, 의사결정"
+          "title": "C3 AI Contested Logistics",
+          "url": "https://c3.ai/products/c3-ai-contested-logistics/"
         }
       ]
     }

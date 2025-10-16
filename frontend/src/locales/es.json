@@ -110,103 +110,213 @@
     }
   },
   "experiencePage": {
-    "title": "Experiencia Profesional",
-    "technicalExperience": {
-      "title": "Experiencia Técnica",
-      "jobs": [
-        {
-          "title": "Ingeniero Full-Stack de IA y ML II",
-          "company": "C3.AI vía Paradyme Inc.",
-          "period": "Junio 2024 - Presente",
-          "description": "Ingeniería de soluciones empresariales y desarrollo de software en el espacio federal (DoD)<br />C3.AI Decision Advantage | C3.AI Contested Logistics",
-          "bullets": [
-            "Colaboré con gerentes de proyecto para preparar características de apps para flujos de demo y contribuí a reuniones con clientes para discutir requisitos de características",
-            "Hackathon de Agente AI: Diseñé y desarrollé un agente AI para agilizar la creación de PR en GitHub usando herramientas de plataforma C3",
-            "Beta testé el curso capstone de Forecasting de ML de C3.AI, proporcioné feedback clave y obtuve certificado de finalización",
-            "Utilicé forecasting de series temporales para predecir la salida de energía de turbinas eólicas por 7 días, logrando 35% de mejora sobre el modelo base",
-            "Creé pipeline end-to-end de LightGBM en plataforma C3.AI, obtuve 100% en el capstone",
-            "Mantuve propiedad end-to-end de características clave incluyendo pruebas de concepto, specs técnicas, desarrollo y documentación:",
-            "API RESTful de Ingress/Egress con autenticación OAuth2 para intercambio de datos seguro",
-            "Importar/Exportar documentos Microsoft usando Pandas para manipulación y parsing de datos",
-            "Sistema de mensajería en tiempo real con historial de chat y funcionalidad de búsqueda de usuario"
-          ]
-        },
-        {
-          "title": "Especialista Técnico",
-          "company": "Apple",
-          "period": "Mayo 2019 - Mayo 2020",
-          "bullets": [
-            "Trié problemas de hardware/software con dispositivos iOS en rol orientado al cliente, realicé diagnósticos y produje documentación técnica",
-            "Excelí en colaboración de equipo cross-functional a través de diferentes departamentos para entregar experiencias excepcionales al cliente"
-          ]
-        }
-      ]
+    "title": "Cronología de Experiencia",
+    "subtitle": "Cronología interactiva que muestra experiencia técnica, liderazgo y relación con clientes",
+    "filters": {
+      "all": "Toda la experiencia",
+      "technical": "Técnico",
+      "leadership": "Liderazgo",
+      "client": "Atención al cliente"
     },
-    "leadershipManagement": {
-      "title": "Liderazgo y Gestión",
-      "jobs": [
-        {
-          "title": "Líder de Equipo de Ingenieros de Software",
-          "company": "Paradyme Inc.",
-          "period": "Enero 2025 - Presente",
-          "bullets": [
-            "Lideré y apoyé el crecimiento del equipo de ingeniería, puenteando comunicación entre ingenieros y liderazgo ejecutivo",
-            "Incorporé y guié a 20+ nuevos miembros del equipo, agilizando sistemas de onboarding y reduciendo el período de onboarding en 60%",
-            "Evalué candidatos potenciales para roles de ingeniería y conduje entrevistas técnicas, resultando en contrataciones más fuertes",
-            "Lideré retrospectivas de sprint y reuniones diarias como scrum master, junto con demo de características a stakeholders"
-          ]
-        },
-        {
-          "title": "Miembro de Junta de Relaciones Públicas / Coordinador de Redes Sociales",
-          "company": "Asociación de Estudiantes Chinos & Asociación de Estudiantes Coreano-Americanos",
-          "period": "Sep 2022 - Jun 2023",
-          "bullets": [
-            "Entregué actualizaciones del club en reuniones generales semanales a 50-100 miembros y lideré actividades de icebreaker",
-            "Expandí redes y partnerships dos veces mediante gestión de cuentas de redes sociales e iniciación de outreach estratégico",
-            "Recaudé cientos de dólares en fondos del club a través de partnerships con negocios locales como Poke House"
-          ]
-        }
-      ]
+    "timeline": [
+      {
+        "id": "current-lead",
+        "title": "Technical Lead",
+        "company": "Paradyme Inc.",
+        "period": "Jan 2025 - Present",
+        "duration": "Current",
+        "type": "current",
+        "categories": ["leadership", "technical"],
+        "highlights": [
+          "Lidero el crecimiento del equipo de ingeniería y el puente con la dirección ejecutiva",
+          "Reduje el tiempo de incorporación en un 60% para más de 20 miembros del equipo",
+          "Conduzco entrevistas técnicas y mejoro la calidad de contratación"
+        ],
+        "impact": "Liderazgo de equipo y optimización de procesos"
+      },
+      {
+        "id": "c3ai-engineer",
+        "title": "AI & ML Fullstack Software Engineer II",
+        "company": "C3.AI vía Paradyme Inc.",
+        "period": "Jun 2024 - Present",
+        "duration": "Current",
+        "type": "technical",
+        "categories": ["technical", "client"],
+        "highlights": [
+          "Desarrollo soluciones empresariales de IA para clientes del sector federal (DoD)",
+          "Colaboro con científicos de datos y gestores de producto en iniciativas cross-team",
+          "Desarrollo APIs seguras con autenticación OAuth2"
+        ],
+        "impact": "Soluciones empresariales de IA y proyectos federales"
+      },
+      {
+        "id": "cartier-coordinator",
+        "title": "Client Experience Coordinator",
+        "company": "Cartier",
+        "period": "Apr 2024 - Jun 2024",
+        "duration": "3 months",
+        "type": "client",
+        "categories": ["client", "leadership"],
+        "highlights": [
+          "Gestioné la experiencia y expectativas de clientes en boutique de lujo",
+          "Formé a nuevos miembros del equipo y facilité sesiones de shadowing",
+          "Coordiné horarios de equipo para una cobertura óptima al cliente"
+        ],
+        "impact": "Gestión de experiencia premium para clientes"
+      },
+      {
+        "id": "apple-genius",
+        "title": "Technical Specialist @ Genius Bar",
+        "company": "Apple",
+        "period": "Nov 2019 - Apr 2020",
+        "duration": "6 months",
+        "type": "technical",
+        "categories": ["technical", "client"],
+        "highlights": [
+          "Top 10% en índices de satisfacción en citas de alto volumen",
+          "Obtuve certificación Apple ACiT (iOS Technician)",
+          "Generé leads de negocio mediante servicio personalizado"
+        ],
+        "impact": "Excelencia en soporte técnico"
+      },
+      {
+        "id": "apple-sales",
+        "title": "Sales Specialist",
+        "company": "Apple",
+        "period": "May 2019 - Nov 2019",
+        "duration": "7 months",
+        "type": "client",
+        "categories": ["client", "technical"],
+        "highlights": [
+          "Logré un Net Promoter Score con clientes de 90%+",
+          "Aumenté la conversión de Apple Care al 70-80%",
+          "Promovido a Technical Specialist"
+        ],
+        "impact": "Ventas y satisfacción del cliente"
+      },
+      {
+        "id": "graduation",
+        "title": "Bachelor's Degree in Computer Science",
+        "company": "University of California Santa Cruz",
+        "period": "Jun 2023",
+        "duration": "Graduated",
+        "type": "education",
+        "categories": ["technical"],
+        "highlights": [
+          "Completé la licenciatura en Ciencias de la Computación",
+          "Formación sólida en algoritmos, estructuras de datos e ingeniería de software",
+          "Preparado para una carrera en IA y desarrollo de software"
+        ],
+        "impact": "Logro académico y base técnica"
+      },
+      {
+        "id": "csa-kasa-board",
+        "title": "PR Board Member & Social Media Coordinator",
+        "company": "Chinese Student Association & Korean American Student Association",
+        "period": "Sep 2022 - Jun 2023",
+        "duration": "10 months",
+        "type": "leadership",
+        "categories": ["leadership", "client"],
+        "highlights": [
+          "Conduje reuniones semanales para 50-100 miembros",
+          "Duplicamos alianzas de red mediante outreach estratégico",
+          "Recaudé fondos para el club a través de partnerships comerciales"
+        ],
+        "impact": "Liderazgo comunitario y creación de alianzas"
+      },
+      {
+        "id": "hot-topic",
+        "title": "Stock Key",
+        "company": "Hot Topic",
+        "period": "Sep 2018 - May 2019",
+        "duration": "9 months",
+        "type": "client",
+        "categories": ["client"],
+        "highlights": [
+          "Gestioné inventario y reposición",
+          "Proporcioné servicio al cliente en entorno minorista",
+          "Mantuve la organización y estándares visuales de la tienda"
+        ],
+        "impact": "Operaciones minoristas y servicio al cliente"
+      },
+      {
+        "id": "chipotle",
+        "title": "Cashier",
+        "company": "Chipotle Mexican Grill",
+        "period": "May 2018 - Aug 2018",
+        "duration": "4 months",
+        "type": "client",
+        "categories": ["client"],
+        "highlights": [
+          "Manejé transacciones de alto volumen",
+          "Mantuvé precisión en un entorno dinámico",
+          "Ofrecí servicio al cliente amable"
+        ],
+        "impact": "Atención al cliente en entornos acelerados"
+      }
+    ],
+    "capstones": {
+      "technical": {
+        "title": "Experticia Técnica",
+        "description": "Desarrollo full-stack, soluciones empresariales de IA y experiencia federal (DoD - Marítimo & Logística).",
+        "icon": "fas fa-code",
+        "color": "#4F46E5"
+      },
+      "leadership": {
+        "title": "Liderazgo y Gestión",
+        "description": "Liderazgo de equipos, optimización de procesos, mentoría y crecimiento organizacional",
+        "icon": "fas fa-users",
+        "color": "#059669"
+      },
+      "client": {
+        "title": "Excelencia con Clientes",
+        "description": "Construir rapport, entender necesidades y entregar soluciones en diversas industrias",
+        "icon": "fas fa-handshake",
+        "color": "#DC2626"
+      }
     },
-    "educationCertifications": {
+    "education": {
       "title": "Educación y Certificaciones",
       "items": [
         {
-          "title": "Licenciatura en Ciencias de la Computación",
-          "subtitle": "Universidad de California Santa Cruz"
+          "title": "Bachelor's Degree in Computer Science",
+          "subtitle": "University of California Santa Cruz • June 2023"
         },
         {
-          "title": "Autorización de Seguridad Top Secret Activa (Tier 5)",
-          "subtitle": "Válida por los próximos 5 años"
+          "title": "Active Security Clearance",
+          "subtitle": "Valid for next 5 years"
         },
         {
-          "title": "Instituto de Deep Learning de Nvidia",
-          "subtitle": "Certificación de IA Generativa Explicada"
+          "title": "Nvidia Deep Learning Institute",
+          "subtitle": "Generative AI Explained Certification"
         },
         {
-          "title": "Técnico Certificado de iOS de Apple (ACiT)",
-          "subtitle": "Certificación de Troubleshooting de Hardware y Software"
+          "title": "Apple Certified iOS Technician (ACiT)",
+          "subtitle": "Hardware and Software Troubleshooting"
         }
       ]
     },
-    "technicalSkills": {
-      "title": "Habilidades Técnicas",
-      "skills": [
+    "skills": {
+      "technical": [
+        "Python", "JavaScript", "React.js", "TypeScript", "AI/ML", "APIs", "PostgreSQL", "Git"
+      ],
+      "leadership": [
+        "Team Management", "Mentorship", "Process Optimization", "Strategic Planning", "Cross-functional Collaboration"
+      ],
+      "client": [
+        "Client Relations", "Problem Resolution", "Service Excellence", "Communication", "Stakeholder Management"
+      ]
+    },
+    "projectExamples": {
+      "label": "Ejemplos de Proyectos",
+      "c3ai": [
         {
-          "category": "Lenguajes de Programación y Frameworks",
-          "items": "Python, JavaScript, React.js, TypeScript, HTML, CSS, JSON, SQL"
+          "title": "C3 AI Decision Advantage",
+          "url": "https://c3.ai/products/c3-ai-decision-advantage/"
         },
         {
-          "category": "Herramientas y Plataformas de Desarrollo",
-          "items": "APIs, Control de Versiones GitHub, Entornos de Terminal, Jira, Despliegue de Clusters y Artefactos, Runtimes de Python, Workstations de Google"
-        },
-        {
-          "category": "IA y Machine Learning",
-          "items": "Inteligencia Artificial, Machine Learning, Procesamiento de Lenguaje Natural, Modelos de Lenguaje Grandes, Ingeniería de Prompts, Ajuste de Hiperparámetros, Pandas, Ingeniería de Características"
-        },
-        {
-          "category": "Habilidades Profesionales",
-          "items": "Liderazgo Colaborativo, Comunicación, Adaptabilidad, Resolución de Problemas, Gestión del Tiempo, Trabajo en Equipo Cross-Functional, Mentoría, Compromiso con Stakeholders, Escritura Técnica, Toma de Decisiones"
+          "title": "C3 AI Contested Logistics",
+          "url": "https://c3.ai/products/c3-ai-contested-logistics/"
         }
       ]
     }
