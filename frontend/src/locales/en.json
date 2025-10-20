@@ -34,6 +34,28 @@
     "inputPlaceholder": "Type your message...",
     "comingSoon": "Chat assistant coming soon..."
   },
+  "demoPage": {
+    "title": "Stock Predictor Demo",
+    "tickerLabel": "Stock Ticker",
+    "tickerPlaceholder": "e.g. AAPL or BRK.B",
+    "supportedFormatNote": "Supports common Yahoo Finance ticker formats (letters, numbers, dots, dashes).",
+    "daysLabel": "Predict Horizon",
+    "daysSuffix": "day(s)",
+    "modelLabel": "Model",
+    "modelOptions": {
+      "linear": "Linear Regression"
+    },
+    "modelNote": "Currently Linear Regression is the only available model.",
+    "predictButton": "Run Prediction",
+    "predictionLoading": "Predicting...",
+    "historicalLabel": "Historical (1 year)",
+    "historicalDescription": "Visualized last 12 months of price data for the selected ticker.",
+    "predictionLabel": "Model Prediction",
+    "predictedTextPrefix": "Predicted price:",
+    "noPredictionText": "No prediction yet. Enter a ticker and run prediction.",
+    "backendTodo": "TODO: Connect to backend prediction API (placeholder).",
+    "errorInvalidTicker": "Invalid ticker format."
+  },
   "common": {
     "close": "Close",
     "send": "Send",

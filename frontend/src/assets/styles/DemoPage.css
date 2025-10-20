@@ -10,15 +10,22 @@
 
 .page-content {
   text-align: center;
-  max-width: 50rem;
+  max-width: 90vw;
   margin: 0 auto;
   padding: 4rem 0;
 }
 
 .page-content h1 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
+  font-size: 4.2vh;
+  margin-bottom: 2vh;
   color: var(--text-primary);
+}
+
+.demo-subtitle {
+  font-size: 1.6vh;
+  color: var(--text-muted);
+  margin-top: 0.6vh;
+  margin-bottom: 3vh;
 }
 
 .content-placeholder {
@@ -41,32 +48,128 @@
 }
 
 .demo-content {
-  max-width: 80vw;
+  max-width: 85vw;
   margin: 0 auto;
-  padding: 6vh 4vw;
+  padding: 4vh 3vw;
 }
 
 .demo-title {
-  font-size: 2.5rem;
-  margin-bottom: 4vh;
-}
-
-.demo-section {
-  margin-bottom: 4vh;
-}
-
-.demo-section-title {
-  font-size: 1.5rem;
+  font-size: 3.2vh;
   margin-bottom: 2vh;
 }
 
+.demo-section {
+  margin-bottom: 2.4vh;
+}
+
+.controls-row {
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 2vh;
+}
+
+.controls-row .demo-section {
+  margin-bottom: 0;
+}
+
+.demo-section-title {
+  font-size: 1.6vh;
+  margin-bottom: 1vh;
+}
+
 .demo-section-content {
-  font-size: 1.1rem;
+  font-size: 1.4vh;
+}
+
+.demo-card {
+  background: linear-gradient(180deg, var(--bg-secondary), rgba(255,255,255,0.01));
+  padding: 3vh 3vw;
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+
+.demo-input,
+.demo-select {
+  width: 20vw;
+  min-width: 12rem;
+  padding: 1vh 1vw;
+  margin-top: 0.6vh;
+  border-radius: 0.6rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  box-sizing: border-box;
+}
+
+.helper-note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.5vh;
+}
+
+.predict-button {
+  background: linear-gradient(90deg, rgba(37,99,235,1), rgba(96,165,250,1));
+  color: white;
+  padding: 1.2vh 2.6vw;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  box-shadow: 0 6px 18px rgba(37,99,235,0.18);
+}
+
+.predict-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(37,99,235,0.22);
+}
+
+.predict-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: #ff6b6b;
+  margin-top: 1vh;
+}
+
+.small-muted {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Stock chart responsive sizing moved here */
+.stock-chart {
+  width: 85vw;
+  max-width: 1200px;
+  height: 36vh;
+  max-height: 420px;
+  margin: 2vh auto 0;
+}
+
+.chart-container {
+  width: 100%;
+  height: 36vh;
+  max-height: 420px;
+  margin-top: 1.6vh;
+  box-sizing: border-box;
+}
+
+/* Ensure Plotly (or fallback SVG) fills the container */
+.chart-container > div,
+.chart-container > svg {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 @media (max-width: 48rem) {
   .page-content h1 {
-    font-size: 2rem;
+    font-size: 3.2vh;
   }
   
   .content-placeholder {
@@ -75,9 +178,20 @@
   }
 
   .demo-title {
-    font-size: 2rem;
+    font-size: 2.6vh;
   }
   .demo-content {
     padding: 2vh 1vw;
+  }
+
+  .demo-input,
+  .demo-select {
+    width: 92%;
+    max-width: none;
+  }
+
+  .stock-chart {
+    width: 95vw;
+    height: 35vh;
   }
 }
