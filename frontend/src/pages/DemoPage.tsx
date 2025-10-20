@@ -19,8 +19,14 @@ const TICKER_SUGGESTIONS = [
 ];
 
 // React.lazy + Suspense to code-split the Plotly chart component.
-// This keeps the initial bundle small while still providing a standard interactive chart.
-const Plot = React.lazy(() => import('react-plotly.js'));
+// Create Plot component via factory so Vite/Rollup can resolve the Plotly bundle correctly.
+const Plot = React.lazy(async () => {
+  // Import the factory that accepts a Plotly instance and returns a React component
+  const factory = (await import('react-plotly.js/factory')).default;
+  // Import a lightweight Plotly distribution
+  const Plotly = (await import('plotly.js-basic-dist'))?.default || (await import('plotly.js-basic-dist'));
+  return { default: factory(Plotly) };
+});
 
 const PlotWrapper: React.FC<{ dates: string[]; prices: number[]; predicted?: { daysAhead: number; value: number } | null; loading?: boolean }> = ({ dates, prices, predicted, loading = false }) => {
   // Show a chart-level loading state when data is being fetched from the backend.
