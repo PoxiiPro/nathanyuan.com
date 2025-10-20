@@ -38,14 +38,13 @@
     "title": "Stock Predictor Demo",
     "tickerLabel": "Stock Ticker",
     "tickerPlaceholder": "e.g. AAPL or BRK.B",
-    "supportedFormatNote": "Supports common Yahoo Finance ticker formats (letters, numbers, dots, dashes).",
     "daysLabel": "Predict Horizon",
     "daysSuffix": "day(s)",
     "modelLabel": "Model",
     "modelOptions": {
       "linear": "Linear Regression"
     },
-    "modelNote": "Currently Linear Regression is the only available model.",
+    "demoIntro": "This demo uses trained machine learning models to predict a future day's stock price up to 7 days from today.",
     "predictButton": "Run Prediction",
     "predictionLoading": "Predicting...",
     "historicalLabel": "Historical (1 year)",
@@ -53,7 +52,6 @@
     "predictionLabel": "Model Prediction",
     "predictedTextPrefix": "Predicted price:",
     "noPredictionText": "No prediction yet. Enter a ticker and run prediction.",
-    "backendTodo": "TODO: Connect to backend prediction API (placeholder).",
     "errorInvalidTicker": "Invalid ticker format."
   },
   "common": {
