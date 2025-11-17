@@ -83,6 +83,9 @@ const DemoPage: React.FC = () => {
   const [prediction, setPrediction] = useState<number | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // New state for caching historical data per ticker in memory
+  const [historicalDataMap, setHistoricalDataMap] = useState<Map<string, { dates: string[], prices: number[] }>>(new Map());
+  const [historicalLoading, setHistoricalLoading] = useState(false);
 
   const chartRef = useRef<HTMLDivElement | null>(null);
 
@@ -93,12 +96,49 @@ const DemoPage: React.FC = () => {
     return d.toISOString().slice(0, 10);
   }
 
-  // Clear plotted series when ticker changes; backend should provide fresh data on predict
+  // Function to fetch 1 year of historical data from backend
+  const fetchHistoricalData = async (ticker: string) => {
+    setHistoricalLoading(true);
+    try {
+      const endDate = new Date();
+      const startDate = new Date();
+      startDate.setFullYear(endDate.getFullYear() - 1);
+
+      const resp = await axios.get('/api/getHistorical', {
+        params: {
+          ticker,
+          start: startDate.toISOString().split('T')[0],
+          end: endDate.toISOString().split('T')[0]
+        }
+      });
+
+      const data = resp.data.historicalData;
+      const dates: string[] = data.map((d: any) => d.date);
+      const prices: number[] = data.map((d: any) => d.close);
+
+      setHistoricalDataMap(prev => new Map(prev.set(ticker, { dates, prices })));
+      setPlotDates(dates);
+      setPlotPrices(prices);
+      setPrediction(null); // Clear prediction on new historical load
+    } catch (err: any) {
+      setError(`Failed to fetch historical data: ${err.message}`);
+    } finally {
+      setHistoricalLoading(false);
+    }
+  };
+
+  // Clear plotted series when ticker changes; fetch historical data if not cached
   useEffect(() => {
-    setPlotDates([]);
-    setPlotPrices([]);
     setPrediction(null);
     setError(null);
+
+    if (historicalDataMap.has(ticker)) {
+      const data = historicalDataMap.get(ticker)!;
+      setPlotDates(data.dates);
+      setPlotPrices(data.prices);
+    } else {
+      fetchHistoricalData(ticker);
+    }
   }, [ticker]);
 
   const handlePredict = async () => {
@@ -258,8 +298,8 @@ const DemoPage: React.FC = () => {
                   <h3 className="demo-section-title">{dm.historicalLabel}</h3>
                   <p className="demo-section-content">{dm.historicalDescription}</p>
                   <div ref={chartRef} className="chart-container">
-                    {/* Plot the current plotted series (updates when prediction runs) */}
-                    <PlotWrapper dates={plotDates} prices={plotPrices} predicted={predictedPoint} loading={loading} />
+                    {/* Plot the current plotted series (updates when prediction runs or ticker changes) */}
+                    <PlotWrapper dates={plotDates} prices={plotPrices} predicted={predictedPoint} loading={loading || historicalLoading} />
                   </div>
                 </div>
 
