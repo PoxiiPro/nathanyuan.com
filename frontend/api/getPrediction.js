@@ -1,5 +1,3 @@
-// Serverless API route for Vercel to proxy prediction requests to a Hugging Face inference endpoint.
-
 const axios = require('axios');
 
 module.exports = async (req, res) => {
@@ -11,12 +9,13 @@ module.exports = async (req, res) => {
   if (!ticker) return res.status(400).json({ error: 'Ticker is required' });
 
   try {
-    const hfEndpoint = process.env.HF_PREDICT_ENDPOINT; // primary HF endpoint
+    // Hugging Face API endpoint and token
+    const hfEndpoint = process.env.HF_PREDICT_ENDPOINT;
     const hfAuthToken = process.env.HF_AUTH_TOKEN;
     const auth_token = process.env.AUTH_TOKEN;
 
     if (!hfEndpoint || !hfAuthToken) {
-      return res.status(500).json({ error: 'Hugging Face prediction endpoint is not configured' });
+      return res.status(500).json({ error: 'Hugging Face credentials are not configured' });
     }
 
     // Helper: compute last 12 months range
@@ -56,7 +55,7 @@ module.exports = async (req, res) => {
     return res.status(200).json(out);
   } catch (err) {
     console.error('getPrediction error', err?.response?.data || err?.message || err);
-    const message = err?.response?.data?.error || 'Failed to get prediction from Hugging Face';
+    const message = err|| 'Failed to get prediction from Hugging Face';
     return res.status(500).json({ error: message });
   }
 };
