@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState, Suspense } from 'react';
+import React, { useEffect, useMemo, useRef, useState, Suspense, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '../hooks/useLanguage';
 import axios from 'axios';
@@ -97,7 +97,7 @@ const DemoPage: React.FC = () => {
   }
 
   // Function to fetch 1 year of historical data from backend
-  const fetchHistoricalData = async (ticker: string) => {
+  const fetchHistoricalData = useCallback(async (ticker: string) => {
     setHistoricalLoading(true);
     try {
       const endDate = new Date();
@@ -125,7 +125,7 @@ const DemoPage: React.FC = () => {
     } finally {
       setHistoricalLoading(false);
     }
-  };
+  }, []);
 
   // Clear plotted series when ticker changes; fetch historical data if not cached
   useEffect(() => {
@@ -139,7 +139,8 @@ const DemoPage: React.FC = () => {
     } else {
       fetchHistoricalData(ticker);
     }
-  }, [ticker]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ticker, fetchHistoricalData]);
 
   const handlePredict = async () => {
     // Clear prior error and proceed; ticker is chosen from the curated dropdown.
