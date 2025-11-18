@@ -75,6 +75,11 @@ module.exports = async (req, res) => {
     // Save the chat log even on error
     await saveChatLog(sessionTimestamp, updatedMessages);
     
-    return res.status(500).json({ error: 'Failed to communicate with Hugging Face API' });
+    const message = `Failed to send chat message: ${err.message} \n ${err.stack}`;
+    return res.status(message.status || 500).json({
+      error: message,
+      status: message.status || 500,
+      code: message.code || null,
+    });
   }
 };

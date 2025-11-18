@@ -75,6 +75,10 @@ export default async function handler(req, res) {
 
     res.status(200).json({ message: 'Data saved successfully' });
   } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+    const message = `Failed to save data: ${err.message} \n ${err.stack}`;
+    return res.status(message.status || 500).json({
+      error: message,
+      status: message.status || 500,
+      code: message.code || null,
+     });  }
 }

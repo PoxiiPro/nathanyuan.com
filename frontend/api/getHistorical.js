@@ -31,8 +31,11 @@ module.exports = async (req, res) => {
 
     return res.status(200).json(hfData);
   } catch (err) {
-    console.error('getHistorical error', err?.response?.data || err?.message || err);
-    const message = err || 'Failed to get historical data from Hugging Face';
-    return res.status(500).json({ error: message });
+    const message = `Failed to get historical data from Hugging Face: ${err.message} \n ${err.stack}`;
+    return res.status(message.status || 500).json({
+      error: message,
+      status: message.status || 500,
+      code: message.code || null,
+     });
   }
 };
