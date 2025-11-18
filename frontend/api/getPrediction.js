@@ -11,10 +11,9 @@ module.exports = async (req, res) => {
   try {
     // Hugging Face API endpoint and token
     const hfEndpoint = process.env.HF_PREDICT_ENDPOINT;
-    const hfAuthToken = process.env.HF_AUTH_TOKEN;
     const auth_token = process.env.AUTH_TOKEN;
 
-    if (!hfEndpoint || !hfAuthToken) {
+    if (!hfEndpoint || !auth_token) {
       return res.status(500).json({ error: 'Hugging Face credentials are not configured' });
     }
 

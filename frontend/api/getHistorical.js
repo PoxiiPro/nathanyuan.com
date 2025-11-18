@@ -18,7 +18,7 @@ module.exports = async (req, res) => {
     }
 
     // Call Hugging Face inference endpoint for historical data
-    const hfResp = await axios.get(`${hfEndpoint}/getHistorical`, {
+    const hfResp = await axios.get(hfEndpoint, {
       params: { ticker, start, end },
       headers: {
         Authorization: `Bearer ${auth_token}`,
