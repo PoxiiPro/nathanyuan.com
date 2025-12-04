@@ -113,8 +113,8 @@ const DemoPage: React.FC = () => {
       });
 
       const data = resp.data.historicalData;
-      const dates: string[] = data.map((d: any) => d.date);
-      const prices: number[] = data.map((d: any) => d.close);
+      const dates: string[] = data.map((d: any) => d.Date);
+      const prices: number[] = data.map((d: any) => d.Close);
 
       setHistoricalDataMap(prev => new Map(prev.set(ticker, { dates, prices })));
       setPlotDates(dates);

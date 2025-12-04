@@ -80,5 +80,5 @@ export default async function handler(req, res) {
       error: message,
       status: message.status || 500,
       code: message.code || null,
-     });  }
+    });  }
 }

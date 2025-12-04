@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
       return res.status(500).json({ error: 'Hugging Face credentials are not configured' });
     }
 
-    // Call Hugging Face inference endpoint for historical data
+    // Send the message to the Hugging Face endpoint
     const hfResp = await axios.get(hfEndpoint, {
       params: { ticker, start, end },
       headers: {
@@ -31,11 +31,12 @@ module.exports = async (req, res) => {
 
     return res.status(200).json(hfData);
   } catch (err) {
+    const status = err.response?.status || 500;
     const message = `Failed to get historical data from Hugging Face: ${err.message} \n ${err.stack}`;
-    return res.status(message.status || 500).json({
+    return res.status(status).json({
       error: message,
-      status: message.status || 500,
-      code: message.code || null,
-     });
+      status: status,
+      code: err.response?.data?.code || null,
+    });
   }
 };
