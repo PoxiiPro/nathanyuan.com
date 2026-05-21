@@ -15,12 +15,7 @@ const UGCNavbar: React.FC = () => {
           <div className="navbar-brand">
             <Link to="/ugc">{translations.landing.name}</Link>
           </div>
-          <ul className="navbar-nav">
-            <li><a href="#niches">{translations.nav.demos}</a></li>
-            <li><a href="#about-me">{translations.nav.aboutMe}</a></li>
-            <li><a href="#contact" className="contact-anchor">{translations.nav.contact}</a></li>
-          </ul>
-          <div className="navbar-actions">
+<div className="navbar-actions">
             <ThemeToggle />
             <LanguageSelector />
           </div>

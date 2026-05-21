@@ -325,66 +325,57 @@
     "instructions": "GitHub Copilot 지시 여기 추가."
   },
   "ugc": {
-    "title": "UGC 크리에이터",
-    "tagline": "베이 에어리어 • 24세 • 라이프스타일 콘텐츠 크리에이터",
+    "title": "NATHAN YUAN",
+    "tagline": "남가주 거주 • 밀레니얼 / Z세대 • 테크 & 라이프스타일",
+    "status": "콜라보 모집 중",
+    "creatorTitle": "UGC 크리에이터",
+    "deliverables": ["UGC 광고", "원본 소스", "4K 화질", "완성 편집본"],
+    "brands": { "label": "함께한 브랜드" },
     "about": {
       "title": "소개",
-      "description": "저는 베이 에어리어에 거주하는 24세 콘텐츠 크리에이터 Nathan입니다. 참여도를 높이고 브랜드 신뢰를 구축하는 진정한 라이프스타일 콘텐츠를 전문으로 합니다. 다양한 오디언스에게 공감을 불러일으키는 진실한 스토리텔링에 중점을 두고 있습니다."
+      "description": "소프트웨어 엔지니어 출신 크리에이터 — 4K 촬영, 원본 소스 또는 완성 광고 제작 가능"
     },
     "niches": {
-      "title": "콘텐츠 분야",
-      "lifestyle": {
-        "title": "라이프스타일",
-        "description": "실제 경험을 보여주는 진정한 일상 콘텐츠"
-      },
-      "fitness": {
-        "title": "피트니스",
-        "description": "운동 루틴, 보충제, 피트니스 장비 리뷰"
-      },
-      "food": {
-        "title": "음식 & 다이닝",
-        "description": "레스토랑 경험, 식사 준비, 식품 리뷰"
-      },
-      "tech": {
-        "title": "테크",
-        "description": "최신 가젯, 앱, 테크 라이프스타일 통합"
-      },
-      "fashion": {
-        "title": "패션",
-        "description": "남성 스타일, 캐주얼웨어, 액세서리 쇼케이스"
-      },
-      "skincare": {
-        "title": "스킨케어",
-        "description": "남성 그루밍 루틴 및 스킨케어 제품 리뷰"
-      }
+      "title": "콘텐츠 카테고리",
+      "tech": { "title": "테크 & 디지털", "description": "소프트웨어, 가젯, 핀테크, 생산성 앱" },
+      "grooming": { "title": "그루밍 & 웰니스", "description": "스킨케어, 건강보조식품, 피트니스" },
+      "style": { "title": "패션 & 액세서리", "description": "의류, 주얼리, 패션" },
+      "lifestyle": { "title": "여행 & 라이프스타일", "description": "맛집, 음료, 여행 브이로그, 반려동물" }
     },
     "contact": {
-      "title": "함께 창작해요",
-      "description": "다음 캠페인에서 협업할 준비가 되셨나요?",
+      "title": "같이 만들어요",
+      "description": "브랜드에 딱 맞는 콘텐츠, 편하게 연락 주세요",
       "email": "ugc@nathanyuan.com",
-      "rates": "비디오당 $150부터 시작",
-      "turnaround": "48-72시간 배송"
+      "rates": "$300부터 시작 — 편하게 연락 주세요",
+      "turnaround": "빠른 답장, 더 빠른 납품",
+      "getInTouch": "연락하기",
+      "copied": "복사됐어요!",
+      "copyEmail": "이메일 복사"
     },
     "social": {
-      "title": "제 여정을 팔로우하세요",
-      "instagram": "@nathanyuan_ugc",
-      "tiktok": "@nathanyuan",
-      "youtube": "Nathan Yuan"
+      "title": "팔로우하기",
+      "instagram": "@poxiipro",
+      "tiktok": "@poxiipro",
+      "youtube": "@poxiipro",
+      "youtubeBadge": "구독자 1만+"
     },
     "cta": {
-      "viewDemo": "데모 릴 보기",
-      "getQuote": "견적 받기",
+      "viewDemo": "데모 보기",
+      "getQuote": "견적 문의",
       "contact": "연락하기"
     },
     "video": {
       "modalTitle": "데모 릴",
-      "modalDescription": "마음에 드시나요? 함께 멋진 작품을 만들어요!",
+      "modalDescription": "마음에 드셨나요? 같이 멋진 거 만들어 봐요",
       "watchMore": "더 보기",
-      "closeVideo": "비디오 닫기"
+      "closeVideo": "닫기",
+      "comingSoon": "곧 공개",
+      "prevVideo": "이전",
+      "nextVideo": "다음"
     },
     "demographics": {
-      "title": "인구통계적 도달 범위",
-      "description": "청중 인구통계 및 참여 지표의 시각적 표현"
+      "title": "오디언스 분석",
+      "description": "실제 SNS 인사이트 기반 오디언스 데이터"
     }
   }
 }

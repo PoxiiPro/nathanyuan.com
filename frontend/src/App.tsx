@@ -13,7 +13,6 @@ import ReadmePage from './pages/ReadmePage';
 import UGCPage from './pages/UGCPage';
 import ChatButton from './components/ChatButton';
 import ChatPanel from './components/ChatPanel';
-import UGCNavbar from './components/UGCNavbar';
 import './assets/styles/globals.css';
 
 const AppContent: React.FC<{ isChatOpen: boolean; toggleChat: () => void; closeChat: () => void }> = ({ 
@@ -25,7 +24,7 @@ const AppContent: React.FC<{ isChatOpen: boolean; toggleChat: () => void; closeC
 
   return (
     <div className="App">
-      {location.pathname === '/ugc' ? <UGCNavbar /> : <Navbar />}
+      {location.pathname !== '/ugc' && <Navbar />}
       <main>
         <Routes>
           <Route path="/" element={<LandingPage />} />

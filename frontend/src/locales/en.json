@@ -325,51 +325,39 @@
     "instructions": "Add your GitHub Copilot directions here."
   },
   "ugc": {
-    "title": "UGC Creator",
-    "tagline": "Bay Area • 24 • Lifestyle Content Creator",
+    "title": "NATHAN YUAN",
+    "tagline": "Based in Southern California • Gen Z / Millennial Male • Tech & Lifestyle",
+    "status": "Open to collabs",
+    "creatorTitle": "UGC Creator",
+    "deliverables": ["UGC Ads", "Raw Assets", "4K Quality", "Fully Edited"],
+    "brands": { "label": "Worked With" },
     "about": {
       "title": "About Me",
-      "description": "I'm Nathan, a 24-year-old content creator based in the Bay Area, specializing in authentic lifestyle content that drives engagement and builds brand trust. My approach focuses on genuine storytelling that resonates with diverse audiences."
+      "description": "Software Engineer + creative strategy — 4K quality, raw assets or fully edited ads"
     },
     "niches": {
-      "title": "Content Niches",
-      "lifestyle": {
-        "title": "Lifestyle",
-        "description": "Authentic day-in-the-life content showcasing real experiences"
-      },
-      "fitness": {
-        "title": "Fitness",
-        "description": "Workout routines, supplements, and fitness gear reviews"
-      },
-      "food": {
-        "title": "Food & Dining",
-        "description": "Restaurant experiences, meal prep, and food product reviews"
-      },
-      "tech": {
-        "title": "Tech",
-        "description": "Latest gadgets, apps, and tech lifestyle integrations"
-      },
-      "fashion": {
-        "title": "Fashion",
-        "description": "Men's style, casual wear, and accessory showcases"
-      },
-      "skincare": {
-        "title": "Skincare",
-        "description": "Men's grooming routines and skincare product reviews"
-      }
+      "title": "Content Verticals",
+      "tech": { "title": "Tech & Digital", "description": "Software, Gadgets, FinTech, Productivity Apps" },
+      "grooming": { "title": "Grooming & Wellness", "description": "Skincare, Supplements, Fitness" },
+      "style": { "title": "Style & Accessories", "description": "Apparel, Jewelry, Fashion" },
+      "lifestyle": { "title": "Travel & Lifestyle", "description": "Food, Drinks, Travel Vlogs, Pet Accessories" }
     },
     "contact": {
       "title": "Let's Create Together",
       "description": "Ready to collaborate on your next campaign?",
       "email": "ugc@nathanyuan.com",
-      "rates": "Starting at $300, please reach out for a consultation",
-      "turnaround": "Quick reply and content delivery times"
+      "rates": "Starting at $300 — let's chat",
+      "turnaround": "Fast replies, faster content",
+      "getInTouch": "Get in touch",
+      "copied": "Copied!",
+      "copyEmail": "Copy email"
     },
     "social": {
       "title": "Let's Connect",
       "instagram": "@poxiipro",
       "tiktok": "@poxiipro",
-      "youtube": "@poxiipro"
+      "youtube": "@poxiipro",
+      "youtubeBadge": "10K+ subs"
     },
     "cta": {
       "viewDemo": "View Demo Reel",
@@ -380,7 +368,10 @@
       "modalTitle": "Demo Reel",
       "modalDescription": "Like what you see? Let's create something amazing together!",
       "watchMore": "Watch More",
-      "closeVideo": "Close Video"
+      "closeVideo": "Close Video",
+      "comingSoon": "Coming Soon",
+      "prevVideo": "Previous",
+      "nextVideo": "Next"
     },
     "demographics": {
       "title": "Demographic Outreach",

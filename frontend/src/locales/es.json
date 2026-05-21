@@ -325,66 +325,57 @@
     "instructions": "Agrega tus instrucciones de GitHub Copilot aquí."
   },
   "ugc": {
-    "title": "Creador UGC",
-    "tagline": "Área de la Bahía • 24 • Creador de Contenido de Estilo de Vida",
+    "title": "NATHAN YUAN",
+    "tagline": "Sur de Cali • Millennial / Gen Z • Tech y Lifestyle",
+    "status": "Disponible para collabs",
+    "creatorTitle": "Creador UGC",
+    "deliverables": ["Ads UGC", "Assets en crudo", "Calidad 4K", "Editado completo"],
+    "brands": { "label": "Ya trabajé con" },
     "about": {
-      "title": "Sobre Mí",
-      "description": "Soy Nathan, un creador de contenido de 24 años con base en el Área de la Bahía, especializado en contenido auténtico de estilo de vida que impulsa el engagement y construye confianza en la marca. Mi enfoque se centra en narrativas genuinas que resuenan con audiencias diversas."
+      "title": "Sobre mí",
+      "description": "Ingeniero de Software + estrategia creativa — 4K, assets en crudo o editado al 100"
     },
     "niches": {
-      "title": "Nichos de Contenido",
-      "lifestyle": {
-        "title": "Estilo de Vida",
-        "description": "Contenido auténtico de día a día mostrando experiencias reales"
-      },
-      "fitness": {
-        "title": "Fitness",
-        "description": "Rutinas de ejercicio, suplementos y reseñas de equipo de fitness"
-      },
-      "food": {
-        "title": "Comida y Restaurantes",
-        "description": "Experiencias gastronómicas, meal prep y reseñas de productos alimentarios"
-      },
-      "tech": {
-        "title": "Tecnología",
-        "description": "Últimos gadgets, apps e integraciones de estilo de vida tech"
-      },
-      "fashion": {
-        "title": "Moda",
-        "description": "Estilo masculino, ropa casual y showcases de accesorios"
-      },
-      "skincare": {
-        "title": "Cuidado de la Piel",
-        "description": "Rutinas de grooming masculino y reseñas de productos de skincare"
-      }
+      "title": "Categorías",
+      "tech": { "title": "Tech & Digital", "description": "Software, gadgets, fintech, apps de productividad" },
+      "grooming": { "title": "Grooming & Wellness", "description": "Skincare, suplementos, fitness" },
+      "style": { "title": "Estilo & Accesorios", "description": "Ropa, joyería, moda" },
+      "lifestyle": { "title": "Viajes & Lifestyle", "description": "Comida, bebidas, vlogs de viaje, mascotas" }
     },
     "contact": {
-      "title": "Creemos Juntos",
-      "description": "¿Listo para colaborar en tu próxima campaña?",
+      "title": "Hagámoslo",
+      "description": "¿Tu marca necesita contenido que conecte de verdad?",
       "email": "ugc@nathanyuan.com",
-      "rates": "Desde $150 por video",
-      "turnaround": "Entrega en 48-72 horas"
+      "rates": "Desde $300 — escríbeme y hablamos",
+      "turnaround": "Respuesta rápida, entrega más rápida",
+      "getInTouch": "Escríbeme",
+      "copied": "¡Copiado!",
+      "copyEmail": "Copiar email"
     },
     "social": {
-      "title": "Sigue Mi Viaje",
-      "instagram": "@nathanyuan_ugc",
-      "tiktok": "@nathanyuan",
-      "youtube": "Nathan Yuan"
+      "title": "Sígueme",
+      "instagram": "@poxiipro",
+      "tiktok": "@poxiipro",
+      "youtube": "@poxiipro",
+      "youtubeBadge": "10K+ subs"
     },
     "cta": {
-      "viewDemo": "Ver Demo Reel",
-      "getQuote": "Obtener Cotización",
+      "viewDemo": "Ver demos",
+      "getQuote": "Cotización",
       "contact": "Contáctame"
     },
     "video": {
       "modalTitle": "Demo Reel",
-      "modalDescription": "¿Te gusta lo que ves? ¡Creemos algo increíble juntos!",
-      "watchMore": "Ver Más",
-      "closeVideo": "Cerrar Video"
+      "modalDescription": "¿Te gustó? Hagamos algo increíble juntos",
+      "watchMore": "Ver más",
+      "closeVideo": "Cerrar",
+      "comingSoon": "Próximamente",
+      "prevVideo": "Anterior",
+      "nextVideo": "Siguiente"
     },
     "demographics": {
-      "title": "Alcance Demográfico",
-      "description": "Representación visual de las demografías de la audiencia y métricas de engagement"
+      "title": "Alcance",
+      "description": "Datos reales de audiencia y engagement de mis propias redes"
     }
   }
 }

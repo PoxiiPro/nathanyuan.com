@@ -48,6 +48,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const value: ThemeContextType = {
     isDarkMode,
     toggleTheme,
+    setDarkMode: setIsDarkMode,
   };
 
   return (

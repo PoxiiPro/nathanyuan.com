@@ -322,7 +322,57 @@
     "instructions": "GitHub Copilotの指示をここに追加。"
   },
   "ugc": {
-    "title": "User Generated Content",
-    "description": "This is a hidden page for user-generated content."
+    "title": "NATHAN YUAN",
+    "tagline": "南カリフォルニア在住 • ミレニアル / Z世代 • テック & ライフスタイル",
+    "status": "案件・コラボ受付中",
+    "creatorTitle": "UGCクリエイター",
+    "deliverables": ["UGC広告", "素材データ", "4K品質", "フル編集"],
+    "brands": { "label": "タイアップ実績" },
+    "about": {
+      "title": "自己紹介",
+      "description": "ソフトウェアエンジニア × クリエイター — 4K撮影、素材納品から完成動画まで対応"
+    },
+    "niches": {
+      "title": "得意ジャンル",
+      "tech": { "title": "テック & デジタル", "description": "ソフトウェア、ガジェット、フィンテック、生産性アプリ" },
+      "grooming": { "title": "グルーミング & ウェルネス", "description": "スキンケア、サプリ、フィットネス" },
+      "style": { "title": "ファッション & アクセサリー", "description": "アパレル、ジュエリー、ファッション" },
+      "lifestyle": { "title": "旅行 & ライフスタイル", "description": "グルメ、ドリンク、旅行vlog、ペット" }
+    },
+    "contact": {
+      "title": "一緒に作りましょう",
+      "description": "ブランドに刺さるコンテンツ、お気軽にご相談ください",
+      "email": "ugc@nathanyuan.com",
+      "rates": "$300〜 — お気軽にDMください",
+      "turnaround": "レスポンス早め、納品はさらに早め",
+      "getInTouch": "お問い合わせ",
+      "copied": "コピーしました！",
+      "copyEmail": "メールをコピー"
+    },
+    "social": {
+      "title": "フォローしてね",
+      "instagram": "@poxiipro",
+      "tiktok": "@poxiipro",
+      "youtube": "@poxiipro",
+      "youtubeBadge": "登録者1万人超"
+    },
+    "cta": {
+      "viewDemo": "デモを見る",
+      "getQuote": "見積もり依頼",
+      "contact": "問い合わせ"
+    },
+    "video": {
+      "modalTitle": "デモリール",
+      "modalDescription": "気に入ってもらえたら嬉しい！ぜひ一緒に作りましょう",
+      "watchMore": "もっと見る",
+      "closeVideo": "閉じる",
+      "comingSoon": "近日公開",
+      "prevVideo": "前へ",
+      "nextVideo": "次へ"
+    },
+    "demographics": {
+      "title": "オーディエンス分析",
+      "description": "実際のSNSインサイトをもとにしたデータ"
+    }
   }
 }

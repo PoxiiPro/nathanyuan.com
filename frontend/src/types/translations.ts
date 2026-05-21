@@ -142,36 +142,34 @@ export interface Translation {
   ugc: {
     title: string;
     tagline: string;
+    status: string;
+    creatorTitle: string;
+    deliverables: string[];
     about: {
       title: string;
       description: string;
     };
     niches: {
       title: string;
-      lifestyle: {
-        title: string;
-        description: string;
-      };
-      fitness: {
-        title: string;
-        description: string;
-      };
-      food: {
-        title: string;
-        description: string;
-      };
       tech: {
         title: string;
         description: string;
       };
-      fashion: {
+      grooming: {
         title: string;
         description: string;
       };
-      skincare: {
+      style: {
         title: string;
         description: string;
       };
+      lifestyle: {
+        title: string;
+        description: string;
+      };
+    };
+    brands: {
+      label: string;
     };
     contact: {
       title: string;
@@ -179,12 +177,16 @@ export interface Translation {
       email: string;
       rates: string;
       turnaround: string;
+      getInTouch: string;
+      copied: string;
+      copyEmail: string;
     };
     social: {
       title: string;
       instagram: string;
       tiktok: string;
       youtube: string;
+      youtubeBadge: string;
     };
     cta: {
       viewDemo: string;
@@ -196,6 +198,9 @@ export interface Translation {
       modalDescription: string;
       watchMore: string;
       closeVideo: string;
+      comingSoon: string;
+      prevVideo: string;
+      nextVideo: string;
     };
     demographics: {
       title: string;
@@ -209,6 +214,7 @@ export type Language = 'en' | 'es' | 'zh' | 'zh-cn' | 'ko' | 'ja';
 export interface ThemeContextType {
   isDarkMode: boolean;
   toggleTheme: () => void;
+  setDarkMode: (dark: boolean) => void;
 }
 
 export interface LanguageContextType {

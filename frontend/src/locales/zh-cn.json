@@ -322,7 +322,57 @@
     "instructions": "在这里添加你的GitHub Copilot指令。"
   },
   "ugc": {
-    "title": "User Generated Content",
-    "description": "This is a hidden page for user-generated content."
+    "title": "NATHAN YUAN",
+    "tagline": "南加州 • 千禧 / Z世代 • 科技与生活方式",
+    "status": "接单中",
+    "creatorTitle": "UGC创作者",
+    "deliverables": ["UGC广告", "原始素材", "4K画质", "成片交付"],
+    "brands": { "label": "合作品牌" },
+    "about": {
+      "title": "关于我",
+      "description": "软件工程师 x 创作者 — 4K拍摄，支持交付素材或剪辑成片"
+    },
+    "niches": {
+      "title": "内容方向",
+      "tech": { "title": "科技与数码", "description": "软件、数码产品、金融科技、效率工具" },
+      "grooming": { "title": "护肤与健康", "description": "护肤品、营养补剂、健身" },
+      "style": { "title": "穿搭与配饰", "description": "服装、珠宝首饰、时尚" },
+      "lifestyle": { "title": "旅行与生活", "description": "美食、饮品、旅行vlog、宠物" }
+    },
+    "contact": {
+      "title": "一起整活",
+      "description": "想让你的品牌真正打动用户？来聊聊",
+      "email": "ugc@nathanyuan.com",
+      "rates": "$300起 — 欢迎随时来谈",
+      "turnaround": "秒回消息，快速出片",
+      "getInTouch": "联系我",
+      "copied": "复制成功！",
+      "copyEmail": "复制邮箱"
+    },
+    "social": {
+      "title": "来关注我",
+      "instagram": "@poxiipro",
+      "tiktok": "@poxiipro",
+      "youtube": "@poxiipro",
+      "youtubeBadge": "订阅破万"
+    },
+    "cta": {
+      "viewDemo": "看作品",
+      "getQuote": "询价",
+      "contact": "联系我"
+    },
+    "video": {
+      "modalTitle": "作品集",
+      "modalDescription": "看上眼了？一起整点好活！",
+      "watchMore": "看更多",
+      "closeVideo": "关闭",
+      "comingSoon": "敬请期待",
+      "prevVideo": "上一条",
+      "nextVideo": "下一条"
+    },
+    "demographics": {
+      "title": "受众数据",
+      "description": "来自本人社媒账号的真实分析数据"
+    }
   }
 }
