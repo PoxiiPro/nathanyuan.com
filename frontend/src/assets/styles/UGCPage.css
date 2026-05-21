@@ -6,6 +6,8 @@
     linear-gradient(160deg, #141414 0%, #111111 50%, #181818 100%);
   color: var(--text-color);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ─── Two-panel layout ───────────────────────────────────────── */
@@ -752,59 +754,90 @@
   .creator-sidebar { width: 240px; }
 }
 
-/* Tablet portrait & mobile (≤768px) — sidebar collapses to top banner */
+/* Tablet portrait & mobile (≤768px) — sidebar becomes a compact info card */
 @media (max-width: 768px) {
   .ugc-layout { flex-direction: column; align-items: stretch; }
 
+  /* Switch to grid so photo + name sit side-by-side and everything
+     else stacks below without flex wrapping issues */
   .creator-sidebar {
     position: static;
-    height: auto;           /* override the vh value — banner sizes to content */
+    height: auto;
     width: auto;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    padding: 0.75rem 1rem;
-    gap: 0.75rem;
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    grid-template-areas:
+      "photo    identity"
+      "photo    chips"
+      "brands   brands"
+      "cta      cta"
+      "ctrls    ctrls";
+    column-gap: 0.75rem;
+    row-gap: 0.5rem;
+    align-items: start;
+    padding: 0.875rem 1rem;
     margin: 0.5rem 0.5rem 0;
     top: auto;
     border-radius: 14px;
-    overflow: hidden;
+    overflow: visible; /* don't clip the copy button */
   }
 
-  .sidebar-profile { flex-direction: row; flex-shrink: 0; gap: 0.6rem; }
-  .profile-image   { width: 48px; height: 48px; }
-  .profile-status  { display: none; }
+  /* Grid area assignments */
+  .sidebar-profile      { grid-area: photo; flex-direction: column; align-items: center; gap: 0.3rem; }
+  .sidebar-identity     { grid-area: identity; text-align: left; }
+  .sidebar-deliverables { grid-area: chips; display: flex; flex-wrap: wrap; gap: 0.3rem; }
+  .sidebar-brands       { grid-area: brands; display: flex; align-items: center; gap: 0.6rem; }
+  .sidebar-cta-group    { grid-area: cta; margin-top: 0; }
+  .sidebar-controls     { grid-area: ctrls; justify-content: flex-start; margin-top: 0; }
 
-  .sidebar-identity { flex-shrink: 0; }
-  .sidebar-identity .creator-name    { font-size: 1rem; text-align: left; }
-  .sidebar-identity .creator-title,
-  .sidebar-identity .creator-tagline { text-align: left; }
-
+  /* Hidden — too verbose for the banner */
   .sidebar-divider,
   .platform-stats,
-  .sidebar-brands,
-  .sidebar-about,
-  .sidebar-deliverables { display: none; }
+  .sidebar-about { display: none; }
 
-  .sidebar-cta-group { margin-top: 0; flex-shrink: 0; }
-  .sidebar-cta      { padding: 0.5rem 0.9rem; font-size: 0.78rem; }
-  .sidebar-controls { flex-shrink: 0; margin-top: 0; }
+  /* Profile photo */
+  .profile-image  { width: 50px; height: 50px; }
+  .profile-status { display: flex; gap: 0.25rem; }
+  .status-text    { font-size: 0.6rem; }
+  .status-dot     { width: 5px; height: 5px; }
 
-  .ugc-niches    { padding: 0.75rem 0.5rem 2rem; }
-  .niches-grid   { gap: 0.75rem; }
-  .demo-videos   { gap: 0.35rem; }
-  .niche-title   { font-size: 0.9rem; }
+  /* Identity */
+  .sidebar-identity .creator-name    { font-size: 0.95rem; text-align: left; margin-bottom: 0.1rem; }
+  .sidebar-identity .creator-title   { font-size: 0.68rem; text-align: left; margin-bottom: 0; }
+  .sidebar-identity .creator-tagline { display: none; }
+
+  /* Deliverable chips — smaller on mobile */
+  .deliverable-chip { font-size: 0.6rem; padding: 0.18rem 0.42rem; }
+
+  /* Brand logos — compact */
+  .sidebar-section-label                { display: none; }
+  .sidebar-brands-grid                  { gap: 0.5rem; }
+  .sidebar-brands-grid .brand-logo-wrap { width: 64px; height: 34px; }
+
+  /* CTA */
+  .sidebar-cta       { padding: 0.52rem 0.85rem; font-size: 0.78rem; }
+  .sidebar-copy-btn  { padding: 0.52rem 0.65rem; font-size: 0.78rem; }
+
+  .ugc-niches  { padding: 0.75rem 0.5rem 2rem; }
+  .niches-grid { gap: 0.75rem; }
+  .demo-videos { gap: 0.35rem; }
+  .niche-title { font-size: 0.9rem; }
 }
 
 /* Mobile (≤480px) — phones in portrait */
 @media (max-width: 480px) {
-  .creator-sidebar { margin: 0.4rem 0.4rem 0; border-radius: 10px; padding: 0.65rem 0.85rem; }
-  .profile-image   { width: 40px; height: 40px; }
-  .creator-name    { font-size: 0.9rem; }
-  .creator-title, .creator-tagline { display: none; }
-  .demo-videos     { gap: 0.3rem; }
-  .ugc-niches      { padding: 0.75rem 0.4rem 1.5rem; }
-  .niche-card      { padding: 0.9rem 1rem 1rem; }
+  .creator-sidebar {
+    grid-template-columns: 44px 1fr;
+    margin: 0.4rem 0.4rem 0;
+    border-radius: 10px;
+    padding: 0.75rem 0.875rem;
+  }
+  .profile-image { width: 42px; height: 42px; }
+  .creator-name  { font-size: 0.88rem; }
+  .creator-title { font-size: 0.65rem; }
+  .demo-videos   { gap: 0.3rem; }
+  .ugc-niches    { padding: 0.75rem 0.4rem 1.5rem; }
+  .niche-card    { padding: 0.9rem 1rem 1rem; }
 }
 
 /* Narrow phones (≤375px — iPhone SE, older Androids) */
