@@ -873,8 +873,8 @@
   background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%);
 }
 
-/* Phone screens — hide the PNG chrome, video fills the full slide */
-@media (max-width: 767px) {
+/* Mobile/tablet/foldable — hide the PNG chrome, video fills the full slide */
+@media (max-width: 1024px) {
   .iphone-mockup-img { display: none; }
 
   .iphone-frame {

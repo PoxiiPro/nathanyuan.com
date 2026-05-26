@@ -335,7 +335,7 @@
     "niches": {
       "title": "得意ジャンル",
       "tech": { "title": "テック & デジタル", "description": "ソフトウェア、ガジェット、フィンテック、生産性アプリ" },
-      "grooming": { "title": "グルーミング & ウェルネス", "description": "スキンケア、サプリ、フィットネス" },
+      "grooming": { "title": "セルフケア & ウェルネス", "description": "スキンケア、サプリ、フィットネス" },
       "style": { "title": "ファッション & アクセサリー", "description": "アパレル、ジュエリー、ファッション" },
       "lifestyle": { "title": "旅行 & ライフスタイル", "description": "グルメ、ドリンク、旅行vlog、ペット" }
     },

@@ -338,7 +338,7 @@
     "niches": {
       "title": "Categorías",
       "tech": { "title": "Tech & Digital", "description": "Software, gadgets, fintech, apps de productividad" },
-      "grooming": { "title": "Grooming & Wellness", "description": "Skincare, suplementos, fitness" },
+      "grooming": { "title": "Autocuidado & Bienestar", "description": "Skincare, suplementos, fitness" },
       "style": { "title": "Estilo & Accesorios", "description": "Ropa, joyería, moda" },
       "lifestyle": { "title": "Viajes & Lifestyle", "description": "Comida, bebidas, vlogs de viaje, mascotas" }
     },

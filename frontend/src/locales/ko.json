@@ -338,7 +338,7 @@
     "niches": {
       "title": "콘텐츠 카테고리",
       "tech": { "title": "테크 & 디지털", "description": "소프트웨어, 가젯, 핀테크, 생산성 앱" },
-      "grooming": { "title": "그루밍 & 웰니스", "description": "스킨케어, 건강보조식품, 피트니스" },
+      "grooming": { "title": "셀프케어 & 웰니스", "description": "스킨케어, 건강보조식품, 피트니스" },
       "style": { "title": "패션 & 액세서리", "description": "의류, 주얼리, 패션" },
       "lifestyle": { "title": "여행 & 라이프스타일", "description": "맛집, 음료, 여행 브이로그, 반려동물" }
     },

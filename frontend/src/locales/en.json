@@ -338,7 +338,7 @@
     "niches": {
       "title": "Content Verticals",
       "tech": { "title": "Tech & Digital", "description": "Software, Gadgets, FinTech, Productivity Apps" },
-      "grooming": { "title": "Grooming & Wellness", "description": "Skincare, Supplements, Fitness" },
+      "grooming": { "title": "Self Care & Wellness", "description": "Skincare, Supplements, Fitness" },
       "style": { "title": "Style & Accessories", "description": "Apparel, Jewelry, Fashion" },
       "lifestyle": { "title": "Travel & Lifestyle", "description": "Food, Drinks, Travel Vlogs, Pet Accessories" }
     },
