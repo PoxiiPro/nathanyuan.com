@@ -121,13 +121,6 @@
   line-height: 1.4;
 }
 
-/* Divider */
-.sidebar-divider {
-  height: 1px;
-  background: rgba(255, 255, 255, 0.07);
-  margin: 0;
-}
-
 /* Platform stat rows */
 .platform-stats {
   display: flex;
@@ -452,14 +445,6 @@
   z-index: 2;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
-/* Video number badge */
-.video-placeholder[data-video-number]::after {
-  content: '';
-}
-
-/* Override with a real numbered badge via CSS counters isn't possible here —
-   the number attribute is fine as a tooltip (title attr handles it) */
 
 .video-placeholder:not(.video-coming-soon):hover {
   transform: translateY(-3px) scale(1.02);
@@ -791,7 +776,6 @@
   .sidebar-controls     { grid-area: ctrls; justify-content: flex-start; margin-top: 0; }
 
   /* Hidden — too verbose for the banner */
-  .sidebar-divider,
   .platform-stats,
   .sidebar-about { display: none; }
 
@@ -916,6 +900,25 @@
 
 .mobile-sticky-btn--copied {
   background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%);
+}
+
+/* Phone screens — hide the iPhone PNG frame, show raw 9:16 video */
+@media (max-width: 767px) {
+  .iphone-mockup-img { display: none; }
+
+  .iphone-frame {
+    height: 85vh;
+    aspect-ratio: 9 / 16;
+    filter: none;
+  }
+
+  .iphone-frame .iphone-screen {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
 }
 
 /* ─── Light theme — new elements ────────────────────────────── */

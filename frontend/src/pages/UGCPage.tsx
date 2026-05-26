@@ -40,6 +40,7 @@ const UGCPage: React.FC = () => {
 
   const slidingRef = useRef(false);
   const touchStartY = useRef(0);
+  const lightboxRef = useRef<HTMLDivElement>(null);
 
   const profilePictureUrl = '/images/ugc_profile_picture.jpg';
 
@@ -60,6 +61,20 @@ const UGCPage: React.FC = () => {
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
+  }, [isVideoModalOpen]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Scroll wheel navigation — must be non-passive to call preventDefault
+  useEffect(() => {
+    if (!isVideoModalOpen) return;
+    const el = lightboxRef.current;
+    if (!el) return;
+    const handler = (e: WheelEvent) => {
+      e.preventDefault();
+      if (e.deltaY > 0) goToNext();
+      else              goToPrev();
+    };
+    el.addEventListener('wheel', handler, { passive: false });
+    return () => el.removeEventListener('wheel', handler);
   }, [isVideoModalOpen]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const navigate = (dir: 'up' | 'down') => {
@@ -263,7 +278,7 @@ const UGCPage: React.FC = () => {
 
       {/* Video lightbox — swipeable short-form feed */}
       {isVideoModalOpen && (
-        <div className="video-lightbox" onClick={closeVideoModal}>
+        <div className="video-lightbox" ref={lightboxRef} onClick={closeVideoModal}>
 
           {/* Nav strip — stops propagation so clicks don't close the lightbox */}
           <div className="video-nav-strip" onClick={(e) => e.stopPropagation()}>
