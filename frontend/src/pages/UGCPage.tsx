@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faChevronUp, faChevronDown, faCopy, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faCopy, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../hooks/useLanguage';
 import { useTheme } from '../hooks/useTheme';
 import ThemeToggle from '../components/ThemeToggle';
@@ -34,13 +34,11 @@ const UGCPage: React.FC = () => {
 
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-  const [slideDir, setSlideDir] = useState<'up' | 'down' | null>(null);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
   const [emailCopied, setEmailCopied] = useState(false);
 
-  const slidingRef = useRef(false);
-  const touchStartY = useRef(0);
-  const lightboxRef = useRef<HTMLDivElement>(null);
+  const reelFeedRef = useRef<HTMLDivElement>(null);
+  const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const profilePictureUrl = '/images/ugc_profile_picture.jpg';
 
@@ -51,49 +49,41 @@ const UGCPage: React.FC = () => {
     return () => { setDarkMode(prev); };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Keyboard navigation
+  // Keyboard navigation — arrow keys scroll between slides
   useEffect(() => {
     if (!isVideoModalOpen) return;
     const handler = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowUp')   goToPrev();
-      if (e.key === 'ArrowDown') goToNext();
+      if (e.key === 'ArrowDown') slideRefs.current[Math.min(currentVideoIndex + 1, ALL_VIDEOS.length - 1)]?.scrollIntoView({ behavior: 'smooth' });
+      if (e.key === 'ArrowUp')   slideRefs.current[Math.max(currentVideoIndex - 1, 0)]?.scrollIntoView({ behavior: 'smooth' });
       if (e.key === 'Escape')    closeVideoModal();
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
+  }, [isVideoModalOpen, currentVideoIndex]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // IntersectionObserver — update currentVideoIndex as user scrolls
+  useEffect(() => {
+    if (!isVideoModalOpen || !reelFeedRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting)
+            setCurrentVideoIndex(Number(entry.target.getAttribute('data-index')));
+        });
+      },
+      { threshold: 0.6, root: reelFeedRef.current }
+    );
+    slideRefs.current.forEach(el => { if (el) observer.observe(el); });
+    return () => observer.disconnect();
   }, [isVideoModalOpen]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Scroll wheel navigation — must be non-passive to call preventDefault
+  // Scroll to the starting video immediately when the feed opens
   useEffect(() => {
     if (!isVideoModalOpen) return;
-    const el = lightboxRef.current;
-    if (!el) return;
-    const handler = (e: WheelEvent) => {
-      e.preventDefault();
-      if (e.deltaY > 0) goToNext();
-      else              goToPrev();
-    };
-    el.addEventListener('wheel', handler, { passive: false });
-    return () => el.removeEventListener('wheel', handler);
+    requestAnimationFrame(() => {
+      slideRefs.current[currentVideoIndex]?.scrollIntoView({ behavior: 'instant' });
+    });
   }, [isVideoModalOpen]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  const navigate = (dir: 'up' | 'down') => {
-    if (slidingRef.current) return;
-    slidingRef.current = true;
-    setSlideDir(dir);
-    setTimeout(() => {
-      setCurrentVideoIndex(prev =>
-        dir === 'up'
-          ? Math.min(prev + 1, ALL_VIDEOS.length - 1)
-          : Math.max(prev - 1, 0)
-      );
-      setSlideDir(null);
-      slidingRef.current = false;
-    }, 300);
-  };
-
-  const goToNext = () => navigate('up');
-  const goToPrev = () => navigate('down');
 
   const openVideoAt = (videoId: string) => {
     const idx = ALL_VIDEOS.indexOf(videoId);
@@ -102,21 +92,7 @@ const UGCPage: React.FC = () => {
     setIsVideoModalOpen(true);
   };
 
-  const closeVideoModal = () => {
-    setIsVideoModalOpen(false);
-    setSlideDir(null);
-    slidingRef.current = false;
-  };
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartY.current = e.touches[0].clientY;
-  };
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    const delta = touchStartY.current - e.changedTouches[0].clientY;
-    if (delta > 50)  goToNext(); // swipe up → next
-    if (delta < -50) goToPrev(); // swipe down → prev
-  };
+  const closeVideoModal = () => setIsVideoModalOpen(false);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(translations.ugc.contact.email)
@@ -276,53 +252,36 @@ const UGCPage: React.FC = () => {
         </div>
       )}
 
-      {/* Video lightbox — swipeable short-form feed */}
+      {/* Reel feed — TikTok-style scroll snap */}
       {isVideoModalOpen && (
-        <div className="video-lightbox" ref={lightboxRef} onClick={closeVideoModal}>
+        <div className="reel-feed" ref={reelFeedRef}>
+          <button className="reel-close-btn" onClick={closeVideoModal} aria-label="Close">✕</button>
+          <div className="reel-counter">{currentVideoIndex + 1} / {ALL_VIDEOS.length}</div>
 
-          {/* Nav strip — stops propagation so clicks don't close the lightbox */}
-          <div className="video-nav-strip" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="video-nav-btn"
-              onClick={goToPrev}
-              disabled={currentVideoIndex === 0}
-              aria-label={translations.ugc.video.prevVideo}
+          {ALL_VIDEOS.map((videoId, idx) => (
+            <div
+              key={videoId}
+              className="reel-slide"
+              data-index={String(idx)}
+              ref={el => { slideRefs.current[idx] = el; }}
             >
-              <FontAwesomeIcon icon={faChevronUp} />
-            </button>
-            <span className="video-counter">
-              {currentVideoIndex + 1}<span>/</span>{ALL_VIDEOS.length}
-            </span>
-            <button
-              className="video-nav-btn"
-              onClick={goToNext}
-              disabled={currentVideoIndex === ALL_VIDEOS.length - 1}
-              aria-label={translations.ugc.video.nextVideo}
-            >
-              <FontAwesomeIcon icon={faChevronDown} />
-            </button>
-          </div>
-
-          {/* iPhone frame */}
-          <div
-            className="iphone-frame"
-            onClick={(e) => e.stopPropagation()}
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
-          >
-            <div className={`iphone-screen${slideDir ? ` slide-${slideDir}` : ''}`}>
-              <iframe
-                key={currentVideoIndex}
-                src={`https://www.youtube.com/embed/${ALL_VIDEOS[currentVideoIndex]}?autoplay=1&rel=0&vq=hd1080&iv_load_policy=3`}
-                title={translations.ugc.video.modalTitle}
-                style={{ border: 'none' }}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              <div className="iphone-frame">
+                <div className="iphone-screen">
+                  {idx === currentVideoIndex && (
+                    <iframe
+                      key={videoId}
+                      src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&vq=hd1080&iv_load_policy=3`}
+                      title={translations.ugc.video.modalTitle}
+                      style={{ border: 'none' }}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  )}
+                </div>
+                <img src="/images/phone_outline.png" alt="" className="iphone-mockup-img" />
+              </div>
             </div>
-            <img src="/images/phone_outline.png" alt="" className="iphone-mockup-img" />
-          </div>
-
+          ))}
         </div>
       )}
 
