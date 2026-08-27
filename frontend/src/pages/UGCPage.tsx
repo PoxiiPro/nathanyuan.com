@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faCopy, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faCopy, faCheck, faVolumeHigh, faVolumeXmark } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../hooks/useLanguage';
 import { useTheme } from '../hooks/useTheme';
 import ThemeToggle from '../components/ThemeToggle';
@@ -39,6 +39,7 @@ const UGCPage: React.FC = () => {
 
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [isMuted, setIsMuted] = useState(true);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
   const [emailCopied, setEmailCopied] = useState(false);
 
@@ -190,8 +191,6 @@ const UGCPage: React.FC = () => {
             </div>
           </div>
 
-          <p className="sidebar-about">{translations.ugc.about.description}</p>
-
           <div className="sidebar-cta-group">
             <a
               href={`mailto:${translations.ugc.contact.email}?subject=UGC Collaboration Inquiry`}
@@ -224,6 +223,7 @@ const UGCPage: React.FC = () => {
           <section className="ugc-about-section">
             <h2 className="ugc-about-title">{translations.ugc.about.title}</h2>
             <p className="ugc-about-body">{translations.ugc.about.body}</p>
+            <p className="ugc-about-body">{translations.ugc.about.description}</p>
           </section>
 
           {/* ── SAMPLE VIDEOS ── */}
@@ -270,14 +270,23 @@ const UGCPage: React.FC = () => {
                       poster={videoPoster(video.id)}
                       title={translations.ugc.video.modalTitle}
                       autoPlay
-                      muted
+                      muted={isMuted}
                       loop
                       playsInline
                       preload="auto"
                     />
                   )}
                 </div>
-                <img src="/images/phone_outline.png" alt="" className="iphone-mockup-img" />
+                {idx === currentVideoIndex && (
+                  <button
+                    className="reel-mute-btn"
+                    onClick={() => setIsMuted(m => !m)}
+                    aria-label={isMuted ? translations.ugc.video.unmute : translations.ugc.video.mute}
+                    title={isMuted ? translations.ugc.video.unmute : translations.ugc.video.mute}
+                  >
+                    <FontAwesomeIcon icon={isMuted ? faVolumeXmark : faVolumeHigh} />
+                  </button>
+                )}
               </div>
             </div>
           ))}

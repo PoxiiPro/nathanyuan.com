@@ -333,7 +333,7 @@
     "brands": { "label": "Worked With" },
     "about": {
       "title": "About Me",
-      "description": "Software Engineer + creative strategy — 4K quality, raw assets or fully edited ads",
+      "description": "Software Engineer + creative strategy — 4K quality, raw assets or fully edited ads across unboxings & reviews, tutorials & app demos, lifestyle/GRWM content, before-and-afters, hauls & comparisons, and scripted or trend-based ads.",
       "body": "Hi! I'm Nathan and I've been creating content for over 10 years. As a YouTuber and software engineer, I bring a unique set of skills to content creation for brands. I'm passionate about skincare, finance, fashion, jewelry, software & tech, food, and travel. I'm flexible with any video format — from unboxings and reviews to more organic, authentic product showcases with my honest personal take."
     },
     "niches": {
@@ -373,7 +373,9 @@
       "comingSoon": "Coming Soon",
       "prevVideo": "Previous",
       "nextVideo": "Next",
-      "samplesTitle": "Sample Videos"
+      "samplesTitle": "Sample Videos",
+      "mute": "Mute",
+      "unmute": "Unmute"
     },
     "demographics": {
       "title": "Demographic Outreach",

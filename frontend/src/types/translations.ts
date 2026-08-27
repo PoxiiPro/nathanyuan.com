@@ -203,6 +203,8 @@ export interface Translation {
       prevVideo: string;
       nextVideo: string;
       samplesTitle: string;
+      mute: string;
+      unmute: string;
     };
     demographics: {
       title: string;
