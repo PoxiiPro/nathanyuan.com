@@ -10,22 +10,27 @@ import '../assets/styles/UGCPage.css';
 
 const FALLBACK_SVG = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iNjAiIGZpbGw9IiMzQjgyRjYiLz4KPHN2ZyB4PSIzMCIgeT0iMzAiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+CjxwYXRoIGQ9Ik0xMiAxMmMyLjIxIDAgNC0xLjc5IDQtNHMtMS43OS00LTQtNC00IDEuNzktNCA0IDEuNzkgNCA0IDR6bTAgMmMtMi42NyAwLTggMS4zNC04IDR2MmgxNnYtMmMwLTIuNjYtNS4zMy00LTgtNHoiLz4KPC9zdmc+Cjwvc3ZnPgo=';
 
-const PLACEHOLDER_ID = 'dQw4w9WgXcQ';
+// Base URL for the Cloudflare R2 custom domain serving UGC video assets.
+// Videos live at ${CDN_BASE_URL}/<id>.mp4, posters at ${CDN_BASE_URL}/<id>.jpg
+const CDN_BASE_URL = import.meta.env.VITE_CDN_BASE_URL ?? 'https://cdn.nathanyuan.com';
+const videoSrc = (id: string) => `${CDN_BASE_URL}/${id}.mp4`;
+const videoPoster = (id: string) => `${CDN_BASE_URL}/${id}.jpg`;
 
-const VIDEO_PLACEHOLDERS = {
-  tech:      ['9h1Z6i0ZMlY', ...Array(2).fill(PLACEHOLDER_ID)],
-  grooming:  Array(3).fill(PLACEHOLDER_ID),
-  style:     Array(3).fill(PLACEHOLDER_ID),
-  lifestyle: ['e6AqYYMOJ3k', ...Array(2).fill(PLACEHOLDER_ID)],
-};
+interface UGCVideo {
+  id: string; // used to derive both the CDN video URL and poster URL
+}
 
-// Flat ordered list of real video IDs for the swipe feed
-const ALL_VIDEOS = [
-  ...VIDEO_PLACEHOLDERS.tech,
-  ...VIDEO_PLACEHOLDERS.grooming,
-  ...VIDEO_PLACEHOLDERS.style,
-  ...VIDEO_PLACEHOLDERS.lifestyle,
-].filter(id => id !== PLACEHOLDER_ID);
+const REAL_VIDEOS: UGCVideo[] = [
+  { id: 'match_masters_app_sponsor' },
+];
+
+const COMING_SOON_SLOTS = 4;
+
+type GridSlot = UGCVideo | null;
+const SAMPLE_VIDEO_SLOTS: GridSlot[] = [...REAL_VIDEOS, ...Array(COMING_SOON_SLOTS).fill(null)];
+
+// Flat ordered list of real videos for the swipe feed
+const ALL_VIDEOS = REAL_VIDEOS;
 
 
 const UGCPage: React.FC = () => {
@@ -85,8 +90,8 @@ const UGCPage: React.FC = () => {
     });
   }, [isVideoModalOpen]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const openVideoAt = (videoId: string) => {
-    const idx = ALL_VIDEOS.indexOf(videoId);
+  const openVideoAt = (id: string) => {
+    const idx = ALL_VIDEOS.findIndex(v => v.id === id);
     if (idx < 0) return;
     setCurrentVideoIndex(idx);
     setIsVideoModalOpen(true);
@@ -103,21 +108,18 @@ const UGCPage: React.FC = () => {
       .catch(() => {});
   };
 
-  const ytThumb = (videoId: string) =>
-    `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-
-  const renderClips = (ids: string[], label: string) =>
-    ids.map((videoId, index) => {
-      const isSoon = videoId === PLACEHOLDER_ID;
+  const renderClips = (slots: GridSlot[], label: string) =>
+    slots.map((video, index) => {
+      const isSoon = video === null;
       return (
         <div
           key={index}
           className={`video-placeholder${isSoon ? ' video-coming-soon' : ''}`}
-          onClick={isSoon ? undefined : () => openVideoAt(videoId)}
+          onClick={isSoon ? undefined : () => openVideoAt(video.id)}
           title={isSoon ? translations.ugc.video.comingSoon : `${label} ${index + 1}`}
           data-video-number={isSoon ? undefined : index + 1}
           style={isSoon ? undefined : {
-            backgroundImage: `url(${ytThumb(videoId)})`,
+            backgroundImage: `url(${videoPoster(video.id)})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -140,10 +142,6 @@ const UGCPage: React.FC = () => {
               onClick={() => setIsProfileModalOpen(true)}
               onError={(e) => { e.currentTarget.src = FALLBACK_SVG; }}
             />
-            <div className="profile-status">
-              <span className="status-dot"></span>
-              <span className="status-text">{translations.ugc.status}</span>
-            </div>
           </div>
 
           <div className="sidebar-identity">
@@ -183,6 +181,12 @@ const UGCPage: React.FC = () => {
               <div className="brand-logo-wrap" data-tooltip="StreamElements">
                 <img src="/images/brands/streamelements_320.png" alt="StreamElements" className="brand-logo" />
               </div>
+              <div className="brand-logo-wrap" data-tooltip="InBody">
+                <img src="/images/brands/inbody.png" alt="InBody" className="brand-logo" />
+              </div>
+              <div className="brand-logo-wrap" data-tooltip="TryNearby">
+                <img src="/images/brands/trynearby.png" alt="TryNearby" className="brand-logo" />
+              </div>
             </div>
           </div>
 
@@ -215,31 +219,23 @@ const UGCPage: React.FC = () => {
 
         {/* ── RIGHT CONTENT AREA ── */}
         <main className="content-area">
+
+          {/* ── ABOUT ME ── */}
+          <section className="ugc-about-section">
+            <h2 className="ugc-about-title">{translations.ugc.about.title}</h2>
+            <p className="ugc-about-body">{translations.ugc.about.body}</p>
+          </section>
+
+          {/* ── SAMPLE VIDEOS ── */}
           <section id="niches" className="ugc-niches">
-            <div className="niches-grid">
-
-              <div className="niche-card">
-                <h3 className="niche-title">{translations.ugc.niches.tech.title}</h3>
-                <div className="demo-videos">{renderClips(VIDEO_PLACEHOLDERS.tech, 'Tech')}</div>
+            <div className="niche-card niche-card--samples">
+              <h3 className="niche-title">{translations.ugc.video.samplesTitle}</h3>
+              <div className="demo-videos demo-videos--five">
+                {renderClips(SAMPLE_VIDEO_SLOTS, 'Sample')}
               </div>
-
-              <div className="niche-card">
-                <h3 className="niche-title">{translations.ugc.niches.grooming.title}</h3>
-                <div className="demo-videos">{renderClips(VIDEO_PLACEHOLDERS.grooming, 'Grooming')}</div>
-              </div>
-
-              <div className="niche-card">
-                <h3 className="niche-title">{translations.ugc.niches.style.title}</h3>
-                <div className="demo-videos">{renderClips(VIDEO_PLACEHOLDERS.style, 'Style')}</div>
-              </div>
-
-              <div className="niche-card">
-                <h3 className="niche-title">{translations.ugc.niches.lifestyle.title}</h3>
-                <div className="demo-videos">{renderClips(VIDEO_PLACEHOLDERS.lifestyle, 'Lifestyle')}</div>
-              </div>
-
             </div>
           </section>
+
         </main>
 
       </div>
@@ -258,9 +254,9 @@ const UGCPage: React.FC = () => {
           <button className="reel-close-btn" onClick={closeVideoModal} aria-label="Close">✕</button>
           <div className="reel-counter">{currentVideoIndex + 1} / {ALL_VIDEOS.length}</div>
 
-          {ALL_VIDEOS.map((videoId, idx) => (
+          {ALL_VIDEOS.map((video, idx) => (
             <div
-              key={videoId}
+              key={video.id}
               className="reel-slide"
               data-index={String(idx)}
               ref={el => { slideRefs.current[idx] = el; }}
@@ -268,13 +264,16 @@ const UGCPage: React.FC = () => {
               <div className="iphone-frame">
                 <div className="iphone-screen">
                   {idx === currentVideoIndex && (
-                    <iframe
-                      key={videoId}
-                      src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&vq=hd1080&iv_load_policy=3`}
+                    <video
+                      key={video.id}
+                      src={videoSrc(video.id)}
+                      poster={videoPoster(video.id)}
                       title={translations.ugc.video.modalTitle}
-                      style={{ border: 'none' }}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="auto"
                     />
                   )}
                 </div>
@@ -294,23 +293,6 @@ const UGCPage: React.FC = () => {
           <span>✉</span>
           <span>{translations.ugc.contact.getInTouch}</span>
         </a>
-      </div>
-
-      {/* Pre-initialize YouTube players on page load — off-screen so browser loads them,
-          no autoplay so they stay paused until the modal opens. Stays mounted until refresh. */}
-      <div
-        aria-hidden="true"
-        style={{ position: 'absolute', top: '-9999px', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden', pointerEvents: 'none' }}
-      >
-        {ALL_VIDEOS.map((videoId) => (
-          <iframe
-            key={`preload-${videoId}`}
-            src={`https://www.youtube.com/embed/${videoId}?rel=0&vq=hd1080&iv_load_policy=3`}
-            title=""
-            tabIndex={-1}
-            allow="accelerometer; clipboard-write; encrypted-media"
-          />
-        ))}
       </div>
     </div>
   );
