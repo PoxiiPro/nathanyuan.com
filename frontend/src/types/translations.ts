@@ -148,6 +148,7 @@ export interface Translation {
     about: {
       title: string;
       description: string;
+      body: string;
     };
     niches: {
       title: string;
@@ -201,6 +202,9 @@ export interface Translation {
       comingSoon: string;
       prevVideo: string;
       nextVideo: string;
+      samplesTitle: string;
+      mute: string;
+      unmute: string;
     };
     demographics: {
       title: string;

@@ -333,7 +333,8 @@
     "brands": { "label": "Ya trabajé con" },
     "about": {
       "title": "Sobre mí",
-      "description": "Ingeniero de Software + estrategia creativa — 4K, assets en crudo o editado al 100"
+      "description": "Ingeniero de Software + estrategia creativa — 4K, assets en crudo o editado al 100",
+      "body": "Soy Nathan — ingeniero de software de día y creador de contenido por vocación. Combino una mirada técnica con una voz auténtica para producir UGC que convierte. Aparezco como una persona real, no como un vocero pulido. Mi contenido apunta al segmento masculino Gen Z / Millennial y abarca cuatro nichos: Tecnología, Cuidado Personal, Estilo y Vida & Viajes. Grabo en 4K y entrego desde assets crudos hasta anuncios 100% editados, con tiempos de respuesta rápidos."
     },
     "niches": {
       "title": "Categorías",
@@ -371,7 +372,8 @@
       "closeVideo": "Cerrar",
       "comingSoon": "Próximamente",
       "prevVideo": "Anterior",
-      "nextVideo": "Siguiente"
+      "nextVideo": "Siguiente",
+      "samplesTitle": "Videos de Muestra"
     },
     "demographics": {
       "title": "Alcance",

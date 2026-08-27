@@ -328,12 +328,13 @@
     "title": "NATHAN YUAN",
     "tagline": "Based in Southern California • Gen Z / Millennial Male • Tech & Lifestyle",
     "status": "Open to collabs",
-    "creatorTitle": "UGC Creator",
+    "creatorTitle": "YouTuber & UGC Creator",
     "deliverables": ["UGC Ads", "Raw Assets", "4K Quality", "Fully Edited"],
     "brands": { "label": "Worked With" },
     "about": {
       "title": "About Me",
-      "description": "Software Engineer + creative strategy — 4K quality, raw assets or fully edited ads"
+      "description": "Software Engineer + creative strategy — 4K quality, raw assets or fully edited ads across unboxings & reviews, tutorials & app demos, lifestyle/GRWM content, before-and-afters, hauls & comparisons, and scripted or trend-based ads.",
+      "body": "Hi! I'm Nathan and I've been creating content for over 10 years. As a YouTuber and software engineer, I bring a unique set of skills to content creation for brands. I'm passionate about skincare, finance, fashion, jewelry, software & tech, food, and travel. I'm flexible with any video format — from unboxings and reviews to more organic, authentic product showcases with my honest personal take."
     },
     "niches": {
       "title": "Content Verticals",
@@ -371,7 +372,10 @@
       "closeVideo": "Close Video",
       "comingSoon": "Coming Soon",
       "prevVideo": "Previous",
-      "nextVideo": "Next"
+      "nextVideo": "Next",
+      "samplesTitle": "Sample Videos",
+      "mute": "Mute",
+      "unmute": "Unmute"
     },
     "demographics": {
       "title": "Demographic Outreach",

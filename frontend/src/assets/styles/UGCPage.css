@@ -1,9 +1,146 @@
+/* ═══════════════════════════════════════════════════════════════
+   UGC PAGE — DESIGN TOKENS
+   All theme-sensitive values live here. To retheme the page,
+   only these two blocks need to change — nothing else in the file.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Dark mode (default for this page) ── */
+.ugc-page {
+  /*
+   * Layer hierarchy (darkest → lightest = deepest → most elevated):
+   *   L0  page bg     #021f3a – #053363  (base)
+   *   L1  sidebar     rgba(4, 42, 78)    (+elevation)
+   *   L2  cards       rgba(0,158,255,.08) (+elevation)
+   *   L3  hover/pop   #00e6ff accent      (interactive)
+   */
+
+  /* Background — L0, deep blue derived from gradient hue */
+  --ugc-bg-radial:           rgba(0, 158, 255, 0.1);
+  --ugc-bg-linear:           linear-gradient(160deg, #021f3a 0%, #032a50 50%, #053363 100%);
+
+  /* Sidebar — L1, off-white frosted panel above bg */
+  --ugc-sidebar-bg:          rgba(255, 252, 248, 0.12);
+  --ugc-sidebar-border:      rgba(0, 158, 255, 0.22);
+  --ugc-tooltip-bg:          rgba(1, 10, 24, 0.96);
+  --ugc-tooltip-text:        #e0f4ff;
+
+  /* Text — pure white name, softer off-white body text */
+  --ugc-text-name:           #ffffff;
+  --ugc-text-title:          #d4a017;
+  --ugc-text-niche-title:    #e8f4ff;
+
+  /* Blue accent — vivid hues from the gradient for highlights */
+  --ugc-blue:                #009eff;
+  --ugc-blue-border:         rgba(0, 158, 255, 0.25);
+  --ugc-blue-border-hover:   rgba(0, 158, 255, 0.45);
+  --ugc-blue-border-strong:  rgba(0, 230, 255, 0.6);
+  --ugc-blue-border-soft:    rgba(0, 158, 255, 0.12);
+
+  /* Gold accent */
+  --ugc-gold:                #d4a017;
+  --ugc-gold-dark:           #b8860b;
+  --ugc-gold-light:          #f0b429;
+  --ugc-gold-subtle:         rgba(212, 160, 23, 0.18);
+  --ugc-gold-border:         rgba(212, 160, 23, 0.4);
+
+  /* Profile image — blue glow matches accent hue */
+  --ugc-profile-border:      rgba(0, 158, 255, 0.5);
+  --ugc-profile-glow:        rgba(0, 158, 255, 0.2);
+  --ugc-profile-border-hover: rgba(0, 230, 255, 0.85);
+  --ugc-profile-glow-hover:  rgba(0, 230, 255, 0.35);
+
+  /* Cards — L2, off-white frosted glass above bg */
+  --ugc-card-bg:             rgba(255, 252, 248, 0.1);
+  --ugc-card-bg-hover:       rgba(255, 252, 248, 0.22);
+  --ugc-card-border:         rgba(255, 255, 255, 0.18);
+  --ugc-card-border-hover:   rgba(255, 255, 255, 0.42);
+
+  /* Stat rows — L2, same elevation as cards */
+  --ugc-stat-bg:             rgba(255, 252, 248, 0.08);
+  --ugc-stat-bg-hover:       rgba(255, 252, 248, 0.16);
+  --ugc-stat-border:         rgba(255, 255, 255, 0.14);
+  --ugc-stat-text:           #e0f4ff;
+
+  /* Video placeholders — L2 */
+  --ugc-video-bg:            linear-gradient(135deg, rgba(255, 252, 248, 0.1) 0%, rgba(255, 252, 248, 0.05) 100%);
+  --ugc-video-border:        rgba(255, 255, 255, 0.2);
+  --ugc-video-border-hover:  rgba(255, 255, 255, 0.45);
+  --ugc-coming-soon-border:  rgba(255, 255, 255, 0.15);
+
+  /* Niches section */
+  --ugc-niches-bg:           transparent;
+
+  /* Mobile sticky bar */
+  --ugc-sticky-bg:           linear-gradient(to top, rgba(2, 20, 42, 0.98) 55%, transparent);
+}
+
+/* ── Light mode token overrides ── */
+/* Light mode uses the vivid gradient as the bg — bright sky vs. dark ocean */
+.light-theme .ugc-page {
+  /* Background — full reference gradient, vibrant blue → cyan */
+  --ugc-bg-radial:           rgba(255, 255, 255, 0.12);
+  --ugc-bg-linear:           linear-gradient(160deg, #009eff 0%, #00c3ff 50%, #00d8ff 100%);
+
+  /* Sidebar — off-white frosted panel floating on the bright blue bg */
+  --ugc-sidebar-bg:          rgba(255, 252, 248, 0.82);
+  --ugc-sidebar-border:      rgba(255, 252, 248, 0.6);
+  --ugc-tooltip-bg:          rgba(0, 30, 70, 0.92);
+  --ugc-tooltip-text:        #ffffff;
+
+  /* Text — dark navy for contrast on bright bg */
+  --ugc-text-name:           #002244;
+  --ugc-text-title:          #0055aa;
+  --ugc-text-niche-title:    #001a33;
+
+  /* Gold (slightly darker for readability on white card surfaces) */
+  --ugc-gold:                #b8860b;
+  --ugc-gold-dark:           #9a7000;
+  --ugc-gold-light:          #d4a017;
+  --ugc-gold-subtle:         rgba(184, 134, 11, 0.12);
+  --ugc-gold-border:         rgba(184, 134, 11, 0.3);
+
+  /* Profile image — white ring on bright bg */
+  --ugc-profile-border:      rgba(255, 255, 255, 0.7);
+  --ugc-profile-glow:        rgba(255, 255, 255, 0.3);
+  --ugc-profile-border-hover: rgba(255, 255, 255, 1);
+  --ugc-profile-glow-hover:  rgba(255, 255, 255, 0.5);
+
+  /* Cards — off-white frosted glass on bright blue bg */
+  --ugc-card-bg:             rgba(255, 252, 248, 0.72);
+  --ugc-card-bg-hover:       rgba(255, 252, 248, 0.92);
+  --ugc-card-border:         rgba(255, 252, 248, 0.5);
+  --ugc-card-border-hover:   rgba(255, 252, 248, 0.88);
+
+  /* Stat rows */
+  --ugc-stat-bg:             rgba(255, 252, 248, 0.5);
+  --ugc-stat-bg-hover:       rgba(255, 252, 248, 0.72);
+  --ugc-stat-border:         rgba(255, 252, 248, 0.4);
+  --ugc-stat-text:           #002244;
+
+  /* Video placeholders */
+  --ugc-video-bg:            linear-gradient(135deg, rgba(255, 252, 248, 0.35) 0%, rgba(255, 252, 248, 0.2) 100%);
+  --ugc-video-border:        rgba(255, 252, 248, 0.5);
+  --ugc-video-border-hover:  rgba(255, 252, 248, 0.88);
+  --ugc-coming-soon-border:  rgba(255, 252, 248, 0.4);
+
+  /* Niches section */
+  --ugc-niches-bg:           transparent;
+
+  /* Mobile sticky bar */
+  --ugc-sticky-bg:           linear-gradient(to top, rgba(0, 150, 230, 0.95) 55%, transparent);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   COMPONENT STYLES — reference tokens only, no hardcoded colors
+   ═══════════════════════════════════════════════════════════════ */
+
 /* ─── UGC Portfolio Page ─────────────────────────────────────── */
 .ugc-page {
   min-height: 100vh;
   background:
-    radial-gradient(ellipse 640px 560px at 170px 340px, rgba(74, 107, 93, 0.05) 0%, transparent 70%),
-    linear-gradient(160deg, #141414 0%, #111111 50%, #181818 100%);
+    radial-gradient(ellipse 640px 560px at 170px 340px, var(--ugc-bg-radial) 0%, transparent 70%),
+    var(--ugc-bg-linear);
   color: var(--text-color);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
@@ -19,17 +156,17 @@
 
 /* ─── Sticky Creator Sidebar ─────────────────────────────────── */
 .creator-sidebar {
-  width: 300px;
+  width: 360px;
   flex-shrink: 0;
   position: sticky;
   top: 1.5rem;
-  height: 88vh;
+  height: 95vh;
   overflow: hidden;
   margin: 1.5rem 0.5rem 1.5rem 0.75rem;
   padding: 1.75rem 1.5rem 1.25rem;
-  border: 1px solid rgba(74, 107, 93, 0.22);
+  border: 1px solid var(--ugc-sidebar-border);
   border-radius: 20px;
-  background: rgba(18, 18, 18, 0.96);
+  background: var(--ugc-sidebar-bg);
   box-shadow:
     0 24px 64px rgba(0, 0, 0, 0.65),
     0 8px 24px rgba(0, 0, 0, 0.4),
@@ -52,8 +189,8 @@
   height: clamp(80px, 14vh, 150px);
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid rgba(74, 107, 93, 0.45);
-  box-shadow: 0 0 28px rgba(74, 107, 93, 0.2);
+  border: 3px solid var(--ugc-profile-border);
+  box-shadow: 0 0 28px var(--ugc-profile-glow);
   cursor: zoom-in;
   transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   display: block;
@@ -62,8 +199,8 @@
 }
 
 .profile-image:hover {
-  border-color: rgba(74, 107, 93, 0.75);
-  box-shadow: 0 0 40px rgba(74, 107, 93, 0.35);
+  border-color: var(--ugc-profile-border-hover);
+  box-shadow: 0 0 40px var(--ugc-profile-glow-hover);
   transform: scale(1.03);
 }
 
@@ -99,7 +236,7 @@
 .creator-name {
   font-size: clamp(1.2rem, 2.5vh, 1.65rem);
   font-weight: 800;
-  color: #EAEAEA;
+  color: var(--ugc-text-name);
   margin: 0 0 0.2rem;
   letter-spacing: -0.01em;
 }
@@ -108,7 +245,7 @@
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #4A6B5D;
+  color: var(--ugc-text-title);
   font-weight: 700;
   margin: 0 0 0.25rem;
 }
@@ -135,16 +272,16 @@
   padding: 0.5rem 0.7rem;
   border-radius: 8px;
   text-decoration: none;
-  color: var(--text-color);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--ugc-stat-text);
+  background: var(--ugc-stat-bg);
+  border: 1px solid var(--ugc-stat-border);
   transition: background 0.2s ease, transform 0.2s ease;
   font-size: 0.92rem;
   font-weight: 500;
 }
 
 .stat-row:hover {
-  background: rgba(255, 255, 255, 0.09);
+  background: var(--ugc-stat-bg-hover);
   transform: translateX(3px);
 }
 
@@ -163,20 +300,24 @@
   flex-shrink: 0;
   font-size: 0.68rem;
   font-weight: 700;
-  background: rgba(74, 107, 93, 0.3);
-  color: #7ab89e;
+  background: var(--ugc-gold-subtle);
+  color: var(--ugc-gold);
   padding: 0.1rem 0.45rem;
   border-radius: 50px;
-  border: 1px solid rgba(74, 107, 93, 0.45);
+  border: 1px solid var(--ugc-gold-border);
 }
 
 /* Platform brand color accents */
-.stat-row.youtube  { border-left: 3px solid rgba(255, 60, 60, 0.65); }
+.stat-row.youtube   { border-left: 3px solid rgba(255, 60, 60, 0.65); }
 .stat-row.instagram { border-left: 3px solid rgba(214, 91, 166, 0.65); }
-.stat-row.tiktok   { border-left: 3px solid rgba(210, 210, 210, 0.3); }
+.stat-row.tiktok    { border-left: 3px solid rgba(210, 210, 210, 0.3); }
 
-.stat-row.youtube  .stat-icon { color: #ff6060; }
+.stat-row.youtube   .stat-icon { color: #ff6060; }
 .stat-row.instagram .stat-icon { color: #d96bb8; }
+
+/* Light mode platform icons (kept outside tokens — platform brand colors) */
+.light-theme .stat-row.youtube   .stat-icon { color: #cc2020; }
+.light-theme .stat-row.instagram .stat-icon { color: #b03a90; }
 
 /* Brands */
 .sidebar-section-label {
@@ -216,8 +357,8 @@
   bottom: calc(100% + 7px);
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(18, 18, 18, 0.92);
-  color: #EAEAEA;
+  background: var(--ugc-tooltip-bg);
+  color: var(--ugc-tooltip-text);
   font-size: 0.72rem;
   font-weight: 600;
   padding: 0.3rem 0.65rem;
@@ -249,6 +390,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   overflow: hidden;
 }
 
@@ -265,9 +407,9 @@
   letter-spacing: 0.05em;
   padding: 0.22rem 0.55rem;
   border-radius: 50px;
-  background: rgba(74, 107, 93, 0.14);
-  border: 1px solid rgba(74, 107, 93, 0.32);
-  color: #7ab89e;
+  background: var(--ugc-gold-subtle);
+  border: 1px solid var(--ugc-gold-border);
+  color: var(--ugc-gold);
   white-space: nowrap;
 }
 
@@ -287,13 +429,13 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.7rem 1rem;
-  background: linear-gradient(135deg, #4A6B5D 0%, #3a5a4d 100%);
+  background: linear-gradient(135deg, var(--ugc-gold) 0%, var(--ugc-gold-dark) 100%);
   color: white;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.82rem;
-  box-shadow: 0 4px 18px rgba(74, 107, 93, 0.3);
+  box-shadow: 0 4px 18px var(--ugc-gold-subtle);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   white-space: nowrap;
   overflow: hidden;
@@ -302,16 +444,16 @@
 
 .sidebar-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 26px rgba(74, 107, 93, 0.42);
+  box-shadow: 0 8px 26px var(--ugc-gold-border);
 }
 
 .sidebar-copy-btn {
   flex-shrink: 0;
   padding: 0.7rem 0.85rem;
   border-radius: 50px;
-  border: 1px solid rgba(74, 107, 93, 0.35);
-  background: rgba(74, 107, 93, 0.14);
-  color: #7ab89e;
+  border: 1px solid var(--ugc-gold-border);
+  background: var(--ugc-gold-subtle);
+  color: var(--ugc-gold);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -321,14 +463,14 @@
 }
 
 .sidebar-copy-btn:hover {
-  background: rgba(74, 107, 93, 0.28);
+  background: var(--ugc-gold-border);
   transform: scale(1.08);
 }
 
 .sidebar-copy-btn--copied {
-  background: rgba(45, 106, 79, 0.35);
-  border-color: rgba(45, 106, 79, 0.5);
-  color: #6fcf97;
+  background: var(--ugc-gold-subtle);
+  border-color: var(--ugc-gold-border);
+  color: var(--ugc-gold-light);
 }
 
 /* Theme + language controls */
@@ -347,9 +489,49 @@
   overflow-x: hidden;
 }
 
+/* ─── About Me section ──────────────────────────────────────── */
+.ugc-about-section {
+  margin: 1.5rem 1.25rem 0;
+  padding: 2rem 2.25rem;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--ugc-card-bg);
+  border: 1px solid var(--ugc-card-border);
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.ugc-about-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ugc-blue);
+  margin: 0 0 0.75rem;
+}
+
+.ugc-about-body {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ugc-stat-text);
+  margin: 0;
+}
+
+.ugc-about-body + .ugc-about-body {
+  margin-top: 1rem;
+}
+
 /* ─── Niches / video grid ────────────────────────────────────── */
 .ugc-niches {
   padding: 1.5rem 1.25rem 1.5rem;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--ugc-niches-bg);
 }
 
 .niches-grid {
@@ -364,8 +546,8 @@
 }
 
 .niche-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--ugc-card-bg);
+  border: 1px solid var(--ugc-card-border);
   border-radius: 16px;
   padding: 1.25rem 1.5rem 1.5rem;
   position: relative;
@@ -380,7 +562,7 @@
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #4A6B5D, #3a5a4d, #5a8070);
+  background: linear-gradient(90deg, var(--ugc-gold), var(--ugc-gold-dark), var(--ugc-gold-light));
   transform: scaleX(0);
   opacity: 0;
   transition: transform 0.35s ease, opacity 0.35s ease;
@@ -389,8 +571,8 @@
 .niche-card:hover::before { transform: scaleX(1); opacity: 1; }
 
 .niche-card:hover {
-  border-color: rgba(74, 107, 93, 0.3);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--ugc-card-border-hover);
+  background: var(--ugc-card-bg-hover);
   transform: translateY(-2px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
@@ -398,7 +580,7 @@
 .niche-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #EAEAEA;
+  color: var(--ugc-text-niche-title);
   margin: 0 0 0.75rem;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -411,14 +593,27 @@
   gap: 0.5rem;
 }
 
+/* Single sample card — 5 portrait slots */
+.demo-videos--five {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media (max-width: 900px) {
+  .demo-videos--five { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .demo-videos--five { grid-template-columns: repeat(2, 1fr); }
+}
+
 .video-placeholder {
   aspect-ratio: 9 / 16;
   border-radius: 8px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(74, 107, 93, 0.2);
-  background: linear-gradient(135deg, rgba(74, 107, 93, 0.12) 0%, rgba(74, 107, 93, 0.06) 100%);
+  border: 1px solid var(--ugc-video-border);
+  background: var(--ugc-video-bg);
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -448,7 +643,7 @@
 
 .video-placeholder:not(.video-coming-soon):hover {
   transform: translateY(-3px) scale(1.02);
-  border-color: rgba(74, 107, 93, 0.5);
+  border-color: var(--ugc-video-border-hover);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -456,7 +651,7 @@
 .video-coming-soon {
   cursor: default;
   border-style: dashed;
-  border-color: rgba(74, 107, 93, 0.18);
+  border-color: var(--ugc-coming-soon-border);
   background: rgba(255, 255, 255, 0.02) !important;
 }
 
@@ -476,6 +671,9 @@
   transform: translate(-50%, -50%) scale(1) !important;
 }
 
+/* Light mode coming-soon text */
+.light-theme .video-coming-soon::before { color: rgba(0, 0, 0, 0.3); }
+
 .video-placeholder:hover::after {
   background: rgba(0, 0, 0, 0.15);
 }
@@ -484,6 +682,10 @@
   transform: translate(-50%, -50%) scale(1.25);
   color: white;
 }
+
+/* Light mode video overlay — lighten instead of darken */
+.light-theme .video-placeholder::after      { background: rgba(0, 0, 0, 0.12); }
+.light-theme .video-placeholder:hover::after { background: rgba(0, 0, 0, 0.06); }
 
 /* ─── Profile lightbox ───────────────────────────────────────── */
 .profile-lightbox {
@@ -574,14 +776,17 @@
   pointer-events: none;
 }
 
-/* ── iPhone PNG mockup frame ── */
+/* ── Reel video card (no phone bezel — plain rounded video, shown uncropped) ── */
 .iphone-frame {
   position: relative;
-  /* Portrait 160×330 — height drives the size, width computed from aspect-ratio */
-  height: min(88vh, calc(85vw * 330 / 160));
-  aspect-ratio: 160 / 330;
+  /* 9:16 portrait — standard vertical video ratio, height drives the size.
+     Reserve 6rem of vertical headroom (not a flat vh %) so the card never
+     grows into the fixed-position .reel-counter/.reel-close-btn at the top,
+     even on short viewports where a plain vh clamp would shrink that margin away. */
+  height: min(calc(100vh - 6rem), calc(89vw * 16 / 9));
+  height: min(calc(100dvh - 6rem), calc(89vw * 16 / 9));
+  aspect-ratio: 9 / 16;
   cursor: default;
-  filter: drop-shadow(0 24px 56px rgba(0, 0, 0, 0.85));
   animation: frameIn 0.28s cubic-bezier(0.34, 1.4, 0.64, 1);
 }
 
@@ -590,124 +795,70 @@
   to   { opacity: 1; transform: scale(1)    translateY(0);    }
 }
 
-/* Video perfectly fills the transparent screen hole.
-   Calibrated against the tight-cropped 160×330 portrait PNG.
-   The phone body fills ~97% of the image; screen starts ~4.5% in from each side. */
 .iphone-screen {
   position: absolute;
-  left: 3%;
-  top: 1.5%;
-  width: 94%;
-  height: 97%;
+  inset: 0;
   overflow: hidden;
-  border-radius: 8%;
+  border-radius: 16px;
+  clip-path: inset(0 round 16px);
   background: #000;
+  /* box-shadow instead of filter: drop-shadow — filter on an ancestor of a clipped
+     <video> is a known cross-browser bug trigger (video escapes overflow:hidden). */
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.85);
   z-index: 1;
 }
 
-.iphone-screen iframe {
+.iphone-screen video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   border: none;
-}
-
-/* PNG frame overlays on top of the video */
-.iphone-mockup-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
   object-fit: contain;
-  pointer-events: none;
+  background: #000;
+}
+
+/* Mute toggle — always visible, no need to enter Picture-in-Picture to find it.
+   Sibling of .iphone-screen (not a descendant), so it sits on top of the video
+   unclipped. */
+.reel-mute-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
   z-index: 2;
-  user-select: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
-/* ─── Light theme overrides ──────────────────────────────────── */
-/* Note: useTheme hook applies .light-theme class to <html>, not data-theme attr */
-
-.light-theme .ugc-page {
-  background:
-    radial-gradient(ellipse 640px 560px at 170px 340px, rgba(74, 107, 93, 0.04) 0%, transparent 70%),
-    linear-gradient(160deg, #EAEAEA 0%, #e8e8e8 50%, #f0f0f0 100%);
-}
-
-.light-theme .creator-sidebar {
-  background: rgba(252, 252, 252, 0.97);
-  border-color: rgba(74, 107, 93, 0.18);
-  box-shadow:
-    0 24px 64px rgba(0, 0, 0, 0.12),
-    0 8px 24px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
-}
-
-.light-theme .creator-name  { color: #1A1A1A; }
-.light-theme .creator-title { color: #4A6B5D; }
-.light-theme .creator-tagline { color: #475569; opacity: 0.85; }
-.light-theme .sidebar-about   { color: #475569; opacity: 0.85; }
-.light-theme .sidebar-section-label { color: #6b6b6b; }
-
-.light-theme .stat-row {
-  background: rgba(0, 0, 0, 0.04);
-  border-color: rgba(0, 0, 0, 0.09);
-  color: #1A1A1A;
-}
-.light-theme .stat-row:hover { background: rgba(0, 0, 0, 0.09); }
-
-.light-theme .stat-row.youtube  .stat-icon { color: #cc2020; }
-.light-theme .stat-row.instagram .stat-icon { color: #b03a90; }
-
-.light-theme .video-placeholder::after { background: rgba(0, 0, 0, 0.12); }
-.light-theme .video-placeholder:hover::after { background: rgba(0, 0, 0, 0.06); }
-
-.light-theme .ugc-niches { background: rgba(0, 0, 0, 0.03); }
-
-.light-theme .niche-card {
-  background: rgba(255, 255, 255, 0.8);
-  border-color: rgba(0, 0, 0, 0.08);
-}
-.light-theme .niche-card:hover {
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(74, 107, 93, 0.3);
-}
-.light-theme .niche-title { color: #222222; }
-
-.light-theme .video-placeholder {
-  border-color: rgba(74, 107, 93, 0.25);
-  background: linear-gradient(135deg, rgba(74, 107, 93, 0.08) 0%, rgba(74, 107, 93, 0.04) 100%);
-}
-
-.light-theme .video-coming-soon {
-  background: rgba(0, 0, 0, 0.04) !important;
-  border-color: rgba(74, 107, 93, 0.2);
-}
-.light-theme .video-coming-soon::before { color: rgba(0, 0, 0, 0.3); }
-
-.light-theme .video-nav-btn {
-  background: rgba(0, 0, 0, 0.07);
-  border-color: rgba(0, 0, 0, 0.15);
-  color: rgba(0, 0, 0, 0.65);
-}
-.light-theme .video-nav-btn:hover:not(:disabled) { background: rgba(0, 0, 0, 0.13); }
-.light-theme .video-counter { color: rgba(0, 0, 0, 0.4); }
+.reel-mute-btn:hover { background: rgba(255, 255, 255, 0.15); }
 
 /* ─── Responsive — viewport width ───────────────────────────── */
 
 /* Wide desktop (≥1440px) — wider sidebar, more breathing room */
 @media (min-width: 1440px) {
-  .creator-sidebar { width: 320px; }
+  .creator-sidebar { width: 384px; }
 }
 
 /* Small desktop (≤1280px) */
 @media (max-width: 1280px) {
-  .creator-sidebar { width: 270px; }
+  .creator-sidebar { width: 324px; }
 }
 
 /* Tablet landscape / small laptop (≤1024px) */
 @media (max-width: 1024px) {
-  .creator-sidebar { width: 240px; }
+  .creator-sidebar { width: 288px; }
 }
 
 /* Tablet portrait & mobile (≤768px) — sidebar becomes a compact info card */
@@ -836,7 +987,7 @@
   left: 0;
   right: 0;
   padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
-  background: linear-gradient(to top, rgba(13, 13, 13, 0.98) 55%, transparent);
+  background: var(--ugc-sticky-bg);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   z-index: 200;
@@ -854,13 +1005,13 @@
   gap: 0.6rem;
   width: 100%;
   padding: 0.9rem;
-  background: linear-gradient(135deg, #4A6B5D 0%, #3a5a4d 100%);
+  background: linear-gradient(135deg, var(--ugc-gold) 0%, var(--ugc-gold-dark) 100%);
   color: white;
   border-radius: 14px;
   text-decoration: none;
   font-weight: 700;
   font-size: 0.95rem;
-  box-shadow: 0 4px 22px rgba(74, 107, 93, 0.45);
+  box-shadow: 0 4px 22px var(--ugc-gold-subtle);
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
@@ -870,38 +1021,21 @@
 }
 
 .mobile-sticky-btn--copied {
-  background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%);
+  background: linear-gradient(135deg, var(--ugc-gold-dark) 0%, #8a6200 100%);
 }
 
-/* Mobile/tablet/foldable — hide the PNG chrome, video fills the full slide */
+/* Mobile/tablet/foldable — video card fills the full slide, no rounded corners */
 @media (max-width: 1024px) {
-  .iphone-mockup-img { display: none; }
-
   .iphone-frame {
     width: 100vw;
     height: 100vh;
     height: 100dvh;
     aspect-ratio: unset;
-    filter: none;
   }
 
   .iphone-frame .iphone-screen {
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
     border-radius: 0;
+    clip-path: none;
+    box-shadow: none;
   }
 }
-
-/* ─── Light theme — new elements ────────────────────────────── */
-.light-theme .deliverable-chip {
-  background: rgba(74, 107, 93, 0.1);
-  border-color: rgba(74, 107, 93, 0.28);
-  color: #3d6b55;
-}
-
-.light-theme .mobile-sticky-cta {
-  background: linear-gradient(to top, rgba(234, 234, 234, 0.98) 55%, transparent);
-}
-
