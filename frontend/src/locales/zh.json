@@ -320,15 +320,21 @@
   },
   "ugc": {
     "title": "NATHAN YUAN",
-    "tagline": "南加州 • 千禧 / Z世代 • 科技與生活",
+    "tagline": "南加州 • 千禧 / Z世代",
     "status": "接業配中",
-    "creatorTitle": "UGC創作者",
+    "responseTime": "通常24小時內回覆信件",
+    "creatorTitle": "軟體工程師 & UGC創作者",
     "deliverables": ["UGC廣告", "原始素材", "4K畫質", "完整剪輯"],
+    "specialties": ["科技與App展示", "桌遊與TCG", "男性保養與健身", "生活風格與時尚"],
     "brands": { "label": "合作過的品牌" },
     "about": {
       "title": "關於我",
-      "description": "軟體工程師斜槓創作者 — 4K拍攝，提供素材或剪輯完成品皆可",
-      "body": "我是 Nathan — 白天是軟體工程師，下班後是內容創作者。我將技術視角與真實聲音結合，製作能帶來轉換的 UGC。我以真實的人出鏡，而非精心塑造的代言人。我的內容鎖定 Z 世代 / 千禧年輕男性族群，涵蓋四個領域：科技、自我保養、時尚配件，以及旅遊生活。4K 拍攝，可交付素材或完整剪輯廣告，快速回應品牌需求。"
+      "description": "每個案子都以4K拍攝，可提供原始素材或完整剪輯 — 涵蓋開箱評測、教學與App展示、生活風格/GRWM、前後對比、好物分享與比較，以及趨勢企劃或腳本廣告。",
+      "body": "嗨，我是 Nathan — 一位有超過10年經驗的內容創作者，白天則是軟體工程師。這樣的技術背景讓我能真正理解每一款App、SaaS或科技產品，而不只是照稿念。鏡頭外，我常常在玩TRPG戰役，或是跟朋友對戰TCG。我也喜歡嘗試新的保養品、關注健身健康議題，以及時尚穿搭。任何拍攝形式我都能彈性配合 — 從開箱評測，到更真實自然、帶有個人觀點的產品呈現。"
+    },
+    "photo": {
+      "samplesTitle": "靜態攝影作品",
+      "description": "商品拍攝、生活風格平拍、開箱靜照、前後對比，適用於動態貼文、商品頁與付費社群廣告。"
     },
     "niches": {
       "title": "內容類別",
@@ -341,7 +347,8 @@
       "title": "一起創作",
       "description": "讓你的品牌跟受眾真正連結，找我就對了",
       "email": "ugc@nathanyuan.com",
-      "rates": "$300起 — 歡迎來聊",
+      "rates": "單支影片 — $300起",
+      "stillsAvailable": "也提供5張一組的照片方案",
       "turnaround": "秒回訊息，快速交件",
       "getInTouch": "聯絡我",
       "copied": "複製成功！",
@@ -367,7 +374,9 @@
       "comingSoon": "敬請期待",
       "prevVideo": "上一支",
       "nextVideo": "下一支",
-      "samplesTitle": "精選影片"
+      "samplesTitle": "精選影片",
+      "mute": "靜音",
+      "unmute": "取消靜音"
     },
     "demographics": {
       "title": "受眾分析",

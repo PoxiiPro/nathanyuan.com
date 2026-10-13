@@ -326,15 +326,21 @@
   },
   "ugc": {
     "title": "NATHAN YUAN",
-    "tagline": "Sur de Cali • Millennial / Gen Z • Tech y Lifestyle",
+    "tagline": "Sur de Cali • Millennial / Gen Z",
     "status": "Disponible para collabs",
-    "creatorTitle": "Creador UGC",
+    "responseTime": "Normalmente respondo correos en menos de 24 horas",
+    "creatorTitle": "Ingeniero de Software y Creador UGC",
     "deliverables": ["Ads UGC", "Assets en crudo", "Calidad 4K", "Editado completo"],
+    "specialties": ["Tech y Demos de Apps", "Juegos de Mesa y TCG", "Cuidado Masculino y Fitness", "Lifestyle y Moda"],
     "brands": { "label": "Ya trabajé con" },
     "about": {
       "title": "Sobre mí",
-      "description": "Ingeniero de Software + estrategia creativa — 4K, assets en crudo o editado al 100",
-      "body": "Soy Nathan — ingeniero de software de día y creador de contenido por vocación. Combino una mirada técnica con una voz auténtica para producir UGC que convierte. Aparezco como una persona real, no como un vocero pulido. Mi contenido apunta al segmento masculino Gen Z / Millennial y abarca cuatro nichos: Tecnología, Cuidado Personal, Estilo y Vida & Viajes. Grabo en 4K y entrego desde assets crudos hasta anuncios 100% editados, con tiempos de respuesta rápidos."
+      "description": "Cada proyecto se entrega en 4K, en crudo o totalmente editado — cubro unboxings y reseñas, tutoriales y demos de apps, lifestyle/GRWM, antes-y-después, hauls y comparaciones, y anuncios de tendencia o con guión.",
+      "body": "¡Hola! Soy Nathan — creador de contenido con más de 10 años frente a cámara, mientras trabajo como ingeniero de software de día. Ese trasfondo técnico significa que entiendo de verdad cada app, SaaS o producto tech para el que creo contenido. Fuera de cámara, es muy probable que me encuentres metido en una campaña de TTRPG o jugando TCG con amigos. También me gusta probar nuevos productos de skincare para mi rutina, y me interesan el fitness/salud y la moda. Soy flexible con cualquier formato — desde unboxings y reseñas hasta showcases más orgánicos y auténticos con mi toque personal honesto."
+    },
+    "photo": {
+      "samplesTitle": "Contenido Fotográfico",
+      "description": "Fotos de producto, flat-lays de lifestyle, fotos de unboxing, y antes-y-después para posts de feed, listados y anuncios pagados."
     },
     "niches": {
       "title": "Categorías",
@@ -347,7 +353,8 @@
       "title": "Hagámoslo",
       "description": "¿Tu marca necesita contenido que conecte de verdad?",
       "email": "ugc@nathanyuan.com",
-      "rates": "Desde $300 — escríbeme y hablamos",
+      "rates": "Video Individual — Desde $300",
+      "stillsAvailable": "También disponible: paquete de 5 fotos",
       "turnaround": "Respuesta rápida, entrega más rápida",
       "getInTouch": "Escríbeme",
       "copied": "¡Copiado!",
@@ -373,7 +380,9 @@
       "comingSoon": "Próximamente",
       "prevVideo": "Anterior",
       "nextVideo": "Siguiente",
-      "samplesTitle": "Videos de Muestra"
+      "samplesTitle": "Videos de Muestra",
+      "mute": "Silenciar",
+      "unmute": "Activar sonido"
     },
     "demographics": {
       "title": "Alcance",
