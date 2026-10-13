@@ -416,6 +416,28 @@
   white-space: nowrap;
 }
 
+/* Niche/specialty chips — what the content is about, distinct from the
+   gold deliverable chips (what format it ships in). Blue matches the
+   page's existing "informational" accent (see .ugc-about-title). */
+.sidebar-niches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.niche-chip {
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.22rem 0.55rem;
+  border-radius: 50px;
+  background: var(--ugc-blue-border-soft);
+  border: 1px solid var(--ugc-blue-border);
+  color: var(--ugc-blue);
+  white-space: nowrap;
+}
+
 /* Email CTA group — mailto link + copy button side by side */
 .sidebar-cta-group {
   display: flex;
@@ -533,6 +555,44 @@
 
 .ugc-about-body + .ugc-about-body {
   margin-top: 1rem;
+}
+
+/* ─── Closing CTA ────────────────────────────────────────────── */
+.ugc-closing-section {
+  margin: 0 1.25rem;
+  padding: 2rem 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  flex: 0 0 auto;
+  background: var(--ugc-card-bg);
+  border: 1px solid var(--ugc-card-border);
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.ugc-closing-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ugc-text-name);
+  margin: 0;
+}
+
+.ugc-closing-description {
+  font-size: 1rem;
+  color: var(--ugc-stat-text);
+  margin: 0;
+  max-width: 420px;
+}
+
+.ugc-closing-cta {
+  flex: none;
+  margin-top: 0.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 0.9rem;
 }
 
 /* ─── Niches / video grid ────────────────────────────────────── */
@@ -942,6 +1002,7 @@
   #niches.ugc-niches     { order: 1; }
   #photos.ugc-niches     { order: 2; }
   .ugc-about-section     { order: 3; }
+  .ugc-closing-section   { order: 4; margin: 0.75rem 1.25rem 0; }
 
   /* Horizontal swipe row instead of a multi-row grid — one finger swipe
      sees all 5 thumbnails, next card peeks at the edge as a swipe hint,
@@ -979,6 +1040,7 @@
     grid-template-areas:
       "photo    identity"
       "photo    chips"
+      "niches   niches"
       "brands   brands"
       "cta      cta"
       "ctrls    ctrls";
@@ -996,6 +1058,7 @@
   .sidebar-profile      { grid-area: photo; flex-direction: column; align-items: center; gap: 0.3rem; }
   .sidebar-identity     { grid-area: identity; text-align: left; }
   .sidebar-deliverables { grid-area: chips; display: flex; flex-wrap: wrap; gap: 0.3rem; }
+  .sidebar-niches       { grid-area: niches; margin-top: 0; display: flex; flex-wrap: wrap; gap: 0.3rem; }
   .sidebar-brands       { grid-area: brands; display: flex; align-items: center; gap: 0.6rem; }
   .sidebar-cta-group    { grid-area: cta; margin-top: 0; }
   .sidebar-controls     { grid-area: ctrls; justify-content: flex-start; margin-top: 0; }
@@ -1016,7 +1079,7 @@
   .sidebar-identity .creator-tagline { display: none; }
 
   /* Deliverable chips — smaller on mobile */
-  .deliverable-chip { font-size: 0.6rem; padding: 0.18rem 0.42rem; }
+  .deliverable-chip, .niche-chip { font-size: 0.6rem; padding: 0.18rem 0.42rem; }
 
   /* Brand logos — compact */
   .sidebar-section-label                { display: none; }
@@ -1098,9 +1161,9 @@
 
 @media (max-width: 768px) {
   .mobile-sticky-cta { display: block; }
-  /* About Me is now the last section (samples are reordered above it) —
-     it needs the clearance so the fixed CTA bar doesn't cover its tail. */
-  .ugc-about-section { padding-bottom: 5.5rem; }
+  /* Closing CTA is now the last section — it needs the clearance so the
+     fixed bottom bar doesn't cover its tail. */
+  .ugc-closing-section { padding-bottom: 5.5rem; }
 }
 
 .mobile-sticky-btn {

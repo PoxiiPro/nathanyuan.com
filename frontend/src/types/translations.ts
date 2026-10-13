@@ -146,6 +146,7 @@ export interface Translation {
     responseTime: string;
     creatorTitle: string;
     deliverables: string[];
+    specialties: string[];
     about: {
       title: string;
       description: string;
@@ -182,6 +183,7 @@ export interface Translation {
       description: string;
       email: string;
       rates: string;
+      stillsAvailable: string;
       turnaround: string;
       getInTouch: string;
       copied: string;

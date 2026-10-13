@@ -190,6 +190,12 @@ const UGCPage: React.FC = () => {
             ))}
           </div>
 
+          <div className="sidebar-niches">
+            {translations.ugc.specialties.map((s, i) => (
+              <span key={i} className="niche-chip">{s}</span>
+            ))}
+          </div>
+
           <div className="platform-stats">
             <a href={`https://youtube.com/${translations.ugc.social.youtube}`} className="stat-row youtube" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faYoutube} className="stat-icon" />
@@ -283,6 +289,19 @@ const UGCPage: React.FC = () => {
                 {renderPhotos(PHOTO_GRID_SLOTS, 'Photo')}
               </div>
             </div>
+          </section>
+
+          {/* ── CLOSING CTA ── */}
+          <section id="closer" className="ugc-closing-section">
+            <h2 className="ugc-closing-title">{translations.ugc.contact.title}</h2>
+            <p className="ugc-closing-description">{translations.ugc.contact.description}</p>
+            <a
+              href={`mailto:${translations.ugc.contact.email}?subject=UGC Collaboration Inquiry`}
+              className="sidebar-cta ugc-closing-cta"
+            >
+              <span>✉</span>
+              <span>{translations.ugc.contact.getInTouch}</span>
+            </a>
           </section>
 
         </main>

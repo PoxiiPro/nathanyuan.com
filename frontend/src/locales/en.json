@@ -326,16 +326,17 @@
   },
   "ugc": {
     "title": "NATHAN YUAN",
-    "tagline": "Based in Southern California • Gen Z / Millennial Male • Tech & Lifestyle",
+    "tagline": "Based in Southern California • Gen Z / Millennial Male",
     "status": "Open to collabs",
     "responseTime": "Usually responds to emails within 24hrs",
-    "creatorTitle": "YouTuber & UGC Creator",
+    "creatorTitle": "Software Engineer & UGC Creator",
     "deliverables": ["UGC Ads", "Raw Assets", "4K Quality", "Fully Edited"],
+    "specialties": ["Tech & App Demos", "Tabletop & TCG", "Men's Grooming & Fitness", "Lifestyle & Fashion"],
     "brands": { "label": "Worked With" },
     "about": {
       "title": "About Me",
-      "description": "Software Engineer + creative strategy — 4K quality, raw assets or fully edited ads across unboxings & reviews, tutorials & app demos, lifestyle/GRWM content, before-and-afters, hauls & comparisons, and scripted or trend-based ads.",
-      "body": "Hi! I'm Nathan and I've been creating content for over 10 years. As a YouTuber and software engineer, I bring a unique set of skills to content creation for brands. I'm passionate about skincare, fitness, finance, fashion, jewelry, software & tech, food, and travel. I'm flexible with any video format — from unboxings and reviews to more organic, authentic product showcases with my honest personal take."
+      "description": "Every project ships in 4K, raw or fully edited — covering unboxings & reviews, tutorials & app demos, lifestyle/GRWM, before-and-afters, hauls & comparisons, and trend-driven or scripted ads.",
+      "body": "Hi! I'm Nathan — a content creator with over 10 years behind the camera while being a software engineer as my day job. That technical background means I bring real, hands-on understanding to every app, SaaS, or tech product I create for. Off-camera, I'm just as likely to be deep in a TTRPG campaign or playing friends in a TCG. I like trying new skincare products for my routine, interested in fitness/health, and fashion. I'm flexible with any format — from unboxings and reviews to more organic, authentic product showcases with my honest personal take."
     },
     "photo": {
       "samplesTitle": "Photo Content",
@@ -352,7 +353,8 @@
       "title": "Let's Create Together",
       "description": "Ready to collaborate on your next campaign?",
       "email": "ugc@nathanyuan.com",
-      "rates": "Starting at $300 — let's chat",
+      "rates": "Single Video Deliverable — Starting at $300",
+      "stillsAvailable": "5-photo bundles also available",
       "turnaround": "Fast replies, faster content",
       "getInTouch": "Get in touch",
       "copied": "Copied!",
