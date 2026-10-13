@@ -143,12 +143,17 @@ export interface Translation {
     title: string;
     tagline: string;
     status: string;
+    responseTime: string;
     creatorTitle: string;
     deliverables: string[];
     about: {
       title: string;
       description: string;
       body: string;
+    };
+    photo: {
+      samplesTitle: string;
+      description: string;
     };
     niches: {
       title: string;

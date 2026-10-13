@@ -15,6 +15,8 @@ const FALLBACK_SVG = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9
 const CDN_BASE_URL = import.meta.env.VITE_CDN_BASE_URL ?? 'https://cdn.nathanyuan.com';
 const videoSrc = (id: string) => `${CDN_BASE_URL}/${id}.mp4`;
 const videoPoster = (id: string) => `${CDN_BASE_URL}/${id}.jpg`;
+// Photos live under a /photos subpath to avoid colliding with video poster filenames.
+const photoSrc = (id: string) => `${CDN_BASE_URL}/photos/${id}.jpg`;
 
 interface UGCVideo {
   id: string; // used to derive both the CDN video URL and poster URL
@@ -32,6 +34,19 @@ const SAMPLE_VIDEO_SLOTS: GridSlot[] = [...REAL_VIDEOS, ...Array(COMING_SOON_SLO
 // Flat ordered list of real videos for the swipe feed
 const ALL_VIDEOS = REAL_VIDEOS;
 
+interface UGCPhoto {
+  id: string; // used to derive the CDN photo URL
+}
+
+const REAL_PHOTOS: UGCPhoto[] = [];
+const PHOTO_SLOTS_TOTAL = 5;
+
+type PhotoSlot = UGCPhoto | null;
+const PHOTO_GRID_SLOTS: PhotoSlot[] = [
+  ...REAL_PHOTOS,
+  ...Array(PHOTO_SLOTS_TOTAL - REAL_PHOTOS.length).fill(null),
+];
+
 
 const UGCPage: React.FC = () => {
   const { translations } = useLanguage();
@@ -40,7 +55,7 @@ const UGCPage: React.FC = () => {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
-  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const [emailCopied, setEmailCopied] = useState(false);
 
   const reelFeedRef = useRef<HTMLDivElement>(null);
@@ -128,6 +143,24 @@ const UGCPage: React.FC = () => {
       );
     });
 
+  const renderPhotos = (slots: PhotoSlot[], label: string) =>
+    slots.map((photo, index) => {
+      const isSoon = photo === null;
+      return (
+        <div
+          key={index}
+          className={`photo-placeholder${isSoon ? ' video-coming-soon' : ''}`}
+          onClick={isSoon ? undefined : () => setLightboxImage(photoSrc(photo.id))}
+          title={isSoon ? translations.ugc.video.comingSoon : `${label} ${index + 1}`}
+          style={isSoon ? undefined : {
+            backgroundImage: `url(${photoSrc(photo.id)})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+      );
+    });
+
   return (
     <div className="ugc-page">
       <div className="ugc-layout">
@@ -140,7 +173,7 @@ const UGCPage: React.FC = () => {
               src={profilePictureUrl}
               alt={translations.landing.name}
               className="profile-image"
-              onClick={() => setIsProfileModalOpen(true)}
+              onClick={() => setLightboxImage(profilePictureUrl)}
               onError={(e) => { e.currentTarget.src = FALLBACK_SVG; }}
             />
           </div>
@@ -209,6 +242,11 @@ const UGCPage: React.FC = () => {
             </button>
           </div>
 
+          <div className="profile-status">
+            <span className="status-dot"></span>
+            <span className="status-text">{translations.ugc.responseTime}</span>
+          </div>
+
           <div className="sidebar-controls">
             <ThemeToggle />
             <LanguageSelector />
@@ -236,14 +274,25 @@ const UGCPage: React.FC = () => {
             </div>
           </section>
 
+          {/* ── PHOTO CONTENT ── */}
+          <section id="photos" className="ugc-niches">
+            <div className="niche-card niche-card--samples">
+              <h3 className="niche-title">{translations.ugc.photo.samplesTitle}</h3>
+              <p className="niche-subtitle">{translations.ugc.photo.description}</p>
+              <div className="demo-videos demo-videos--five">
+                {renderPhotos(PHOTO_GRID_SLOTS, 'Photo')}
+              </div>
+            </div>
+          </section>
+
         </main>
 
       </div>
 
-      {/* Profile lightbox */}
-      {isProfileModalOpen && (
-        <div className="profile-lightbox" onClick={() => setIsProfileModalOpen(false)}>
-          <img src={profilePictureUrl} alt={translations.landing.name} className="profile-lightbox-img"
+      {/* Image lightbox — profile picture or a full-size sample photo */}
+      {lightboxImage && (
+        <div className="image-lightbox" onClick={() => setLightboxImage(null)}>
+          <img src={lightboxImage} alt={translations.landing.name} className="image-lightbox-img"
             onError={(e) => { e.currentTarget.src = FALLBACK_SVG; }} />
         </div>
       )}
